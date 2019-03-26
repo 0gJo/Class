@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+</head>
+<body>
+<button>Toggle</button>
+<div style=" background-color: black; color: white; padding: 20px">
+<h3>div 설명</h3>
+<p>
+div: 블럭모드 <br>
+html 요소를 담는 용기 <br>
+등등
+</p>
+</div>
+<script>
+button 태그를 가진 jquery 객체를 가져와서 click 이벤트발생..
+$( "button" ).click(function() {
+  $( "div" ).slideToggle( "slow" );
+});
+</script>
+</body>
+</html>

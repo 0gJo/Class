@@ -1,0 +1,67 @@
+HTML ~ 목
+
+http://localhost/webPro/html/days02/ex01.html
+WebPro : 루트경로 
+하위의 WebContent 디렉토리를 외부에서 자동으로 찾아감
+
+Server에서 보낸 html 파일을 브라우저(크롬)이 해석(랜더링)시킨 것 =
+화면
+
+ex02.jsp
+
+서버가 client에 응답할때는 html 사용
+( 서버가 사용한 언어가 ASP, JSP, PHP.. 이던간에.. )
+WAS : 자바언어를 Compile 해서 웹서버에 전달해줌
+( 아파치 톰캣 = 웹서버 + WAS )
+
+
+ex01.html
+
+ex03.html
+문법적으로 오류있어도 브라우저가 알아서 해석.. 주의.. 
+
+ex04.html - image
+** 이미지가 깨져서 안나오는 경우 우클릭 - 속성에서 주소 확인
+(이미지 경로가 안맞는 경우임)
+==> alt 값으로 대체되는게 좋음
+- 사용
+- 이미지 크기 설정
+
+ex05.html  -  링크 / 북마크 
+path와 fileName이 생략된 경우 
+: dd파일에 welcomelist에 있는 파일 자동으로 찾아감
+<a> 요소
+- 링크 기능
+- 자바스크립트 코딩
+
+#과 id
+
+ex06.html -  단락 (Paragraph) / style
+p 닫기태그 꼭 붙이기 
+- 
+- 
+
+ex07.html - 폰트 / 서식 / 인용문 
+같은 서식 다른 태그명
+-> 다른 style을 적용하여 관리하기 위한 목적
+**서식주기 위한 목적외에도..  해당 태그안에 있는 내용을 따로 관리하기 위한 용도
+ex) address , code.. 
+
+ex08.html - ***div, span
+div                                    span
+구성요소들을 하나의 작업단위로 묶기 위함
+( 하나의 작업을 여러 요소에 적용하기 위해)
+담는 요소 : html태그 		담는 요소 : 텍스트(text)
+블럭모드(수직방향)					인라인모드(수평방향)
+
+ex09.html - jQuery Script
+
+ex10.html 기사 예제
+
+ex11.html - 테이블
+
+
+
+
+
+

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+google <br>
+모든 html요소는 속성(attribute)을 가진다.
+속성 - html 요소의 추가정보를 제공
+속성은 시작태그 안에 선언
+문법 : 시작태그 속성명="속성값" 속성명='속성값' 속성명=속성값
+<img src="http://localhost/webPro/html/days02/images/%EA%B5%AC%EA%B8%80.png" alt=" ">
+src ="url"
+alt="CDATA" 문자열
+URL (Uniform Resource Locators)
+- 브라우저가 서버에 웹페이지를 요청할때 사용되는 주소(웹주소)
+- 구성
+	schema:// prefix.domain:port/path/filename
+	schema:인터넷서비스 유형 (http,https,ftp,file)
+	prefix : 도메인 접두사 (www , kr, jp ...)
+	port 호스트의 포트번호 http의 기본포트 (80)
+	path 서버의 경로
+	filename 문서 or 자원이름
+	[http]    : //  [www] .[ naver.com]
+	
+	URL 인코딩
+	<img src="http://localhost/webPro/html/days02/images/구글.png" alt="googlelogo">
+	- URL은 ASCII 문자 집합을 사용하여 인터넷을 통해서만 전송할 수 있다.
+	- 지금처럼 비 ASCII 문자 집합(한글)은 변환되어진다
+	- %16진수값으로 대체됨.
+	- URL은 공백을 포함할 수 없다. 공백은 + or %20으로 대체됨.
+	<hr> 
+	이미지크기설정1
+	width 속성
+	height 속성
+	단위 생략하면 px(기본) <br>
+	width="150" height="46" 
+	<img width="146" height="46" src="http://localhost/webPro/html/days02/images/구글.png" alt="googlelogo"><br>
+	
+	width="100%" -- % 기준 : 부모 요소의 100 % - body기준 100% 
+	height 설정안한경우 원래 비율에 비례하여 height 값 설정
+	<img width="100%" src="http://localhost/webPro/html/days02/images/구글.png" alt="googlelogo">
+	이미지크기설정2
+	style 속성 권장
+	why? 스타일 시트가 이미지 크기를 변경하지못하게 할 수 있기에.
+	style = "width: 141px ; height: 46px" <br>
+	<img style = "width: 141px ; height: 46px" src="http://localhost/webPro/html/days02/images/구글.png" alt="googlelogo">
+	<hr>
+	절대 경로 : http://localhost/webPro/html/days02/images/구글.png"
+	상대 경로 :(기준으로부터 경로를 찾아가는것) 
+	<img style = "width: 141px ; height: 46px" src="구글.png" alt="googlelogo">
+     이미지 주소 복사 : [ http://localhost/webPro/html/days02 ]/%EA%B5%AC%EA%B8%80.png
+                            [ 현재 경로 ]  
+	<img style = "width: 141px ; height: 46px" src="./images/구글.png" alt="googlelogo">
+	두단계.. 상위
+	<img style = "width: 141px ; height: 46px" src="../../구글.png" alt="googlelogo">
+	
+	
+	<b>상대경로</b> <br>
+	<img alt="googlelogo" src="../days01/images/구글.png">
+	 http://localhost/webPro/html/days01/images/%EA%B5%AC%EA%B8%80.png
+	<b>절대경로</b> <br>
+	<img alt="" src=" http://localhost/webPro/html/days01/images/구글.png">
+	
+	내가 이미지 안가지고 있어도.. 다른 서버에 있는 이미지 가져다 쓸수있다..
+	<img alt="" src=" https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png">
+	
+	
+	
+	
+</body>
+</html>
