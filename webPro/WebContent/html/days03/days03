@@ -1,0 +1,68 @@
+CSS
+
+javascript
+openAPI - map
+
+
+ex01.html - style 적용
+
+unvisited link 파랑
+visited link 보라색
+active link 빨강
+밑줄
+
+링크태그의 기본스타일 코딩으로 변경
+
+ex02.html - 테이블
+
+ex03.html 테이블
+- 셀 병합 (첫번째 꺼)
+- span 사용하고 병합당한 셀 삭제
+
+- 셀에 height width를 주지 않으면,
+	자동으로 셀안의 문자(내용)에 따라 달라짐
+
+- 기억
+table, td width ,height 설정 깨지는 문제
+
+table width=200px  border= 1
+	td width 100px - >
+	td width 100px - > border너비 떄문에 < 100 
+	
+space, padding 등 (여백)은 초기화 필요**
+cellspacing="0" cellpadding="0"
+
+CSS에서는 단위를 꼭 명시해야(0제외)
+
+padding inner
+margin outer
+
+margin = 0; padding=0; 초기화
+바깥여백 			안쪽여백
+
+ex05.html 리스트
+
+
+ex06.html 리스트 
+a {
+	display : inline-block;
+	width: 100px; /*a태그는 인라인 모드 이므로 width 속성x  */
+}
+
+ex09.html iframe
+html 웹페이지 안에 다른 html페이지를 삽입시켜 참조하도록하는 것
+( 유지보수 에 좋음 )
+(중복제거, 변경되었을때 해당 html만 수정)
+
+- 광고 등 자주 변경되는 부분에 많이 사용
+
+
+ex11.html - html 양식(form)
+form tag - input에서 client에서 입력받은 값을 서버에 submit할때 입력태그 input태그를 감쌈
+
+form tag + input type=submit
+
+input태그의 name속성 중요 (서버에 name으로 전달되기 때문)
+
+[		]
+ex07. html

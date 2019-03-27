@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+li {
+	float: left; /*블럭모드 를 해당방향으로부터 float 인라인모드 */
+}
+
+li a {
+	color: white;
+	text-align: center;
+	display: block;
+	padding: 16px;
+	text-decoration: none;
+}
+
+ul#nav {
+	list-style-type: none;
+	background-color: black;
+	padding: 0;
+	margin: 0;
+	overflow: hidden; /*넘치는 부분이 존재하면 : hidden */
+}
+
+li a:hover {
+	background-color: #111111;
+	color: red;
+}
+</style>
+</head>
+<body>
+
+	<h3>Navigation Menu</h3>
+	<ul id="nav">
+		<li><a href="#">Home</a></li>
+		<li><a href="#">News</a></li>
+		<li><a href="#">Contact</a></li>
+		<li><a href="#">About</a></li>
+	</ul>
+</body>
+</html>

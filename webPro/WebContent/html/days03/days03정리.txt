@@ -1,0 +1,74 @@
+<a></a> 링크
+
+링크의 상태에 따른 style 적용 (css)
+:link
+:visited
+:hover
+:active
+
+a{
+	color :  ;
+	text-decoration: ;
+}
+
+-----------------
+<table></table> 테이블
+- 테이블 제목
+- 컬럼 제목
+- 내용
+- foot 
+- 셀병합
+- 
+table {
+	margin: 0 auto; /*==가운데정렬 */
+	/*위 오른쪽 아래 왼쪽 여백*/
+	border-collapse: collapse; /* 붕괴하다 : 1줄 선 */
+}
+
+tr:nth-child(even) {
+tbody td { /*tbody 의 자식 td 에게만.. */
+
+div#demo
+
+ex03.html부터
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table>
+<caption></caption> : 제목
+
+<thead>	 : 테이블 제목  
+	<tr>
+	<td></td>
+	<td></td>
+	</tr>
+</thead>	
+
+<tbody> : 내용 테이블 
+	<tr>
+	<td></td>
+	<td></td>
+	</tr>
+</tbody>
+
+<tfoot> : 마지막
+	<tr>
+	<td></td>
+	<td></td>
+	</tr>
+</tfoot>
+
+</table>

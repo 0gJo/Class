@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+
+button {
+	font-size: 10px;
+	width: 50px;
+}
+
+table {
+	margin: 0 auto; /*==가운데정렬 */
+	/*위 오른쪽 아래 왼쪽 여백*/
+	border-collapse: collapse; /* 붕괴하다 : 1줄 선 */
+}
+
+th {
+	background-color: black;
+	color: white;
+}
+
+tr:nth-child(even) {
+	background-color: #eee;
+}
+
+tbody td { /*tbody 의 자식 td 에게만.. */
+	border-bottom: dotted gray;
+}
+
+</style>
+
+
+
+
+</head>
+<body>
+
+	<table border="0" style="width: 500px;">
+
+		<caption>dept Info</caption>
+		<thead>
+			<tr>
+				<th><input type="checkbox">deptno</th>
+				<th>name</th>
+				<th>loc</th>
+
+
+				<!-- 	<td align="center"><b>deptno</b></td>
+	<td align="center"><b>name</b></td>
+	<td align="center"><b>loc</b></td>
+ -->
+			</tr>
+
+
+
+		</thead>
+		<tbody>
+			<tr>
+				<td><input type="checkbox">10</td>
+				<td>ACC</td>
+				<td>loc</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox">20</td>
+				<td>ADM</td>
+				<td>loc</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox">30</td>
+				<td>SALES</td>
+				<td>loc</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox">40</td>
+				<td>ETC</td>
+				<td>loc</td>
+			</tr>
+
+		</tbody>
+
+		<tfoot>
+			<tr>
+				<td colspan="3" align="right" valign="middle">
+					<!-- 			align 개체가 주위의 텍스트와 연관하여 어떻게 정렬되는가를 반환/설정
+				 valign개체 속에서 내용이 어떻게 수직적으로 정렬될 것인가를 반환/설정 --> <!--병합-->
+					<button>add</button>
+					<button>edit</button>
+					<button>move</button>
+				</td>
+			</tr>
+
+
+		</tfoot>
+	</table>
+
+</body>
+</html>
