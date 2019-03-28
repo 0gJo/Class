@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+table , td {
+	border: solid 1px gray;
+	border-collapse: collapse;
+}
+
+table {
+	width: 200px;
+}
+
+/* tr:nth-child(3)  {
+	align-items: center;
+}
+ */
+
+input[type=text],[type=password] {
+	width: 95%;
+}
+
+caption {
+	background-color: black;
+	color: white;
+	font-weight: bold;
+}
+
+</style>
+
+</head>
+
+
+<body>
+<input type="submit">
+<input type="reset">
+<input type="button">
+<button type="submit">서브밋버튼</button>
+<button type="reset">리셋버튼</button>
+<button type="button">버튼</button>
+
+
+
+<hr>
+<!--input 태그에서 멀티라인 을 입력받고자할때-->
+<textarea rows="5" cols="20">A multi-line text field</textarea>
+<!--rows : 보여지는 행의 수 col: ...-->
+
+<textarea style="width: 200px; height: 100px">A multi-line text field</textarea>
+
+
+
+
+
+
+
+
+
+<hr>
+<form action="ex01_ok.jsp" target="_blank"><!-- action값 default ; 자기자신 페이지호출-->
+
+<!-- table>caption+tr*3>td*2 -->
+
+<table>
+	<caption>로그인</caption>
+	<tr>
+		<td align="center" width="30%">id</td>
+		<td width="70%"><input type="text" id="uid" name="uid" 
+autofocus="autofocus"  tabindex="1"
+maxlength="15" size="12" 
+autocomplete="off"></td>
+	</tr>
+	<tr>
+		<td align="center">pass</td>
+		<td><input type="password" name="password" size="10" maxlength="8" 
+tabindex="2"></td>
+	</tr>
+	<tr>
+	<td colspan="2">
+	<select  style="width: 100% ;text-align: center;" name="cars"  size="4" multiple="multiple"> <!--SIZE=(옵션수) : 다중선택을 위해  -->
+	<option value="1">VOLVO</option>
+	<option value="2">SAAB</option>
+	<option value="3">BMW</option>
+	<option value="4">EQQUS</option>
+</select>
+	</td>
+	</tr>
+	<tr>
+		<td align="center" colspan="2"><input type="submit" value="logon"> 
+<input type="reset" value="reset"></td>
+		
+	</tr>
+</table>
+
+
+
+<!--속성명==속성값일때 생략가능-->
+<!-- size : input 객체의 width -->
+<!--read only의 사용 : 글 수정에서 조회수와 글번호는 수정못하도록 화면상에만 나타냄-->
+
+<!-- input태그가 form태그 안에 2개 이상이면 엔터칠떄 자동 submit x -->
+
+
+
+
+</form>
+
+
+<form action="ex02_ok.jsp">
+<fieldset> <!--그룹화 하는 역할-->
+<legend>개인정보</legend>
+성별:
+<input type="radio"  value="m" name="gender" checked="checked">남자 <!--선택지-->
+<input type="radio" value="f" name="gender">여자
+<br>
+팀 :
+<input type="radio"  value="1" name="team" checked>1조
+<input type="radio" value="2" name="team">2조
+<input type="radio" value="3" name="team">3조
+<br>
+소유한 자동차 :<br>
+<input type="checkbox" name="cars" value="1">그랜저<br>
+<input type="checkbox"  name="cars" value="2">에쿠스<br>
+<input type="checkbox"  name="cars"  value="3">소나타<br>
+<input type="checkbox"  name="cars" value="4">BMW<br>
+<input type="checkbox"  name="cars" value="5">기타
+<input style="visibility: hidden;"> 
+
+<hr>
+<!-- option태그의 value 속성값을 생략--- > text 값 제출-->
+<select name="final_education">
+<option value="1">고졸</option>
+<option value="2" selected="selected">대졸</option>
+<option value="3">대학원졸</option>
+<option value="4">기타</option>
+</select>
+
+
+<!--  기억 pk가 value,  -->
+<select name="deptno" id="">
+	<option value="10">ACCOUNTING</option>
+	<option value="20">RESEARCH</option>
+	<option value="30">SALES</option>
+	<option value="40">OPERATIONS</option>
+</select>
+
+<hr>
+
+
+
+<input type="submit" value="send">
+
+</fieldset>
+</form>
+
+
+<!--  
+	1. form의 method = 'get'
+		ㄱ.URL 요청주소에 parameter로 전송
+		ㄴ. URL 길이제한
+		ㄷ. 중요한 데이터 X
+	2. 		 method = 'post'
+		ㄱ. 보안적인 측면
+		ㄴ. 길이제한 x -> 첨부파일
+		
+
+
+-->
+
+
+
+
+
+
+
+
+
+</body>
+</html>

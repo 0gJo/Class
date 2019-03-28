@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+
+input:focus {
+	background-color: yellow;
+}
+
+ul {
+	border: solid 1px gray;
+	border-left-width: 10px;
+	
+	
+	
+}

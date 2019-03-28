@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<!--중첩연산자-->
+child : div>ul>li
+
+<div>
+	<ul>
+		<li></li>
+	</ul>
+</div>
+
+sibling : div+p+bq
+
+<div></div>
+<p></p>
+<blockquote></blockquote>
+
+
+^연산자 
+html>head+body
+html>head+body
+html>head>meta+title^body
+
+
+<html>
+<head>
+	<meta />
+	<title></title>
+</head>
+<body>
+	
+</body>
+</html>
+
+* 연산자
+ul>li*5
+ul>li*5>a
+
+() 그룹화 연산자
+div>(header>ul>li*2>a)+footer>p  <!--^ 사용대신-->
+<div>
+	<header>
+		<ul>
+			<li><a href=""></a></li>
+			<li><a href=""></a></li>
+		</ul>
+	</header>
+	<footer>
+		<p></p>
+	</footer>
+</div>
+
+(div>dl>(dt+dd)*3)+p
+
+
+속성연산자
+div[id=box]
+div[id=box class=team01]
+
+div[class=team manager teacher]
+
+.team.manager.teacher
+
+<div class="team manager teacher"></div>
+
+#demo
+<div id="demo"></div>
+<div class="team01"></div>
+
+사용자지정 속성
+4행4열 테이블 , 마지막 행 1열인 테이블 
+
+table>(tr*3>td*3)+tr>td[colspan=3]
+<table>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td colspan="3"></td>
+	</tr>
+</table>
+
+a>{naver}
+<a href="">naver</a>
+a[href=http://www.naver.com target=_blank]>{naver}
+<a href="http://www.naver.com" target="_blank">naver</a>
+
+
+항목에 번호매기기 :   *연산자 +   $ 연산자  
+ul>li*5>{item}
+ul>li*5>{item $}
+<ul>
+	<li>item 1</li>
+	<li>item 2</li>
+	<li>item 3</li>
+	<li>item 4</li>
+	<li>item 5</li>
+</ul>
+
+ul>li*5>{item $$$}
+<ul>
+	<li>item 001</li>
+	<li>item 002</li>
+	<li>item 003</li>
+	<li>item 004</li>
+	<li>item 005</li>
+</ul>
+
+ul>li.item$*5
+<ul>
+	<li class="item1"></li>
+	<li class="item2"></li>
+	<li class="item3"></li>
+	<li class="item4"></li>
+	<li class="item5"></li>
+</ul>
+
+
+ul>li.item$@-*5 <!--역순  -->
+<ul>
+	<li class="item5"></li>
+	<li class="item4"></li>
+	<li class="item3"></li>
+	<li class="item2"></li>
+	<li class="item1"></li>
+</ul>
+
+ul>li.item$@11*5
+<ul>
+	<li class="item11"></li>
+	<li class="item12"></li>
+	<li class="item13"></li>
+	<li class="item14"></li>
+	<li class="item15"></li>
+</ul>
+ul>li.item$@-11*5
+
+
+{}를 사용해서 텍스트를 추가할 수 있다.
+
+a{naver} == a>{naver}
+
+<a href="">n<b>ave</b>r</a>
+a>{n}+b{ave}+{r}
+<a href="">n<b>ave</b>r</a>
+
+
+li*5>lorem4 <!-- 4개 절?마디?  -->
+<li>Lorem ipsum dolor sit.</li>
+<li>Harum dolore dolorum veniam.</li>
+<li>Repellat porro eius asperiores.</li>
+<li>Soluta ex voluptatum aut.</li>
+<li>Aperiam id tempora porro.</li>
+
+ . 자동인식 
+
+.wrap>.content
+<div class="wrap">
+	<div class="content"></div>
+</div>
+
+em>span.info
+em>span.info
+em>.info
+
+ul>.item
+
+table>#row$*5
+<table>
+	<tr id="row1"></tr>
+	<tr id="row2"></tr>
+	<tr id="row3"></tr>
+	<tr id="row4"></tr>
+	<tr id="row5"></tr>
+</table>
+
+
+table+
+<table>
+	<tr>
+		<td></td>
+	</tr>
+</table>
+
+select+3
+
+</body>
+</html>

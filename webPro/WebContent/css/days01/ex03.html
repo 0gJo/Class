@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	html picture 태크 사용하면 브라우저 창 크기에따라 다른 이미지를 정의할 수 있다.
+
+	<picture> 
+	<source srcset="/webPro/css/days01/images/img_smallflower.jpg" media="(max-width:600px)">
+	<source srcset="/webPro/css/days01/images/img_flowers.jpg" media="(max-width:900px)">
+	<source srcset="/webPro/css/days01/images/flowers.jpg" media="">
+  <img src="/webPro/WebContent/css/days01/images/flowers.jpg">
+
+	</picture>
+
+</body>
+</html>
