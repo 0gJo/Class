@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<style type="text/css">
+#demo {
+	border: solid 1px red;
+	padding: 2cm;
+}
+
+#in {
+	border: solid 1px blue;
+	padding: 1cm;
+	/* Top Right Bottom Left */
+	/* 10px 20px 30px */
+	/* top     l/r       bottom  */
+	margin: 2cm;  /* padding 2cm + margin 2cm = 4cm  */
+	
+}
+
+div.ex1{
+	background: yellow;
+	width: 300px;
+
+}
+div.ex2{ /* 총 너비 = 300(width)+25px(padding)*2+20px(border)*2     */
+	background: lightblue;
+	width: 300px; 
+	padding: 25px;
+	border: solid 20px green;
+	
+	box-sizing: border-box;  /* 여백, border에 상관없이 처음 설정한 width=300 으로 다시 설정  */
+	
+}
+</style>
+</head>
+<body>
+<div class="ex1">Lorem ipsum dolor sit.</div>
+<br>
+<div class="ex2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+Asperiores doloribus inventore eaque aspernatur vel 
+ex voluptatum quaerat tempora in veritatis?</div>
+<hr>
+	<div id="demo">
+		<div id="in">Lorem ipsum dolor sit.</div>
+	</div>
+</body>
+</html>

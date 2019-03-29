@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+p.solid {
+	border-style: solid;
+}
+
+p.dotted {
+	border-style: dotted;
+}
+
+p.dashed {
+	border-style: ridge;
+}
+/*ridge, inset, outset : 3D 테두리*/
+/*border-width : px,pt,cm,em. .. + thin medium thick..*/
+p#box {
+	/* 	padding: 10px;
+	border-top-style: dotted;
+	border-right-style: solid;
+	border-bottom-style: dotted;
+	border-left-style: solid;
+ 
+ 	border-style: dotted solid;
+ */
+	background-color: lightgray;
+	border-left: solid 6px red;
+	border-bottom: solid 3px red;
+}
+
+p#demo {
+	width: 500px;
+	height: 100px;
+	text-align: center;
+	border: 2px solid red;
+	border-radius: 50px;
+/* 	 5px 10px 20px 25px; */
+	
+	
+	/*                    시계방향  */
+	/* 	border-radius: 5px 25px;  */
+	/* radius(반지름) 커질수록 귀퉁이가 둥글어짐.. */
+}
+</style>
+</head>
+<body>
+
+	<p id="demo">Lorem ipsum dolor sit amet.</p>
+
+	<p id="box">Lorem ipsum dolor sit amet.</p>
+
+	<p class="solid">Lorem ipsum dolor sit amet.</p>
+	<p class="dotted">Eligendi architecto harum est laboriosam!</p>
+	<p class="dashed">Blanditiis sint cum adipisci quod!</p>
+	<p class="">Distinctio velit labore eos mollitia!</p>
+	<p class="">In consequatur pariatur animi molestiae?</p>
+	<p class="">Nobis cumque repellendus quos blanditiis.</p>
+	<p class="">Modi minus aspernatur praesentium impedit?</p>
+	<p class="">Iure tenetur vel a perferendis.</p>
+	<p class="">Accusamus officiis quam quasi facere!</p>
+	<p class="">Eius magnam temporibus deserunt delectus.</p>
+
+</body>
+</html>
