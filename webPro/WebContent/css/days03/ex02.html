@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>css outline</title>
+<style type="text/css">
+p {
+	border: solid 1px black;
+}
+
+p.dotted {
+	outline-style: dotted;
+	outline-color: red;
+	outline-width: medium;
+}
+
+p.dashed {
+/* 	outline-style: dashed;
+	outline-color: red;
+	outline-width: thick; */
+
+	outline: dashed red thin;
+	outline-offset : 4px;
+	margin: 3px; /*  margin<outline-offset이면 margin  적용 x*/
+}
+
+p.solid {
+	outline-style: solid;
+	outline-color: red;
+	outline-width: thin;
+}
+</style>
+</head>
+<body>
+	<p class="solid">Lorem ipsum dolor sit.</p>
+	<p class="dotted">Velit nihil dolores perferendis.</p>
+	<p class="dashed">Fugiat quasi architecto nulla.</p>
+	<p class="groove">Aperiam nam optio voluptatum.</p>
+</body>
+</html>

@@ -1,0 +1,55 @@
+주석
+
+
+
+ex01.html
+우선순위 : 인라인스타일시트>내부스타일시트>외부스타일시트
+                            (link가 내부style태그 위에 선언되어있을때)
+		    :  순서대로(가장마지막에 선언된것 적용)
+		 
+f12로 디버깅.. 
+
+ex02.html - 색상
+
+
+ex03.html - css 배경
+
+ex04.html - css 테두리
+기억**  - border-style을 주지 않으면, 다른 속성은 적용x
+
+
+p : 자동 padding
+
+ex05 - 6. html margin
+/*margin  top 2cm bottom 2cm != 4cm*/
+	/* 둘중 큰것으로 / right-margin 5 left-margin 4 = 5 */
+	
+margin: auto; /* 0 auto 0 auto : 가운데정렬 */
+
+margin: 1cm 2cm 3cm 4cm;
+			 top right bottom left 
+
+
+ex07. padding ***
+	/* Top Right Bottom Left */
+	/* 10px 20px 30px */
+	/* top     l/r       bottom  */
+  /* padding 2cm + margin 2cm = 4cm  */
+ /* 총 너비 = 300(width)+25px(padding)*2+20px(border)*2     */
+ box-sizing: border-box;  /* 여백, border에 상관없이 처음 설정한 width=300 으로 다시 설정  */
+
+
+ex08 css 높이 , 넓이
+max-height,width
+		height,width
+
+
+ex09-10.html / 네이버
+div >span > input 
+button
+레이아웃 - table x  div로
+position**
+
+header
+container
+footer

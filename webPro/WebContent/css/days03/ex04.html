@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<style type="text/css">
+p {
+	/* " " : 두 단어 이상 일때 사용 */
+	font-family: "Times New Roman", verdana;
+	font-style: oblique; /* == italic */
+	font-size: 10vw;
+	/* vw : viewport width 
+	    1vw ; viewport 너비의 1%
+	    반응형 웹에서 사용하는 font-size
+	    */
+	/* 절대크기 : cm , mm , pt (= 0.75 inch )  상대크기 : %, px, em */
+	/* 상대크기 : 주변요소를 [기준]으로..  
+		em (기준 : M)
+		많을 개발자들이 픽셀 대신에 엠을 사용한다.
+		W3C 협회 에서 엠을 권장
+		1em = 현재 글꼴 크기와 동일.
+		브라우저의 기본 텍스트 크기 는 16px = 1em 
+		사용이유 : 기본글꼴이 바뀌면 유지보수가 쉽기 때문*/
+	font-weight: 300;
+}
+div.small{
+	font-variant: small-caps; /* 글꼴 변형 : 작은 대문자 글꼴로 */
+}
+
+div.normal{
+	font-variant: normal;
+}
+
+p,div{
+	/*      스타일 두께   크기/ 행높이 글꼴모음  */
+	font: italic bold 12px/15px gerogia, serif;
+}
+
+</style>
+</head>
+<body>
+	<div class="small">Lorem ipsum dolor.</div>
+	<div class="normal">Lorem ipsum dolor.</div>
+	<p>Lorem ipsum dolor sit amet, consectetur.</p>
+</body>
+</html>

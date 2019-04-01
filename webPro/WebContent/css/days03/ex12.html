@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<style type="text/css">
+body{
+	margin: 0;
+	padding: 0;
+
+}
+
+#box1{
+	width: 600px;
+	height: 60px;
+	background-color: yellow;
+	position : absolute; /* z좌표 생기는 상황 */
+	position : relative;
+	left: 10px;
+	top: 10px;
+}
+#confirm{
+	background-color: red;
+	width: 100%;
+	height: 100px;
+	}
+#box2{
+	position: absolute;
+	left: 10px;
+	top : 10px;
+	width: 20px;
+	height: 40px;
+	background-color: green;
+	color: white;
+}
+#box3{
+	position: absolute;
+	right : 10px;
+	top : 10px;
+	width: 20px;
+	height: 40px;
+	background-color: green;
+	color: white;
+}
+#box4{
+	position: absolute;
+	left:40px;
+	top : 10px;
+	width: 520px;
+	height: 40px;
+	background-color: green;
+	color: white;
+}
+#header{
+	height: 70px; /* 접쳐지지 않게 */
+/* 	background-color: blue; */
+}
+
+</style>
+</head>
+<body>
+<div id="header">
+<div id="box1">
+<div id="box2">2</div>
+<div id="box4">4</div>
+<div id="box3">3</div>
+</div>
+</div>
+<div id="confirm">확인</div>
+</body>
+</html>

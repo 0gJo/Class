@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<!-- <style type="text/css">
+ul {
+	list-style-type: upper-roman;
+	list-style-image: url("/webPro/css/days03/images/sqpurple.gif");
+}
+
+ol {
+	list-style-type: circle;
+}
+
+
+</style>
+ -->
+
+<style type="text/css">
+/* 
+li {
+	/* border: solid 1px gray; 
+	border-bottom: solid 1px gray;
+	border-left:  solid 1px gray;
+	border-right:  solid 1px gray;
+}
+li:first-child{
+	border-top: solid 1px gray;
+}
+ */
+ li{
+ 	border-bottom: solid 1px gray;
+ }
+ 
+ ul, ol{
+ 	border: solid 1px gray;
+ }
+ 
+ li:last-child{
+ 	border: none;
+ }
+ 
+ li:hover{
+ 	color: red;
+ 	cursor: pointer;
+ }
+
+ul, ol{
+/* 	border: solid 1px aqua; */
+}
+
+ul.a{
+	/* li 태그안에 포함됨 */
+	list-style-position: inside;
+}
+
+ol.b{
+	list-style-position: outside;
+	background: #f1f1f1;
+	border-left: solid 5px red;
+	padding: 10px 20px;
+	list-style-type: none;
+	
+/* 	list-style: ??? ??? ??? ; */
+
+
+}
+
+.none{
+	/* ul/li 기본 설정 제거 */
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+
+}
+</style>
+
+</head>
+<body>
+
+
+
+
+<!-- list-style position  속성-->
+<hr>
+	<ul class="a none">
+		<li>Lorem ipsum dolor.</li>
+		<li>Iusto minus ea!</li>
+		<li>Quam ipsa magni?</li>
+	</ul>
+
+	<ol class="b">
+		<li>Lorem ipsum dolor.</li>
+		<li>Beatae optio quod.</li>
+		<li>Laboriosam minima autem.</li>
+	</ol>
+	<dl>
+		<dt>Lorem.</dt>
+		<dd>Lorem ipsum dolor sit.</dd>
+		<dt>Molestias!</dt>
+		<dd>Quod sapiente molestias dignissimos.</dd>
+		<dt>Hic.</dt>
+		<dd>Similique quaerat molestias ipsa!</dd>
+	</dl>
+
+</body>
+</html>

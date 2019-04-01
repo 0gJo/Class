@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<style type="text/css">
+h1 {
+	background-color: green;
+	text-align: center;
+	text-transform: uppercase;
+	padding: 20px;
+	color: white;
+}
+
+#nav{
+	padding: 25px;
+	border: aqua 1px solid;
+	background-color : #fff;
+	
+	/* safari에서는 position : webkit-sticky */
+	position : sticky;
+	top: 0; /* 스크롤 내리다가 nav의 top이 0이 될때  position : fixed로 */
+	
+}
+
+.container{
+	position: relative; /*기준점 */
+}
+.container img{
+
+	width: 100%;
+	height: auto;
+	opacity: 0.4;
+}
+.topleft{
+	position : absolute;
+	top: 8px;
+	left: 8px;
+}
+.topright{
+	position : absolute;
+	top: 8px;
+	right: 8px;
+}
+.center{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+}
+.bottomleft{
+	position : absolute;
+	bottom: 40px;
+	left: 8px;
+}
+.bottomright{
+	position : absolute;
+	bottom: 40px;
+	right: 8px;
+}
+
+</style>
+</head>
+<body>
+	<h1>top</h1>
+	<div id="nav">메뉴1메뉴2메뉴3메뉴4</div>
+	<div id="content" style="padding-bottom: 1000px">
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam ab!</p>
+	<p>Reiciendis perferendis quis laboriosam eaque praesentium molestias esse doloremque placeat!</p>
+	<p>Delectus laborum corporis quibusdam atque eum minima quasi odio! Dicta.</p>
+	<div class="container">
+		<img alt="" src="/webPro/css/images/img_5terre_wide.jpg">
+		<div class="topleft">topleft</div>
+		<div class="position topright">topright</div>
+		<div class="bottomleft">bottomleft</div>
+		<div class="bottomright">bottomright</div>
+		<div class="center">center</div>
+	</div>
+	
+	</div>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<style type="text/css">
+body {
+	color: blue; /* 모든텍스트에 적용.. */
+}
+
+h1 {
+	color: green;
+}
+
+.box {
+	border: solid 1px gray;
+	padding: 10px;
+	width: 200px;
+	height: 200px; /* 내용물이 흘러넘칠수 ~ + 자동개행 */
+	text-align: justify; /* 양쪽 맞춤 + 단어사이를 동일한 간격 설정 */
+	text-indent: 50px; /* 첫번째줄 들여쓰기 */
+}
+
+#demo {
+	/*문자사이 공백(간격) 지정  */
+	letter-spacing: 5px;
+	/* 줄 사이 간격  */
+	line-height: 1.8px;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline overline;
+	text-transform: capitalize; /* 맨앞글자 대문자 */
+}
+
+h5 {
+	/* text 방향변경 */
+	direction: rtl;
+	/* 단어사이 간격 */
+	word-spacing: -10px;
+}
+
+h2 {
+	color: black;
+	text-shadow: 3px 2px gray;
+	/*        원 글자에서 그림자 글자 사이의 width간격 height 간격  */
+}
+
+p.a {
+	white-space: pre; /* code에서 작성한 그대로 줄바꿈적용 */
+}
+
+p.b {
+	/* 	white-space: nowrap; /* 창 width가 작아져도 자동줄바꿈 적용x */
+	white-space: normal; /* default :  */
+}
+
+img {
+	/* 	vertical-align: text-top; */
+	/* 	vertical-align: baseline; */
+	/* 	vertical-align: middle; */
+	/* 	display: block; */
+	float: left;
+}
+</style>
+</head>
+<body>
+	<p>
+		<img alt="" src="/webPro/css/days02/images/paper.gif"> Lorem
+		ipsum dolor sit amet, consectetur adipisicing elit. impedit numquam
+		hic autem. Quaerat reprehenderit tempore quos!
+	</p>
+
+	<hr>
+	<p class="a">This is sime text. This is sime text. This is sime
+		text. This is sime text. This is sime text. This is sime text. This is
+		sime text. This is sime text.</p>
+
+	<p class="b">This is sime text. This is sime text. This is sime
+		text. This is sime text. This is sime text. This is sime text. This is
+		sime text. This is sime text.</p>
+
+	<hr>
+	<h2>Text-Shadow Effect</h2>
+
+	<hr>
+	<h5>Lorem ipsum dolor.</h5>
+
+	<a href="https://www.naver.com">naver</a>
+
+	<hr>
+	<div class="box" id="demo">Lorem ipsum dolor sit amet,
+		consectetur adipisicing elit. Architecto eum sunt esse sit enim neque
+		impedit numquam hic autem. Quaerat reprehenderit tempore quos!
+		Quisquam quae esse qui ipsum maiores asperiores.</div>
+
+	<div class="box">Lorem ipsum dolor sit amet, consectetur
+		adipisicing elit. Architecto eum sunt esse sit enim neque impedit
+		numquam hic autem. Quaerat reprehenderit tempore quos! Quisquam quae
+		esse qui ipsum maiores asperiores.</div>
+
+
+
+	<hr>
+	<!--  text- align : 수평정렬 (가로맞춤)-->
+	<h2 style="text-align: left;">lorem</h2>
+	<h3 style="text-align: center;">lorem</h3>
+	<h4 style="text-align: right;">Lorem.</h4>
+	<hr>
+	<h1>Lorem ipsum dolor sit.</h1>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero
+		iste vero inventore quasi nemo dignissimos placeat atque alias debitis
+		quis.</p>
+</body>
+</html>
