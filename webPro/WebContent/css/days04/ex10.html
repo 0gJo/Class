@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<style type="text/css">
+p {
+	width: 400px;
+	border: solid 1px #ddd;
+	text-align: justify;
+}
+/* p 텍스트의 첫번째 문자(글자) 지정 */
+p::first-letter {
+	color: red;
+	font-size: xx-large;
+}
+
+/* 첫번째 줄  */
+p::first-line {
+	color: blue;
+	font-size: xx-small;
+}
+
+/* 요소의 내용 이전에 일부 내용을 삽입할 수 있다. */
+h1::before {
+	content: url("/webPro/css/images/smiley.gif")
+}
+
+h1::after{
+	content: "~~~";
+	color: red;
+}
+
+p::selection{ /* 드래그 했을때 선택되는 영역 */
+	color: red;
+	background: yellow;
+}
+
+p::-moz-selection{ /* firefox  */
+	color: red;
+	background: yellow;
+}
+</style>
+</head>
+<body>
+<h1>Lorem ipsum dolor sit amet.</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo mollitia ut cumque a iusto in nesciunt nulla aliquam vel iste numquam asperiores aliquid placeat exercitationem molestias explicabo tenetur perferendis nostrum.</p>
+</body>
+</html>

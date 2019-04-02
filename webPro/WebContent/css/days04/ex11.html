@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<style type="text/css">
+img {
+	width: 170px;
+	height: 100px;
+	border:solid 1px gray;
+	
+	opacity: 0.5;
+	filter:alpha(opacity=50); /*  */
+}
+
+img:hover{
+	opacity: 1.0;
+	filter:alpha(opacity=100); /*  */
+
+}
+div {
+	background: green;
+	padding: 10px;
+}
+
+div#f{ opacity: 0.3}
+div#s{opacity: 0.6}
+div#t{opacity: 0.1}
+
+
+</style>
+<style type="text/css">
+div.background{
+
+	background: url("/webPro/css/images/klematis.jpg");
+
+}
+
+div.transbox{
+
+	margin: 30px;
+	background: #fff;
+	border: solid 1px black;
+	
+	opacity: 0.6;
+}
+
+div.transbox p{
+
+	margin: 5px;
+	
+}
+</style>
+
+</head>
+<body>
+<div class="background">
+	<div class="transbox">
+		<p>Lorem ipsum dolor sit amet.</p>
+	</div>
+</div>
+
+
+<!--  -->
+<div >투명도0.1</div>
+<div id="f">투명도0.3</div>
+<div id="s">투명도0.6</div>
+<div id="t">투명도1.0</div>
+
+
+
+<!--이미지투명성-->
+<hr>
+<img alt="" src="/webPro/css/images/img_forest.jpg">
+<img alt="" src="/webPro/css/images/img_mountains.jpg">
+<img alt="" src="/webPro/css/images/img_5terre.jpg">
+
+</body>
+</html>

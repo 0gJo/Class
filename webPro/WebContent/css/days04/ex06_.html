@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<style type="text/css">
+.center{
+	width: 300px;
+	height: 150px;
+	border: solid 3px green;
+	margin: auto;
+	position: relative; /* 뜨지않고 기준점 그대로유지 */
+	
+}
+.center p{
+	margin :0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform:translate(-50%,-50%);
+	/* p태그 기준점 변경 */
+}
+
+
+</style>
+</head>
+<body>
+	<div class="center">
+		<p>center vertically</p>
+	</div>
+</body>
+</html>

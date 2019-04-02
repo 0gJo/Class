@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<!-- <style type="text/css">
+
+div {
+	border: solid 3px #ddd;
+	padding: 5px;
+}
+img {
+	float: right;
+}
+
+.clearfix{
+	overflow: auto;
+}
+
+
+</style> -->
+<!-- <style type="text/css">
+div {
+	border: 3px solid green;
+	padding: 5px;
+}
+img {
+	float: right;
+}
+.clearfix::after{ /* id = clearfix 인 div 뒤에 할일들.. */
+	content: ""; /* " "라는 content 추가 */
+	clear: both; /* float right left clear 용도 */
+	display: table;  /* overflow 방지 용도 */
+}
+
+</style> -->
+<style type="text/css">
+* {
+	/* 	box-sizing: border-box;  */
+	
+}
+
+.box {
+	/* 	display: inline-block; */
+	width: 33.33%;
+	padding: 50px;
+	float: left;
+}
+
+.clearfix::after {
+	content: "";
+	clear: both; /* float right left clear 용도 */
+	display: table; /* overflow 방지 용도 */
+}
+
+
+/* images Side by Side */
+.img-container{
+	float
+	width: 33%;
+	padding: 5px;
+	border: solid 1px #ddd;
+	border-radius: 5px;
+	margin: 1px;
+}
+
+</style>
+
+
+</head>
+<body>
+	<div class="clearfix">
+
+		<h3>PineApple</h3>
+		<img alt="" src="/webPro/css/images/pineapple.jpg"
+			style="width: 170px; height: 170px"> Lorem ipsum dolor sit
+		amet, consectetur adipisicing elit. Nemo earum aperiam alias quo illum
+		quaerat repellendus eveniet quia accusantium vitae!
+
+	</div>
+	<h3>Grid of Boxes</h3>
+
+	<div class="clearfix" style="border: 2px red solid">
+		<div class="box" style="background: #bbb;">
+			<p>Lorem.</p>
+		</div>
+		<div class="box" style="background: #ccc">
+			<p>Lorem.</p>
+		</div>
+		<div class="box" style="background: #ddd">
+			<p>Lorem.</p>
+		</div>
+	</div>
+
+	<h3>images Side by Side</h3>
+
+	<div class="clearfix">
+		<div class="img-container">
+			<img alt="" src="/webPro/css/images/pineapple.jpg"
+				style="width: 100%">
+		</div>
+
+		<div class="img-container">
+			<img alt="" src="/webPro/css/images/pineapple.jpg"
+				style="width: 100%">
+		</div>
+
+		<div class="img-container">
+			<img alt="" src="/webPro/css/images/pineapple.jpg"
+				style="width: 100%">
+		</div>
+
+
+
+
+	</div>
+</body>
+</html>

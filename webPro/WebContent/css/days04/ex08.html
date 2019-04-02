@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<style type="text/css">
+p.flip, div.panel{
+ text-align:center;
+ 
+font-size: 16px;
+padding: 10px;
+width: 300px;
+background: green;
+}
+
+p{
+	margin: 0;
+	cursor: pointer;
+}
+
+div.panel{
+
+	display: none;
+}
+</style>
+<script type="text/javascript">
+
+function flip_click() {
+	var pnl=	document.getElementById("pn1");
+	pnl.style.display="block"
+	
+}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</script>
+
+</head>
+<body>
+<p class="flip"">Click Panel</p>
+
+<div id="pnl1" class="panel">
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa velit eaque blanditiis repellat repellendus possimus doloremque atque distinctio molestias hic tenetur commodi necessitatibus aspernatur. Perspiciatis praesentium consectetur ab magnam laboriosam!</p>
+	<p>Culpa quam natus velit similique ducimus ab blanditiis veniam molestias voluptates id magnam repudiandae ipsam aperiam laborum ut ipsum quod odit rerum sapiente corporis maxime inventore ratione amet necessitatibus earum.</p>
+	<p>Rerum praesentium vitae animi numquam laboriosam sunt dolorem iusto iste necessitatibus fugit quo non amet cumque deleniti sequi minus laborum blanditiis hic vel autem reprehenderit tempora aspernatur. Ipsum eligendi similique!</p>
+</div>
+
+
+<div id="pnl2" class="panel">
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa velit eaque blanditiis repellat repellendus possimus doloremque atque distinctio molestias hic tenetur commodi necessitatibus aspernatur. Perspiciatis praesentium consectetur ab magnam laboriosam!</p>
+	<p>Culpa quam natus velit similique ducimus ab blanditiis veniam molestias voluptates id magnam repudiandae ipsam aperiam laborum ut ipsum quod odit rerum sapiente corporis maxime inventore ratione amet necessitatibus earum.</p>
+	<p>Rerum praesentium vitae animi numquam laboriosam sunt dolorem iusto iste necessitatibus fugit quo non amet cumque deleniti sequi minus laborum blanditiis hic vel autem reprehenderit tempora aspernatur. Ipsum eligendi similique!</p>
+</div>
+<div id="pnl3" class="panel">
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa velit eaque blanditiis repellat repellendus possimus doloremque atque distinctio molestias hic tenetur commodi necessitatibus aspernatur. Perspiciatis praesentium consectetur ab magnam laboriosam!</p>
+	<p>Culpa quam natus velit similique ducimus ab blanditiis veniam molestias voluptates id magnam repudiandae ipsam aperiam laborum ut ipsum quod odit rerum sapiente corporis maxime inventore ratione amet necessitatibus earum.</p>
+	<p>Rerum praesentium vitae animi numquam laboriosam sunt dolorem iusto iste necessitatibus fugit quo non amet cumque deleniti sequi minus laborum blanditiis hic vel autem reprehenderit tempora aspernatur. Ipsum eligendi similique!</p>
+</div>
+<div id="pnl4" class="panel">
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa velit eaque blanditiis repellat repellendus possimus doloremque atque distinctio molestias hic tenetur commodi necessitatibus aspernatur. Perspiciatis praesentium consectetur ab magnam laboriosam!</p>
+	<p>Culpa quam natus velit similique ducimus ab blanditiis veniam molestias voluptates id magnam repudiandae ipsam aperiam laborum ut ipsum quod odit rerum sapiente corporis maxime inventore ratione amet necessitatibus earum.</p>
+	<p>Rerum praesentium vitae animi numquam laboriosam sunt dolorem iusto iste necessitatibus fugit quo non amet cumque deleniti sequi minus laborum blanditiis hic vel autem reprehenderit tempora aspernatur. Ipsum eligendi similique!</p>
+</div>
+<div id="pnl5" class="panel">
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa velit eaque blanditiis repellat repellendus possimus doloremque atque distinctio molestias hic tenetur commodi necessitatibus aspernatur. Perspiciatis praesentium consectetur ab magnam laboriosam!</p>
+	<p>Culpa quam natus velit similique ducimus ab blanditiis veniam molestias voluptates id magnam repudiandae ipsam aperiam laborum ut ipsum quod odit rerum sapiente corporis maxime inventore ratione amet necessitatibus earum.</p>
+	<p>Rerum praesentium vitae animi numquam laboriosam sunt dolorem iusto iste necessitatibus fugit quo non amet cumque deleniti sequi minus laborum blanditiis hic vel autem reprehenderit tempora aspernatur. Ipsum eligendi similique!</p>
+</div>
+
+
+<script type="text/javascript">
+
+/* $(".flip").click(flip_click) ; */
+$('.flip').click(function(){
+	
+	window.alert("경고창");
+	/* 클릭받은 객체 */
+	$(this).next().slideToggle();  
+	
+});
+
+
+</script>
+
+</body>
+</html>

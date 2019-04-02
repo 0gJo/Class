@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<style type="text/css">
+p {
+	border: solid 1px gray;
+}
+
+div p {
+	background: yellow;
+}
+
+/* div의 직계자식 */
+div>p {
+	color: red;
+	font-size: 20px;
+}
+/* div 인접한 바로 다음 요소 p */
+/* div+p{
+	border-width: 10px;
+	border-color: blue;
+
+}
+ */
+
+/*  div 다음 모든 형제요소 p*/
+div ~p{
+	border-width: 10px;
+	border-color: blue;
+}
+</style>
+</head>
+<body>
+
+	<p>Lorem ipsum dolor.</p>
+	<div>
+		<p>Lorem ipsum dolor.</p>
+		<p>Voluptatem excepturi culpa.</p>
+		<p>Asperiores quo ut?</p>
+		<span>
+			<p>Lorem ipsum dolor.</p>
+		</span>
+	</div>
+	<span>xxx</span>
+	<p>Lorem ipsum dolor.</p>
+	<span>xxx</span>
+	<span>xxx</span>
+
+	<p>Aliquam sed magnam.</p>
+</body>
+</html>

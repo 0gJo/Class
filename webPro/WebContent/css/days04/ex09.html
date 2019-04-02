@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2019. 4. 2. - 오전 11:52:21  k≡n¡k</title>
+<link rel="stylesheet" type="text/css" href="">
+<style>
+/* selector:pesudo-class */
+/* 
+ a:link{          
+ }
+ a:visited{
+ }
+ a:hover{
+ }
+ a:active{
+ }
+ */ 
+ a{
+   text-decoration: none;
+   text-align: center;
+   text-transform: uppercase;
+   display: inline-block;
+   width:200px;
+   padding: 10px;
+   background: green;
+   color:white;
+ }
+ a:hover{
+    background: blue; 
+ }
+ a + div#in{
+   width:200px;
+   padding: 10px;
+   background: aqua;
+   display: none;
+ }
+ 
+ /* 이해 및 기억 */
+ #out:hover #in{
+   display: block;
+ }
+ 
+ p:first-child{
+    background: yellow;
+ }
+ p:last-child{
+   background: red;
+ }
+ 
+ /* div:first-child i{ */
+ div i:first-child, div i:last-child{
+	background: green;
+}
+</style>
+</head>
+<body>
+<!-- 가짜클래스 ( pseudo-class ) -->
+<div>
+   Lorem ipsum <i>dolor</i> sit amet, <i>consectetur</i> adipisicing elit.
+    <i>Porro</i> aliquam.
+</div>
+
+<p style="width:300px;border:solid 1px gray;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique dolorem qui eum minus aspernatur magni inventore illo totam esse suscipit. Praesentium totam quo dolorem corrupti beatae natus placeat quidem dignissimos?</p>
+<p style="width:300px;border:solid 1px gray;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique dolorem qui eum minus aspernatur magni inventore illo totam esse suscipit. Praesentium totam quo dolorem corrupti beatae natus placeat quidem dignissimos?</p>
+<p style="width:300px;border:solid 1px gray;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique dolorem qui eum minus aspernatur magni inventore illo totam esse suscipit. Praesentium totam quo dolorem corrupti beatae natus placeat quidem dignissimos?</p>
+
+<!-- 형식 )  selector:pseduo-class -->
+<!-- 
+1. 사용자가 마우스를 올리면 요소의 스타일 지정
+2. a 방문한적이 있는 경우, 없는 경우, 스타일 지정
+3. 요소가 포커스 가지면 스타일 지정
+ --> 
+<div id="out">
+	<a href="#">Mouse over Me</a>
+	<div id="in">
+	    테스트
+	</div>
+</div> 
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

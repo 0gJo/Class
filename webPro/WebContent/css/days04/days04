@@ -1,0 +1,70 @@
+ex01.html - layout overflow 속성
+: content가 너무 커서 영역에 적합하지 않는 경우 어떻게 제어?
+: visible(default) , hidden, scroll, auto
+1. div 태그 h 주지 않을 경우 , 내용물에 가변적
+auto vs scroll
+auto : 넘칠경우''에만'' scroll이 생김
+overflow-x, y로 따로 관리 가능 
+
+ex02.html - layout float, clear 속성
+:left, right, none(default), inherit(부모float)
+
+ex03.html 
+content가 너무 커서 영역에 적합하지 않는 경우
+->overflow: auto ***
+or
+->display : table;
+
+???box-sizing: border-box;  /* 여백, border에 상관없이 처음 설정한 width=300 으로 다시 설정  */
+
+--
+
+display : inline-block
+-> w, h, padding, margin 설정 용도
+display : table
+--
+ex05.html - layout 정렬
+- 이미지 가운데 정렬 
+
+ex06.html**
+1. padding
+2. position : absolute
+p태그의 기준점이 left-top 이 아니라, center가 중간에 와야
+
+.center p{
+  margin:0;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+}
+
+3. line-heights
+
+ex07.html - css 결합자**(암기)
+selector+selector
+
+
+ex09.html - 
+#out:hover #in{
+	display: block; /* 기억 */
+}
+
+ex10.html - :: 가상요소
+
+ex11.html - 이미지 투명도
+
+ex12.html - drop down menu
+
+ex13.html - 수직, 수평 탐색 모음
+
+ex14.html - 이미지 갤러리
+
+ex15.html - 이미지 스프라이트
+웹페이지에 필요한 이미지를 단일 이미지 하나로 서버에서 가져와서 
+브라우저에서 잘라서 사용하겠다.
+[			]
+ex05- 이미지 가운데 정렬 
+ex12 디테일
+
+13

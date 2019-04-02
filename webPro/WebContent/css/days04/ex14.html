@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<style type="text/css">
+div.gallery{
+	margin: 5px;
+	border: solid 1px #ccc;
+	float: left;
+/* 	width: 180px; */
+	width: 100%;	
+	
+}
+
+div.gallery img{
+	width: 100%;
+	height: auto;
+
+}
+
+div.gallery:hover{
+	border: solid 1px #777;
+}
+
+div.desc{
+	padding: 15px;
+	text-align: center;
+}
+</style>
+<style type="text/css">
+*{
+	box-sizing: border-box; /* padding, margin 모두 width에 맞춰짐 */
+}
+
+.clearfix{
+	content: "";
+	clear: both;
+	display: table;
+}
+
+.response{
+	border : solid 1px red;
+	padding: 0 6px;
+	float: left;
+	width: 24.99%;
+}
+
+@media only screen and ( max-width:700px){
+	.response{
+		margin: 6px 0;
+		width: 49.9999%;
+	}
+
+}
+
+
+@media only screen and ( max-width:500px){
+	.response{
+	
+		width: 100%;
+	}
+
+}
+</style>
+</head>
+<body>
+<h3>이미지갤러리 + 반응형 웹</h3>
+
+<div class="response">
+<div class="gallery">
+<a href="/webPro/css/images/img_5terre.jpg" target="_blank">
+<img alt="" src="/webPro/css/images/img_5terre.jpg" width="600" height="400">
+</a>
+<div class="desc">Add a description of the image here</div>
+</div>
+</div>
+
+<div class="response">
+<div class="gallery">
+<a href="/webPro/css/images/img_forest.jpg" target="_blank">
+<img alt="" src="/webPro/css/images/img_forest.jpg" width="600" height="400">
+</a>
+<div class="desc">Add a description of the image here</div>
+</div>
+</div>
+
+<div class="response">
+<div class="gallery">
+<a href="/webPro/css/images/img_lights.jpg" target="_blank">
+<img alt="" src="/webPro/css/images/img_lights.jpg" width="600" height="400">
+</a>
+<div class="desc">Add a description of the image here</div>
+
+</div>
+</div>
+
+<div class="response">
+<div class="gallery">
+<a href="/webPro/css/images/img_mountains.jpg" target="_blank">
+<img alt="" src="/webPro/css/images/img_mountains.jpg" width="600" height="400">
+</a>
+<div class="desc">Add a description of the image here</div>
+
+</div>
+</div>
+
+<div class="clearfix"></div>
+
+<p>Lorem ipsum dolor sit amet.</p>
+<p>Aliquid aspernatur odio corporis quia.</p>
+<p>Enim dolorum quis obcaecati et.</p>
+<p>Perspiciatis atque fugit accusantium ut?</p>
+<p>Cum necessitatibus delectus similique iusto.</p>
+<p>Numquam dolorem iusto voluptatum sapiente?</p>
+<p>Cum eum laboriosam repellat quos.</p>
+<p>Quas maiores quis repellat quaerat.</p>
+<p>Illum maiores repellendus eius nisi?</p>
+<p>Earum assumenda nulla magnam vitae!</p>
+
+</body>
+</html>

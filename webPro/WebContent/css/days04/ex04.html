@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<style type="text/css">
+* {
+	box-sizing: border-box;
+}
+
+.header, .footer {
+	background: gray;
+	color: white;
+	padding: 15px;
+}
+
+.column {
+	float: left;
+	padding: 15px;
+}
+
+.menu {
+	width: 25%;
+}
+
+.content {
+	width: 75%;
+}
+
+.clearfix::after {
+	content: "";
+	clear: both;
+	display: table; /* 의미이해 */
+}
+
+.menu ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.menu ul li {
+	padding: 8px;
+	background: #33b5e5;
+	color: white;
+}
+
+.menu ul li:hover {
+	background: #0099cc;
+}
+</style>
+</head>
+<body>
+
+	<div class="header">
+		<h1>Header</h1>
+	</div>
+	<div class="clearfix">
+		<div class="column menu">
+			<ul>
+				<li class="active">Lorem.</li>
+				<li>Quidem!</li>
+				<li>Suscipit.</li>
+				<li>Cum.</li>
+			</ul>
+
+		</div>
+
+		<div class="column content">
+			<h1>lorem</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+				Officia officiis dolor nam libero dolorum vero repellat suscipit
+				rerum mollitia corporis quas ratione praesentium dolorem ipsum
+				delectus placeat ea sint velit?</p>
+			<p>Pariatur modi animi aliquid iste harum itaque dolorem enim
+				aspernatur distinctio officia tempore deserunt provident explicabo
+				vero ut repellendus asperiores et ad vitae illum praesentium hic
+				iure eos veniam fugiat.</p>
+		</div>
+	</div>
+	<div class="footer">
+		<h1>footer</h1>
+	</div>
+
+
+</body>
+</html>
