@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<style type="text/css">
+body {
+	counter-reset: section; /* int i = 0;    i는 section*/
+}
+
+div {
+	margin: 5px;
+}
+/* :: 가상요소 */
+div::before {
+	counter-increment: section; 
+	content: counter(section);
+	background: black;
+	color: white;
+	margin-right: 16px;
+	padding: 1px 10px;
+	border-radius: 50%;
+}
+
+div::after {
+	content: "tutorial";
+	color: red;
+	font-style: italic;
+}
+
+</style>
+</head>
+<body>
+<div>java</div>
+<div>oracle</div>
+<div>jdbc</div>
+<div>html5</div>
+<div>css3</div>
+
+<div>javascript</div>
+<div>jquery</div>
+<div>open API</div>
+</body>
+</html>

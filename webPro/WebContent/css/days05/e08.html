@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<style type="text/css">
+p {
+	padding: 20px;
+	width: 300px;
+	height: 150px;
+}
+
+p:first-child {
+	background-color: green;
+	border-radius: 15px 50px 30px 5px;
+	/* left-top 부터 시계방향 */
+}
+
+p:last-child {
+	border: solid 2px #73da21;
+	border-radius: 25px;
+}
+
+p:nth-child(2) {
+	border-radius: 0 50%;
+	background: url("/webPro/css/images/paper.gif") left top repeat;
+}
+</style>
+</head>
+<body>
+	<p>Lorem ipsum.</p>
+	<p>Quae vel.</p>
+	<p>Iusto quaerat.</p>
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<style type="text/css">
+input[type='text']{
+	width: 130px;
+	box-sizing: border-box; 
+	border: soild 1px #ccc;
+	border-radius: 4px;
+	font-size: 16px;
+	/* background-color: white;
+	background-image: url("/webPro/css/images/searchicon.png");
+	background-repeat: no-repeat;
+	background-position: right; */
+	background: white url("/webPro/css/images/searchicon.png") no-repeat right;
+	padding: 12px 40px 12px 20px;
+	
+	/* CSS 2D , 3D효과 */
+	transition:width 1s; /*width 속성값이 바뀔때 1초동안 전환하라  */
+	-webkit-transition:width 1s;
+}
+input[type='text']:focus{
+	width: 100%;
+}
+/*  */
+textarea {
+	width: 100%;
+	height: 150px;
+	border-radius: 5px;
+	border: solid 2px #ccc;
+	background: #f8f8f8;
+	font-size: 16px;
+	padding: 12px 20px;
+	resize: none;
+}
+
+*{
+	box-sizing: border-box;
+}
+
+
+.button{
+	background: #4caf50;
+	border: none;
+	color: white;
+	padding: 16px 32px;
+	margin: 4px 2px;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.circlebutton{
+	border-radius: 15px;
+}
+
+
+</style>
+</head>
+<body>
+<!-- 부트스트랩 테이블 -->
+<table class="table table-hover" style="width: 500px ; text-align: center; margin: 0 auto;">
+<thead class="thead-dark">
+	<tr >
+		<th>Lorem.</th>
+		<th>Impedit?</th>
+		<th>Ex?</th>
+		<th>Minus.</th>
+		<th>Nihil.</th>
+	</tr>
+	</thead>
+	<tr>
+		<td>Lorem.</td>
+		<td>Harum.</td>
+		<td>Magnam.</td>
+		<td>Culpa!</td>
+		<td>Magnam.</td>
+	</tr>
+	<tr>
+		<td>Lorem.</td>
+		<td>Sed!</td>
+		<td>Porro.</td>
+		<td>Numquam.</td>
+		<td>Id.</td>
+	</tr>
+	<tr>
+		<td>Lorem.</td>
+		<td>Nostrum.</td>
+		<td>Minus!</td>
+		<td>Voluptas!</td>
+		<td>Ut.</td>
+	</tr>
+	<tr>
+		<td>Lorem.</td>
+		<td>Cum.</td>
+		<td>Impedit?</td>
+		<td>Ipsum.</td>
+		<td>Assumenda.</td>
+	</tr>
+	<tr>
+		<td>Lorem.</td>
+		<td>Similique!</td>
+		<td>Ducimus.</td>
+		<td>Saepe!</td>
+		<td>Sit.</td>
+	</tr>
+	<tr>
+		<td>Lorem.</td>
+		<td>Pariatur!</td>
+		<td>Ducimus.</td>
+		<td>Quibusdam?</td>
+		<td>Expedita.</td>
+	</tr>
+	<tr>
+		<td>Lorem.</td>
+		<td>Dolorum.</td>
+		<td>Nihil?</td>
+		<td>Aut!</td>
+		<td>Repudiandae.</td>
+	</tr>
+	<tr>
+		<td>Lorem.</td>
+		<td>Cumque.</td>
+		<td>Nobis.</td>
+		<td>Maxime.</td>
+		<td>Quis.</td>
+	</tr>
+	<tr>
+		<td>Lorem.</td>
+		<td>Quam.</td>
+		<td>Quas!</td>
+		<td>Obcaecati.</td>
+		<td>Facilis!</td>
+	</tr>
+</table>
+
+<form action="">
+<input type="text" name="search" id="search"
+	autocomplete="off" placeholder="Search...">
+<br><br>
+
+<textarea rows="" cols="">Lorem ipsum dolor.
+</textarea>
+<br><br>
+<input type="button" class="button circlebutton" value="Button">
+<input type="reset" class="button" value="reset">
+<input type="submit" class="button" value="submit">
+<span class="button">button</span>
+<a href="#" class="button">button</a>
+<button type="button" class="button">button</button>
+
+<br><br>
+<input type="button" class="btn-info active" value="Button">
+<input type="reset" class="btn-info disabled" value="reset">
+<input type="submit" class="btn" value="submit">
+<span class="btn">button</span>
+<a href="#" class="btn">button</a>
+<button type="button" class="btn">button</button>
+
+
+
+</form>
+</body>
+</html>

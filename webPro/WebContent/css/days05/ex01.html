@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<style type="text/css">
+ul#navlist{
+	position: relative; /* 자식들이 기준점 잡을때 사용 */
+	
+}
+ul#navlist li{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	position: absolute;
+	top: 0;
+	width: 44px;
+	background-image: url(/webPro/css/images/img_navsprites_hover.gif);
+}
+ul#navlist li, ul#navlist a{
+	display: block;  /* a태그 */
+	height: 44px;
+	
+}
+
+#home{
+	left: 0;
+	background-position: 0 0;
+}
+/* 오버효과 */
+#home:hover{
+	left: 0;
+	background-position: 0 -46px;
+}
+
+#prev{
+	left: 100px;
+	background-position: -46px 0; 
+
+}
+#next{
+	left: 200px;
+	background-position: -90px 0; 
+
+}
+</style>
+</head>
+<body>
+<ul id="navlist">
+	<li id="home"><a href="#"></a></li>
+	<li id="prev"><a href="#"></a></li>
+	<li id="next"><a href="#"></a></li>
+	
+</ul>
+</body>
+</html>

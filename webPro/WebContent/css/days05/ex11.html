@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<style type="text/css">
+div {
+	border: solid 15px black;
+	padding: 35px;
+	background-image: url("/webPro/css/images/img_flwr.gif");
+	background-repeat: no-repeat;
+}
+</style>
+<style type="text/css">
+#box1 {
+	background-origin: padding-box;
+} /*default     padding 왼쪽상단  */
+#box2 {
+	background-origin: border-box;
+} /* border 왼쪽상단 */
+#box3 {
+	background-origin: content-box;
+} /* 내용 왼쪽상단 */
+</style>
+<style type="text/css">
+span {
+	border: black 15px dotted;
+	padding: 35px;
+	background-color: yellow;
+	display: block;
+	margin: 10px;
+}
+
+#demo1 {
+	background-clip:border-box;
+}
+
+#demo2 {
+	background-clip: content-box;
+}
+
+#demo3 {
+	background-clip: padding-box;
+}
+</style>
+
+</head>
+<body>
+
+	<span id="demo1">
+		<h1>Lorem.</h1>Lorem ipsum dolor sit amet, consectetur adipisicing
+		elit. In officiis.
+	</span>
+	<span id="demo2">
+		<h1>Laboriosam.</h1>Cum repellendus in expedita eum hic ut eligendi!
+		Numquam dolorem.
+	</span>
+	<span id="demo3">
+		<h1>Nobis?</h1>Veniam voluptas fuga dolorem commodi neque quidem
+		repellat iusto nostrum!
+	</span>
+
+
+	<hr>
+	<div id="box1">
+		<h1>Lorem</h1>
+		ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit hic
+		illo asperiores modi voluptatem eius non odit officiis dolore
+		perspiciatis ut tenetur corporis. Temporibus similique dolore nobis
+		quae odio! Voluptas?
+	</div>
+	<br>
+	<div id="box2">
+		<h1>Quos</h1>
+		ullam aut ipsa dolores dolor numquam consequuntur sequi possimus
+		temporibus nihil vitae consectetur quam. Repellat quasi odit
+		recusandae itaque rerum similique incidunt eos ullam! Neque rerum
+		magnam asperiores est?
+	</div>
+	<br>
+	<div id="box3">
+		<h1>Consectetur</h1>
+		a provident sunt id sint voluptate officia amet ut voluptatibus illum
+		inventore ex rerum perspiciatis. Assumenda doloremque officiis quis
+		facere nisi odio nihil ratione mollitia adipisci sed iure deleniti!
+	</div>
+</body>
+</html>

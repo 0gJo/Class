@@ -1,0 +1,85 @@
+ex01.html
+단일 이미지에 들어이쓴 이미지 모음을 이미지 스프라이트라고 한다.
+오른쪽 - / 아래 - 
+
+ex02.html - css 속성선택자**(jQuery 객체로 사용)
+input[type]
+: input태그 중 type 속성을 가지고 있는(명시된)~ 
+
+? title속성값에 info 특정[단어]를 포함한다면 선택자로 선택해서 css주겠다.
+- input[title~="info"]
+(
+
+input[title^="info"]
+input[title$="info"]
+
+? title속성값에 문자열 "nf"를 포함한다면, 선택자로 사용
+input[title*="nf"]
+
+[class|=top]{  /* top 단일단어 (=) top- (하이픈) 전체단어 */
+( 원래는 공백있을때만 단어로 인식, but '-' 까지 단어로 인식 )
+
+ex03.html - css form(입력양식)
+부트스트랩(bootstrap)
+- 외부 css파일
+어떠한 클래스의 css를 미리 정의해 놓은 
+
+ex04.html - css 카운터 매기기
+css 카운터는 변수와 같은 의미이다.
+사용횟수를 추적하여 증가 될 수 있다.
+속성 
+counter-reset : 카운터 재설정
+counter-increment : 카운터 값 증가
+content : 생성된 내용 삽입
+counter() or counters() :  요소에 카운트한 값을 추가
+---> 1,2,3,4,5,.. 순위 값 설정가능
+
+ex06.html - 반응형 웹 CSS
+*header
+*topnav
+*row
+	    left column float:left				right column float:left
+	    
+card TITLE HEADING				About Me
+card TITLE HEADING				Popular Post
+											Follow Me
+											
+*Footer clear: both
+
+
+
+ex07.html - css 단위 / 우선순위
+
+우선순위
+
+인라인cCS>요소명.아이디명>아이디명>오소명.클래스명>클래스명 > 태그(요소)명
+
+ex09.html
+border에도 image 줄수 ㅣㅆ다...
+1. 이미지 경로
+2. 이미지를 슬라이스할 위치 
+3. 중간 섹션을 반복하거나 늘려야하는지 정의 부분(round, stretch)
+
+ex10.html - css 여러개 이미지 주기 / background-size
+
+background-size: cover; // 영역을 완전히 이미지로 채움
+						  : contain; // 늘릴 수 있는만큼 가로,세로 늘리기 
+현재페이지 전체 배경줄떄는 -> html 태그에..
+
+ex11.html - background-origin
+background-clip
+background-attachment : fixed == display : fixed;
+
+ex12.html - gredient 효과
+background-image: linear-gradient(방향, start색1, 색2, ... );
+방향 default : to bottom
+background-image: radial-gradient(원점, 원점색, 색,... );
+
+ex13.html - css 그림자 효과  (텍스트/box)
+
+
+
+
+
+
+

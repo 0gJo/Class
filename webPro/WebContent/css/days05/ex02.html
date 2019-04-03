@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<title>Insert title here</title>
+<style type="text/css">
+
+input {
+	width: 300px;
+	border: solid 1px #ddd;
+}
+
+input:focus {
+	background-color: yellow;
+}
+/* 태그선택자[속성(=속성값)]    */
+
+input[type]{  /* */
+	width: 400px;
+}
+
+input[type="text"]{
+	border-color: red;
+}
+
+input[title~="info"]{
+	border-color: green;
+}
+
+input[title^="info"]{
+	border-color: blue;
+}
+
+input[title$="info"]{
+	border-color: red;
+}
+
+
+
+
+</style>
+<style type="text/css">
+[class|=top]{  /* top 단일단어 (=) top- (하이픈) 전체단어 */
+	background-color: aqua;
+}
+
+</style>
+
+</head>
+<body>
+
+<h1 class="topheader">Lorem ipsum.</h1>
+<p class="top-text">Lorem ipsum.</p>
+<p class="topcontent">Lorem ipsum.</p>
+
+<hr>
+<input  autofocus="autofocus" /><br />
+<input  /><br />
+<input type="text" title="info" /><br />
+<input type="text" title="student info" /><br />
+<input type="text" title=" info " /><br />
+<input type="password" title="student" /><br />
+
+<script type="text/javascript">
+
+	$('[class|=top]').click( function () {
+		$(this).hide(1000);
+	});
+
+</script>
+</body>
+</html>
