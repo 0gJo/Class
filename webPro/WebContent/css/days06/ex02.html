@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style type="text/css">
+p {
+	width: 200px;
+	border: solid 1px black;
+	white-space: nowrap; /* 자동개행 x */
+	/* 넘치는 내용 숨기기 */
+	overflow: hidden;
+}
+p.ex01{
+	/* 숨겨진 내용 (content) 어떻게 할지?*/
+	text-overflow: clip;
+}
+
+p.ex02{
+	text-overflow: ellipsis;
+}
+
+p:hover {
+	overflow: visible;
+}
+</style>
+<style type="text/css">
+div {
+	width: 140px;
+	border: solid  1px red;
+	word-break : keep-all; /* default값 */
+}
+
+div.box1{
+	word-break : break-all;
+}
+
+div.box2{
+	word-break : break-all;
+}
+
+div.box3{
+	/* word-break : break-all; */
+	word-wrap: break-word;
+}
+</style>
+
+</head>
+<body>
+<div class="box1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque illo!</div>
+<br>
+<div class="box2">Delectus corporis tempora sapiente est laudantium laboriosam id eum itaque.</div>
+<br>
+<div class="box3">Delectus corporis tempora sapienteaaaaaaaaaaaaaaaaaaa est laudantium laboriosam id eum itaque.</div>
+<br>
+
+
+<p class="ex01">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam sint.</p>
+<p class="ex02">Saepe ullam nam reiciendis autem neque dolor eos dicta blanditiis?</p>
+
+</body>
+</html>

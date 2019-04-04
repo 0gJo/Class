@@ -3,7 +3,25 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function () {
+		
+		var d = new Date();
+		var year = d.getFullYear();
+		var month = d.getMonth() + 1;
+		var date = d.getDate();
+		
+		$(".card>.header>h1").text(date);  //text() == print
+		$(".container>p").text(year+"년"+" "+month+"월");
+		
+	});
+
+
+</script>
+
 <style type="text/css">
 div.card{
 	width: 250px;
@@ -23,12 +41,17 @@ div.container{}
 <body>
 <div class="card">
 	<div class="header">
-		<h1>1</h1>
+		<h1></h1>
 	</div>
 
 <div class="container">
-	<p>4.3 2019</p>
+	<p></p>
 </div>
 </div>
+
+
+
+
+
 </body>
 </html>

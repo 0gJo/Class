@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style type="text/css">
+div {
+	border: solid 1px #ddd;
+	
+}
+
+.news{ /* 다중컬럼만들기 */
+	column-count: 3;
+	/* 열과 열사이의 간격 설정 */
+	column-gap: 10px;
+	column-rule-style: solid; /* 열 line */
+	column-rule: solid 1px #ddd;
+}
+
+h2{
+	column-span: all;
+}
+
+</style>
+</head>
+<body>
+<div class="news">
+
+<h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae doloribus.</h2>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+Qui aliquid doloribus dolore dicta quae mollitia voluptates veritatis nesciunt 
+ipsa adipisci inventore ex ratione magnam vitae deleniti incidunt ipsum. Ut odio!
+</div>
+
+<div >
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+Qui aliquid doloribus dolore dicta quae mollitia voluptates veritatis nesciunt 
+ipsa adipisci inventore ex ratione magnam vitae deleniti incidunt ipsum. Ut odio!
+</div>
+</body>
+</html>

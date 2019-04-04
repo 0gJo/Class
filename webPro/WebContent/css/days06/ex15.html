@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style type="text/css">
+.tooltip{
+	position: relative; /* 툴팁 위치 기준점  */
+	display: inline-block;  /* span 태그에 width, height주려고  전이..  */
+	border: dotted 1px black;
+}
+.tooltip .tooltiptext{
+/* 	visibility: hidden; */
+	width: 120px;
+	/* height 내용물에 따라 변하도록 */
+	background-color: black;
+	color: #fff;
+	text-align: center;
+	border-radius: 6px;
+	padding: 5px 0;
+	
+	
+	
+	position: absolute;
+	z-index: 1; /* 다른 내용물들 위에 올라가도록  */
+	bottom: 150%; /* div높이*1.5  */ /* 50%는 삼각형 고려해서.. */
+	left: 50%;
+	margin-left: -60px;
+}
+
+.tooltip .tooltiptext::after{
+	content: "";
+	
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	margin-left: -5px;
+	
+	
+	border-width: 5px;
+	border-style: solid;
+	border-color: black transparent transparent transparent;
+
+	
+}
+
+</style>
+</head>
+<body style="text-align: center;">
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+
+<div class="tooltip">Hover over me
+<span class="tooltiptext">  <!-- 안에 넣은 이유: : div 기준으로 position 잡기위해-->
+김길환반장
+</span>
+</div>
+</body>
+</html>

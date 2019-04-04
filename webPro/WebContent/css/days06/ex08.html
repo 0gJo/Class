@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style type="text/css">
+div {
+	width: 100px;
+	height: 100px;
+	background-color: red;
+	margin: 2px;
+	transition : width 2s , height 2s, 3s;
+	
+	/* 전환될때 속도 곡선(속도) 지정 */
+	transition-timing-function:linear;
+	
+	
+	transition-timing-function:ease-in;
+	transition-timing-function:ease-out;
+	transition-timing-function:ease;
+	
+	
+	display: inline-block;
+}
+
+div:hover{
+/* 	width: 100%;*/
+ 	width: 150px;
+ 	height: 150px;
+ 	transform: rotate(360deg);
+ /* 	transform-origin : 100% 100%; */
+ 
+ }
+</style>
+</head>
+<body>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div> 
+</body>
+</html>

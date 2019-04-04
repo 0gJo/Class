@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style type="text/css">
+.pagination{
+	display: inline-block; /* a 태그들도 inline-block모드가 됨 */
+}
+
+.pagination a{
+	color: black;
+	float: left;
+	padding: 8px 16px;
+	text-decoration: none;
+	border: solid 1px #ddd;
+}
+
+.pagination a.active{
+	background-color: green;
+	color: white;
+	border: solid 1px green;
+}
+
+.pagination a:first-child {
+	border-top-left-radius: 7px;
+	border-bottom-left-radius: 7px;
+}
+
+.pagination a:last-child {
+	border-top-right-radius: 7px;
+	border-bottom-right-radius: 7px;
+}
+
+.pagination a:hover:not(.active){
+	background-color: #ddd;
+	
+}
+
+.center{
+	text-align: center; /* text가 아니어도 내용물 -align */
+}
+</style>
+<style type="text/css">
+.paging{
+	display: inline-block;
+}
+.paging a{
+	color: black;
+	float: left;
+	padding: 8px 16px;
+	text-decoration: none;
+	border: solid 1px #ddd;
+}
+
+.paging a:hover{
+	background-color: green;
+	color: white;
+	border: solid 1px green;
+	
+	transition:background-color 3s;
+}
+
+</style>
+</head>
+<body>
+<div class="paging">
+
+<a href="#">&lt;</a>
+<a href="#">&gt;</a>
+</div>
+
+<hr>
+<div class="center">
+<div class="pagination">
+	<a href="#">&laquo;</a>
+	<a href="#">1</a>
+	<a href="#">2</a>
+	<a href="#" class="active">3</a>
+	<a href="#">4</a>
+	<a href="#">5</a>
+	<a href="#">6</a>
+	<a href="#">7</a>
+	<a href="#">8</a>
+	<a href="#">9</a>
+	<a href="#">10</a>
+	<a href="#">&raquo;</a>
+</div>
+</div>
+</body>
+</html>
