@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style type="text/css">
+.spn {
+	color: red;
+}
+</style>
+</head>
+<body>
+	<script type="text/javascript">
+
+	function turnon(){
+		
+		document.getElementById('pic_bulb').src=
+			"/webPro/javascript/images/pic_bulbon.gif";
+	}
+	
+	function turnoff() {
+		
+		document.getElementById('pic_bulb').src=
+			"/webPro/javascript/images/pic_bulboff.gif";
+	}
+	
+	
+	var sw=false;
+	
+	function powerOnOff() {
+		if (!sw) { //true
+			// text : off
+			document.getElementById('powerbutton').innerText="[TurnOff]";
+			// img : off
+			document.getElementById('pic_bulb').src=
+				"/webPro/javascript/images/pic_bulboff.gif";
+		
+			
+		} else {
+			// text : 
+			document.getElementById('powerbutton').innerText="[TurnOn]";
+			// img : off
+			document.getElementById('pic_bulb').src=
+				"/webPro/javascript/images/pic_bulbon.gif";	
+		}
+		
+		sw=!sw;
+			
+	}
+
+
+
+
+</script>
+
+
+
+
+	<button onclick="turnon();">Turn On</button>
+
+	<button id="powerbutton" onclick="powerOnOff();">[Turn On]</button>
+
+	<button onclick="turnoff();">Turn Off</button>
+
+
+	<img id="pic_bulb" alt="" onmouseover="turnon();"
+		onmouseout="turnoff();"
+		src="/webPro/javascript/images/pic_bulboff.gif">
+		
+		
+
+
+	<hr>
+	<!-- window :자바스크립트내 내장객체 -->
+	<!-- doument : 내장객체 -->
+	<button type="button" onclick="window.alert();">Click me</button>
+
+
+
+	<button type="button"
+		onclick="document.getElementById('demo').innerText=''">Click
+		me</button>
+	<script type="text/javascript">
+		function test() {
+			var message = document.getElementById('txtMsg').value;
+			message = "<span class='spn'>"+message+"<span>";
+			document.getElementById('demo').innerHTML = message;
+			/* inner: 태그와 태그사이 */
+		}
+	</script>
+	<hr>
+	메시지 :
+	<input type="text" id="txtMsg" autofocus placeholder="전송할 메시지 입력...">
+
+
+	<button type="button" onclick="test();">Click me</button>
+
+
+	<p id="demo"></p>
+</body>
+</html>

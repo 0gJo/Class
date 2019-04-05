@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style type="text/css">
+p:nth-child(3) { /* 3번쨰 중에 p인것 */
+	/* background-color: red; */
+}
+
+p:nth-of-type(3) { /*p 중에 3번째 인 것 */
+/* 	background-color: red; */
+}
+
+p:nth-last-of-type(1) {
+/* 	background-color: green; */
+}
+</style>
+
+<style type="text/css">
+.box {
+	border: solid 2px green;
+}
+
+p:only-of-type {
+	background-color: aqua;
+}
+
+p:only-child {
+	background-color: aqua;
+}
+
+</style>
+
+<style type="text/css">
+input:optional:not([type=submit]){ /*<-> required  */
+	background-color: yellow;
+}
+
+::placeholder{
+	color: red;
+}
+
+input:read-only{
+	background-color: black;
+}
+
+
+
+</style>
+</head>
+<body>
+<form action="">
+
+id : <input type="text" required placeholder="id input...."><br>
+pwd : <input type="password" required><br>
+email : <input type="email"  readonly="readonly"  value="aa@naver.com">
+
+
+<input type="submit">
+</form>
+
+
+<hr>
+	<p>Lorem ipsum.</p>
+	<p>Numquam molestias?</p>
+	<div>Lorem ipsum.</div>
+	<div>Commodi perferendis.</div>
+	<p>Cumque impedit?</p>
+	<p>Asperiores soluta?</p>
+	<p>Eligendi et?</p>
+	<p>Quod ad.</p>
+
+	<hr>
+
+	<div class="box">
+		<p>Lorem.</p>
+	</div>
+	<div class="box">
+		<div>sub-div</div>
+		<p>Lorem.</p>
+		<div>sub-div</div>
+	</div>
+
+
+</body>
+</html>

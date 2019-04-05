@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style type="text/css">
+* {
+	box-sizing: border-box;
+}
+
+#myVideo {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	min-width: 100%;
+	min-height: 100%;
+}
+
+.content {
+	position: fixed;
+	top: 0;
+	background-color: rgb(0, 0, 0, 0.5);
+	color: #f1f1f1;
+	width: 100%;
+	padding: 2px;
+}
+
+#btnpause {
+	width: 200px;
+	font-size: 18px;
+	padding: 10px;
+	border: none;
+	background-clip: #000;
+	color: #fff;
+	cursor: pointer;
+}
+
+#btnpause:hover {
+	background-color: black;
+}
+</style>
+</head>
+<body>
+	<video id="myVideo" src="/webPro/css/images/rain.mp4" autoplay loop
+		muted>
+		<!-- html5 요소-->
+		your browser does not support html5 video element.
+	</video>
+	<div class="content">
+		<h1>Lorem.</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi
+			ipsum alias repellat totam debitis velit.</p>
+		<button id="btnpause" onclick="video_play();">Pause</button>
+	</div>
+	<script type="text/javascript">
+		
+	function video_play() {
+		
+		var videoElement = document.getElementById("myVideo");
+		var btnpauseElement =document.getElementById("btnpause");
+	
+			if (videoElement.paused ) {
+				videoElement.play();
+				btnpauseElement.innerText = "pause";
+
+			} else {
+				videoElement.pause();
+				btnpauseElement.innerText = "play";
+				
+			}
+		
+	}
+	
+	
+	
+			
+			
+		
+	</script>
+</body>
+</html>

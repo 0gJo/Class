@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style type="text/css">
+a:active { /* 가상클래스 */
+	background-color: yellow;
+}
+
+a::before {
+	visibility: hidden;
+	content: url("/webPro/css/images/mist.jpg");
+}
+
+a::after { /* 가상요소 */
+	content: "~~~";
+	color: red;
+}
+
+a:hover a::before {
+	visibility: visible;
+}
+</style>
+
+<style type="text/css">
+input:checked {
+	height: 50px;
+	width: 50px;
+}
+/* checkbox, radio, button, option에 사용하는 가상 클래스 */
+input:default {
+	box-shadow: 0 0 2px 2px red;
+}
+
+input[type=text]:enabled {
+	background-color: green;
+}
+
+input[type=text]:disabled {
+	background-color: yellow;
+}
+</style>
+<style type="text/css">
+p {
+	border: solid 1px gray;
+	width: 200px;
+}
+
+p:empty{
+	height: 20px;
+	background-color: red;
+}
+
+
+</style>
+
+</head>
+<body>
+
+<p></p>
+<p>Esse.</p>
+<p>Similique.</p>
+
+<hr>
+	<form action="">
+		f name: <input type="text" disabled="disabled"> l name:
+		<input type="text"> email : <input type="text">
+		<hr>
+		<input type="checkbox" checked="checked" /> email 수신합니다. <br>
+		<input type="radio" name="gender" checked="checked">Male<br>
+		<input type="radio">Female<br>
+	</form>
+	<hr>
+	<a href="#">Lorem.</a>
+	<br>
+	<a href="#">Aliquam.</a>
+	<br>
+	<a href="#">Aliquam.</a>
+
+</body>
+</html>

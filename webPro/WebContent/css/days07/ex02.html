@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+/*jQuery  */
+
+$(document).ready(function(){
+	
+	$("#spn_open").click(function(){
+		
+		$("#myNav").css("width","100%");
+		
+	});
+	
+	$(".closebtn").click(function(){
+		
+		$("#myNav").css("width","0%");
+		
+	})
+	
+	
+	
+});
+
+
+	
+
+</script>
+<style type="text/css">
+body {
+	font-family: 'Lato', sans-serif;
+}
+
+.overlay {
+	height: 100%;
+	width: 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	background-color: rgba(0, 0, 0, 0.9);
+	overflow-x: hidden;
+	transition: 0.5s;
+}
+
+.overlay a {
+	padding: 8px;
+	text-decoration: none;
+	font-size: 36px;
+	color: #818181;
+	display: block;
+	padding: 8px;
+}
+
+.overlay a:hover, .overlay a:focus {
+	color: #f1f1f1;
+}
+
+.overlay .closebtn {
+	position: absolute;
+	top: 20px;
+	right: 45px;
+	font-size: 60px;
+}
+
+.overlay-content {
+	position: relative;
+	top: 25%;
+	width: 100%;
+	text-align: center;
+	margin-top: 30px;
+}
+</style>
+</head>
+<body>
+	<div id="myNav" class="overlay">
+		<a href="javasript:void(0)" class="closebtn">&times;</a>
+		<div class="overlay-content">
+			<a href="#">Java</a> <a href="#">Jsp</a> <a href="#">Html</a> <a
+				href="#">Css</a>
+		</div>
+	</div>
+	<h2>FullScreen Overlay Nav</h2>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum
+		ea hic nostrum ad expedita explicabo non harum dolores sequi assumenda
+		porro necessitatibus excepturi minima. Ea voluptatibus temporibus
+		accusantium animi vel!</p>
+	<span id="spn_open" style="font-size: 30px; cursor: pointer;">
+		<!-- on~ : 속성값 = 자바스크립트 코딩 --> &#9776; open
+	</span>
+
+	<script type="text/javascript">
+	function openNav() {
+		// style ="width:100%" -> 자바스크립트 처리
+		document.getElementById("myNav").style.width="100%";
+	}
+
+	function closeNav() {
+		// style ="width:100%" -> 자바스크립트 처리
+		document.getElementById("myNav").style.width="0%";
+	}
+	
+</script>
+
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style type="text/css">
+
+
+
+p:first-child { /* 첫번째 자식들  and p 태그 */
+	/* border: solid 2px red; */
+	
+}
+
+p:first-of-type {
+	border: solid 2px red;
+}
+
+:last-child {
+/* 	border: solid 2px blue;  */
+}
+
+p:last-child {
+	border: solid 2px blue; 
+}
+
+p:last-of-type{
+	border: solid 2px blue; 
+}
+
+#demo{
+	width: 300px;
+	border: solid 1px gray;
+	word-spacing: 
+}
+
+#demo:first-letter {
+	font-size: 50px;
+	color: red;
+}
+
+#demo:first-line {
+	text-decoration: line-through;
+}
+
+</style>
+
+<style type="text/css">
+input:in-range{
+	background-color: green;
+}
+</style>
+
+<style type="text/css">
+input:invalid{
+	border: solid 2px red;
+}
+
+</style>
+<style type="text/css">
+:not(p){
+	border: solid 1px blue;
+}
+
+</style>
+</head>
+<body>
+
+email : <input type="email">
+<br>
+<form action="">
+정수 : 
+<input type="number" min="1" max="10" value="5">
+<input type="submit" value="send">
+</form>
+
+<hr>
+<div id="demo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+Obcaecati esse corporis amet molestiae consequatur tempora in reiciendis!
+ Dolorem illum fugit facilis laborum dolor ab fuga quia labore placeat quod adipisci.
+ </div>
+
+
+
+
+
+
+
+
+<hr>
+<table border="1">
+<thead>
+<tr>
+	<th>Lorem.</th>
+	<th>Odio.</th>
+	<th>Ullam.</th>
+</tr>
+</thead>
+
+
+<tr>
+	<td>Lorem.</td>
+	<td>Itaque?</td>
+	<td>Quos!</td>
+</tr>
+<tr>
+	<td>Lorem.</td>
+	<td>At!</td>
+	<td>Reiciendis!</td>
+</tr>
+<tr>
+	<td>Lorem.</td>
+	<td>A.</td>
+	<td>Rem.</td>
+</tr>
+<tr>
+	<td>Lorem.</td>
+	<td>Commodi!</td>
+	<td>Molestiae.</td>
+</tr>
+<tr>
+	<td>Lorem.</td>
+	<td>Sapiente.</td>
+	<td>Suscipit.</td>
+</tr>
+
+</table>
+
+
+<hr>
+	<p>1 Lorem ipsum.</p>
+
+	<div>
+		<div>div box</div>
+		<p>div 1. Lorem.</p>
+		<p>div 2. Illo.</p>
+		<p>div 3. Inventore.</p>
+	</div>
+
+	<p>2 Impedit corporis!</p>
+	<p>3 Sunt laudantium.</p>
+</body>
+</html>
