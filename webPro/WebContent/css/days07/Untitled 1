@@ -1,0 +1,31 @@
+ex01.html loading 처리이미지 / 평가하기
+
+ex02.html - jQuery
+
+ex03.html - 
+display : table-cell;
+
+ex04.html - html5 요소 - video
+
+ex05.html - css 전역변수 ( 유지보수..)
+
+ex06.html - css flexbox (layout)
+
+display: flex;
+1. flex-direction :  속성값     ;
+2. flex-wrap: wrap; /* 벗어났을때 항목 줄바꿈 지정  */
+3. justify-content : 항목 가로 정렬
+4. align-items: 항목 세로 정렬
+5.   align-content: space-between;  
+
+
+javascript
+script : 클라이언트 단에서 사용되는 웹 언어 (서버에서 실행되지 x)
+            '브라우저'가 언어를 시행
+ㄱ. html 내용을 동적으로 변경할 수 있다.
+ㄴ. html 속성값을 변경할 수 있다.
+ㄷ. html 스타일(css)을 변경할 수 있다.
+ㄹ. html 요소를 숨길 / 표시 할 수 도 있다.
+등등..
+
+ex01.html  

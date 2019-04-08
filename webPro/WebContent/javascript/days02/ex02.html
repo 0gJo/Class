@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>js로 data 출력하는 방법</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style type="text/css">
+</style>
+<script type="text/javascript">
+	function in_keyup() {
+		// js에서 이벤트 발생할때 사용자가 행동한 모든 이벤트를 알아올 때 -> event 객체를 사용함
+
+		/* if (event.keyCode==13||event.keyCode==8)  *//* Enter를 누르면 (Enter의 아스키 코드 값 =13) */
+		if ( event.shiftKey== true && event.altKey== true && event.keyCode == 13 ) {
+				
+				console.log( document.getElementById("in").value);
+			
+				document.getElementById("out").value /* innerHTML */
+				= document.getElementById("in").value;
+		}
+	}
+</script>
+
+</head>
+<body>
+
+	<input type="text" id="in" autofocus="autofocus" onkeyup="in_keyup();">
+	<br>
+	<input type="text" id="out">
+	<hr>
+	<p id="demo" onclick="alert('경고창 출력')">Click me</p>
+
+	<script type="text/javascript">
+		
+		/* document.getElementById("demo").innerText="출력"; */
+		document.getElementById("demo").innerHTML = "<span style='color:red'>출력</span>";
+	</script>
+	
+	<script type="text/javascript">
+		document.write();
+	</script>
+</body>
+</html>

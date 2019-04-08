@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style type="text/css">
+</style>
+</head>
+<body>
+	<input type="text" id="num1" autofocus="autofocus" onkeyup="Enter1()">
+	<select id="op" onselect="change();">
+		<option>+</option>
+		<!-- value 값 생략되면 option의 text 속성값과 동일 -->
+		<option>-</option>
+		<option>*</option>
+		<option>/</option>
+		<option>%</option>
+	</select>
+
+
+
+	<input type="text" id="num2" onkeyup="Enter2()"> 
+	<input type="text" id="result" disabled="disabled">
+
+
+	<script type="text/javascript">
+		var result = document.getElementById("result");
+		var num1 = document.getElementById("num1");
+		var num2 = document.getElementById("num2");
+
+		function Enter1() {
+			if (event.keyCode == 13) {
+				// 유효성 검사 
+
+				n1 = Number(num1.value);
+
+				var pattern = /[0-9]+/i;
+
+				if (!pattern.test(n1)) {
+					alert("~~~");
+					return;
+				}
+
+				document.getElementById("num2").focus(); //autofocus=true;
+
+			}
+		}
+
+		function Enter2() {
+			if (event.keyCode == 13) {
+
+				n2 = Number(num2.value);
+
+				if (isNaN(n2)) {
+
+					alert("잘못된 값입니다.");
+					num2.focus();
+					num2.select();
+
+					return;
+					
+				}
+
+				// disabled 해제 
+				//document.getElementById("result").disabled=false;
+
+				// 더한값 추가
+				
+				result.value = n1 + n2;
+
+				// String -> number 형변환 
+			}
+
+		}
+
+		function change() {
+
+			var cal = document.getElementById("op");
+			var sidx = cal.selectedIndex;
+
+			switch (sidx) {
+			case 0:
+				result.value = n1 + n2;
+				break;
+
+			case 1:
+				result.value = n1 - n2;
+
+				break;
+
+			case 2:
+				result.value = n1 * n2;
+				
+				
+				break;
+
+			case 3:
+				result.value = n1 / n2;
+				break;
+
+			case 4:
+				result.value = n1 % n2;
+				break;
+
+			}
+
+		}
+	</script>
+
+</body>
+</html>

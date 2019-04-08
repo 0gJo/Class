@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style type="text/css">
+
+</style>
+</head>
+<body onload="window_load();"> <!-- onload : 메모리에 올릴때 -->
+<button onclick="btn_click();">버튼1</button>
+<p id="demo">ㅇㅅㅇ</p>
+
+<script type="text/javascript">
+	var demo = document.getElementById("demo");
+	
+	function btn_click() {
+		//함수 안에 선언된 변수 (== 지역변수 )
+		// 함수 호출될 때 생성 -> 함수 완료시 삭제
+		
+		demo.innerHTML="btn_click()호출";
+		}
+
+	function window_load() { /* 대개 초기화 코딩, 생성자 선언 */
+		//alert("window_alert() 호출됨");
+		var result = sum(10,20);
+		/* document.write(result); */
+	
+	}
+
+	function sum(a, b) {
+		return a+b;
+	}
+	
+	
+	
+
+</script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style type="text/css">
+</style>
+</head>
+<body>
+
+	<input type="text" id="in" autofocus="autofocus" onkeyup="in_check()">
+	<select id="op" onchange="op_select()"> <!--event : onselect 아님..  -->
+
+		<option value="">+</option>
+		<option value="">-</option>
+		<option value="">*</option>
+		<option value="">/</option>
+		<option value="">%</option>
+
+	</select>
+
+	<input type="text" id="out" onkeyup="out_check()" />
+	<input type="text" id="result" disabled="disabled" />
+
+	<script type="text/javascript">
+		var num1 = document.getElementById("in"); // input in 요소 가져오기
+		var num2 = document.getElementById("out");
+		var result = document.getElementById("result");
+
+		
+		var op = document.getElementById("op");
+		function op_select() {
+
+		
+
+			var text = op.options[op.selectedIndex].text; // string
+
+			console.log(op.options[op.selectedIndex].text);
+			
+			switch (text) {
+			case "+":
+				result.value=n1+n2;
+				break;
+
+			case '-':
+				result.value=n1-n2;
+				break;
+				
+			case "*":
+				result.value=n1*n2;
+				break;
+				
+			case "/":
+				result.value=n1/n2;
+				break;
+				
+			case "%":
+				result.value=n1%n2;
+				break;
+			}
+
+		}
+
+		function in_check() {
+
+			if (event.keyCode == 13) { // up한 값이 enter 이면
+
+				// in 에 입력된 값 가져오기 // in.value : string
+				n1 = Number(num1.value);
+				// 유효성 검사 (숫자인지) -> 정규표현식으로
+				regx = /[0-9]+$/i;
+
+				if (!regx.test(n1)) { // 숫자가 아니면
+					alert("다시 입력해주세요");
+					num1.focus();
+					num1.select();
+					return;
+				}
+
+				// 입력한 값이 숫자이면
+
+				out.focus();
+
+			}// if end
+
+		}// fuction end
+
+		function out_check() {
+			if (event.keyCode == 13) {
+
+				n2 = Number(num2.value);
+
+				if (!regx.test(n2)) {
+					alert("다시 입력해주세요");
+					num2.focus();
+					num2.select();
+					return;
+				}
+
+				result.value = n1 + n2;
+
+			}
+		}
+	</script>
+</body>
+</html>

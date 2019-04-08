@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style type="text/css">
+</style>
+</head>
+<body>
+	<button onclick="btn1_click()">버튼1</button>
+	<button onclick="btn2_click()">버튼2</button>
+	<p id="demo"></p>
+
+	<script type="text/javascript">
+		var age = 25;  // 전역변수
+		age = 25; // 전역변수
+		
+		var name="홍길동"; // 변수선언만 하고 초기화(값 할당)x
+
+		var name; //  변수를 재선언해도 값은 손실되지 않는다.
+		
+		function btn1_click() {
+			// 변수 선언
+			/* 	var x, y, z;
+				x=5;
+				y=3.14;
+				z="kenik";
+				z=x+y;
+				console.log(z);
+			 */
+
+			/* var msg = "hello"; *//* 지역변수 */
+
+			// var 이라는 키워드로 변수 선언 없이 할당 + 사용 가능
+			msg = "hello~"; // 전역변수
+			/* alert(msg); */
+			//alert(age);
+			
+			//alert(name);
+			
+			document.getElementById("demo").innerHTML=name;
+			console.log(name);
+
+		}
+
+		function btn2_click() {
+			alert(msg); 
+			//alert(age);
+			/*ex03.html:33 Uncaught ReferenceError: msg is not defined
+			at btn2_click (ex03.html:33)
+			at HTMLButtonElement.onclick (ex03.html:14)
+			btn2_click @ ex03.html:33
+			onclick @ ex03.html:14  */
+		}
+	</script>
+	
+<script type="text/javascript">
+	var x=10;
+	var k = 30;
+	var y="20";
+	// + 연산자 : 왼쪽 -> 오른쪽..
+	var z=k+x+y; // 숫자 + 문자 = 문자 
+	
+	console.log(z); //1020
+	
+	
+</script>
+</body>
+</html>

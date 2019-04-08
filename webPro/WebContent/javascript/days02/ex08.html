@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style type="text/css">
+</style>
+</head>
+<body>
+
+	숫자 입력 :
+	<input type="text" id="num" onkeydown="num_keydown();">
+
+	<br> Email :
+	<input type="text" id="email">
+	<br> Password :
+	<input type="password" id="pw" onkeydown="check_valid();"> <!-- 8자리이상 숫자, 문자, 특수문자 조합 -->
+
+
+	<p id="demo"></p>
+
+	<script type="text/javascript">
+		var num = document.getElementById("num");
+		var pw = document.getElementById("pw");
+		
+		function check_valid() {
+			if (event.keyCode==13) {
+				
+				var pattern =/^[a-zA-Z0-9];
+				
+				
+				pattern.test(pw);
+				
+				
+			}
+			
+			
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		function num_keydown() {
+			if (event.keyCode == 13) {
+				// js 정규표현식으로 입력값이 숫자인지 확인
+				// 형식 : /pattern/modifies (i, g, m)
+				// 			/[0-9]+/i
+
+				var pattern = /^[0-9]+$/i;
+
+				// 정규표현식 관련 메서드 test() : 정규표현식 일치여부 boolean 반환
+
+				if (!pattern.test(num)) {
+
+					alert("입력형식 잘못~");
+
+				}
+
+			}
+
+		}
+	</script>
+
+
+</body>
+</html>
