@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style type="text/css">
+.focus {
+	background-color: yellow;
+}
+
+.blur {
+	background-color: white;
+}
+</style>
+</head>
+<body>
+	<input type="text" autofocus="autofocus" />
+	<br>
+	<input type="text" onfocus="" />
+	<br>
+	<input type="text" />
+	<br>
+	<input type="text" />
+	<br>
+	<input type="text" />
+
+
+	<script type="text/javascript">
+		var tags = document.getElementsByTagName("input");
+
+		// alert(tags.length); : 5
+
+		for (var i = 0; i < tags.length; i++) {
+
+			tags[i].addEventListener("focus", function() {
+				//event.srcElement.style.backgroundColor = "yellow";
+				event.srcElement.className = "focus"; // style 갯수가 많아질수록 위보다 효율적코딩
+
+			})
+			tags[i].addEventListener("blur", function() {
+				//event.srcElement.style.backgroundColor = "white";
+				event.srcElement.className = "blur";
+			})
+			tags[i].addEventListener("mouseover", function() {
+				event.srcElement.style.border = "solid 1px red";
+			})
+			tags[i].addEventListener("mouseout", function() {
+				event.srcElement.style.border = "solid 1px gray";
+			})
+
+		}
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style type="text/css">
+div {
+	padding: 50px;
+	border: solid 1px gray;
+}
+
+#out {
+	background: orange;
+}
+
+#in {
+	background: yellow;
+}
+</style>
+</head>
+<body>
+
+
+	<div id="out">
+		out
+		<div id="in">in</div>
+	</div>
+	
+<script type="text/javascript">
+/// 이벤트 전파
+//  이벤트 버블링 : false: in(자식) -> out(부모)
+//  이벤트 캡처링 : true : out(부모) -> in(자식) 
+// 부모 event가 자식 event 에 전이됨 
+
+document.getElementById("out").addEventListener(
+		"click", function () { alert("out div 클릭")} , false // 이벤트 버블링, 캡처링 여부 boolean
+		);
+document.getElementById("in").addEventListener(
+		"click", function () { alert("in div 클릭")} , false
+		);
+
+
+</script>
+	
+</body>
+</html>

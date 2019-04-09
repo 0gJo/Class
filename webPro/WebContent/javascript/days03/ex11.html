@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style type="text/css">
+#demo li{
+	list-style-type: lower-roman;
+
+}
+
+</style>
+</head>
+<body>
+
+	<input type="text" style="width: 300px" autofocus="autofocus" id="data">
+	<p id="demo"></p>
+
+
+	<script type="text/javascript">
+		document.getElementById("data").keyup = function() {
+			// 팀원들 이름 입력받아서 .. 출력
+
+			if (event.keyCode == 13) {
+
+				//
+				var data = document.getElementById("data").value;
+				var pattern = /\s*,\s*/;
+				var datas = data.split(pattern);
+
+				var demo = document.getElementById("demo");
+
+				demo.innerHTML = "<ol>"
+				for (var i = 0; i < datas.length; i++) {
+
+					demo.innerHTML = "<li>" + datas[i] + "</li>";
+
+				}
+				demo.innerHTML = "</ol>"
+
+			}
+		}
+	</script>
+</body>
+</html>

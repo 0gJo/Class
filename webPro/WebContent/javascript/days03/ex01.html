@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style type="text/css">
+<!-- 
+조건)
+1. 국어,영어,수학   0<=  <=100 정규표현식으로 유효성 검사
+2. 평균 소수점 2자리
+3. 수학 입력 후 엔터치면 총점,평균 계산해서 출력.
+ --> 
+</style>
+</head>
+<body>
+국어 : <input type="text" id="kor" autofocus="autofocus" onkeyup="kor_valid_test();"  /><br>
+영어 : <input type="text" id="eng"  onkeyup="eng_valid_test();" /><br>
+수학 : <input type="text" id="mat" onkeyup="math()" /><br>
+총점 : <input type="text" id="tot" disabled="disabled" /><br>
+평균 : <input type="text" id="avg" disabled="disabled" /><br>
+
+<script type="text/javascript">
+var kor = document.getElementById("kor");
+var eng = document.getElementById("eng");
+var mat = document.getElementById("mat");
+var tot = document.getElementById("tot");
+var avg = document.getElementById("avg");
+
+function kor_valid_test() { 
+			if (event.keyCode == 13) {
+				
+				var regex = /1?[0-9]{1,2}/i ; // ???? 0-100
+				if (!regex.test(kor.value)) { 
+					alert("잘못된 값");
+					mat.focus();
+					mat.select();
+					return;
+				}
+				
+				eng.focus();
+				
+			}
+			 
+}
+
+
+function eng_valid_test() { 
+	if (event.keyCode == 13) {
+		
+		var regex = /[0-9]{2}/i ; // ???? 0-100
+		if (!regex.test(kor.value)) { 
+			alert("잘못된 값");
+			mat.focus();
+			mat.select();
+			return;
+		}
+		
+		mat.focus();
+
+	}
+	 
+}
+
+
+
+function math() {
+	if (event.keyCode == 13) {
+		// 유효성검사
+		var regex = /[0-9]{2}/i ; // ???? 0-100
+		if (!regex.test(mat.value)) { 
+			mat.focus();
+			mat.select();
+			return;
+		}
+		
+		// 유효성 검사 통과하면
+		
+		var total = Number(kor.value)+Number(eng.value)+Number(mat.value);
+		tot.value= total;
+		
+		avg.value = (total/3).toFixed(2);
+		
+	}
+	
+}
+
+</script>
+
+
+
+
+</body>
+</html>

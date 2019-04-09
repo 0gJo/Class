@@ -1,0 +1,46 @@
+^(100|[1-9]?\d$)
+: ^, $ 반드시.. (앞부분 뒷부분만 맞는지 체크../ 빼면 일치하는것이 하나만 존재해도 true)
+ 
+ ex02.html
+ 
+ ex03.html 
+ event.srcElement
+ event.keyCode
+ event.type
+ 
+ ex04.html 동적이벤트처리 3가지
+ 
+ 응답받으면 DOM 생성 , 객체, 메서드 , 속성 제공 
+ 				document.  getElementById.  
+ 				innerText
+ 
+ 
+ ex06_02.html - js 이용한 css 변경
+  ex06_03.html - jquery 이용한 css 변경
+  
+  ex07.html -
+  
+  ----------문자열-------------
+ ex08.html - js 문자열
+ ex09.html 
+ - substr(start, len)
+ - substring( start, end) cf. end-1
+ - slice (start, end) , (-start, -end)  
+ 
+ ++ 1******
+ 
+ ex13.html - js 숫자 관련 함수
+ 
+ 
+ [		]
+ test() , test
+ 
+ [		]
+ ex02.html - 
+ ex06_02
+ ex06_03
+ ex08
+ ex09
+ 
+ 
+ ex11

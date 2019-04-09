@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style type="text/css">
+
+</style>
+</head>
+<body>
+
+<button onclick="btn_click()">btn 1</button>
+<button onclick="btn_click()">btn 2</button>
+<button onclick="btn_click()">btn 3</button>
+<button onclick="btn_click()">btn 4</button>
+<button onclick="btn_click()">btn 5</button>
+
+
+
+
+<!-- 
+<button onclick="btn_click(this)">btn 1</button>
+<button onclick="btn_click(this)">btn 2</button>
+<button onclick="btn_click(this)">btn 3</button>
+<button onclick="btn_click(this)">btn 4</button>
+<button onclick="btn_click(this)">btn 5</button>
+ -->
+
+
+<script type="text/javascript">
+
+/* 
+function btn_click(clickedbtn) {
+	alert(clickedbtn.innerText);
+}
+ */
+ 
+function btn_click() {
+	// 이벤트 발생시킨 요소를 얻어 올 수 있다.
+	alert(event.srcElement.innerText);
+}
+
+
+</script>
+
+
+
+</body>
+</html>

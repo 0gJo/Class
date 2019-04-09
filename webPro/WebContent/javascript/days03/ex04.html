@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style type="text/css">
+
+</style>
+<script type="text/javascript">
+function window_load() {
+	
+	//element.addEventListener(event,function,useCapture);
+	//1. 이벤트 유형 : click / 2. 함수 / 3. 이벤트 버블링 or 캡처를 사용할 지 여부 boolean
+	document.getElementById("btn3").addEventListener(
+		"click", test );
+	// addEventListener를 사용하면 여러개의 이벤트를 추가해서 처리
+	document.getElementById("btn3").addEventListener(
+		"click", function(){alert("동적으로 등록된 2번째 함수")});
+	// 등록된 이벤트 제거
+		document.getElementById("btn3").removeEventListener(
+		"click", test );
+	
+	
+	//html DOM을 사용한 이벤트 처리 
+	//document.getElementById("btn2").onclick=test;
+	document.getElementById("btn2").onclick=function(){alert("무명메서드")};
+
+}
+
+</script>
+
+</head>
+<body onload="window_load()"> <!--페이지가 메모리에 로딩된 후에 보통 초기화 작업..  -->
+<!-- js 이벤트 처리방법 -->
+1. 
+<em onXXX="js 코딩, 함수"></em>
+
+<button onclick="this.innerHTML='클릭'">이벤트처리1</button>
+<br>
+2.
+<!-- onclick = javascript -->
+<button id="btn2">이벤트 처리2</button>
+
+<script type="text/javascript">
+function test() {
+	alert("동적으로 ~~");
+}
+</script>
+<!-- 3. html Dom EventListener -->
+
+<br>
+3.
+<button id="btn3">이벤트 처리3</button>
+
+</body>
+</html>

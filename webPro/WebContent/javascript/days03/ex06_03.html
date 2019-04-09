@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style type="text/css">
+.focus {
+	background-color: yellow;
+}
+
+.blur {
+	background-color: white;
+}
+</style>
+</head>
+<body>
+	<input type="text" autofocus="autofocus" />
+	<br>
+	<input type="text" onfocus="" />
+	<br>
+	<input type="text" />
+	<br>
+	<input type="text" />
+	<br>
+	<input type="text" />
+
+
+	<script >
+	$("input")
+	.focus( //체인처럼 연결..
+	function () {
+		$(this).addClass("focus");
+	}	
+	)
+	.blur(
+	function () {
+		$(this).removeClass("focus");
+	}		
+	)
+	.hover( //hover일어나면
+		function () { //mouseover
+			$(this).css("border","solid 1px red");
+			
+		}
+		
+	,	function () { //mouseout
+			$(this).css("border","solid 1px gray");
+			
+		}
+	
+	);
+	
+	</script>
+
+</body>
+</html>

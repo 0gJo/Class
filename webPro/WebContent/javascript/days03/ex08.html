@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>js 문자열</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style type="text/css">
+</style>
+<script type="text/javascript">
+	function word_search() { // index 출력하는 함수
+		
+		if (event.keyCode == 13) {
+			var keyword = document.getElementById("search").value;
+			var source = document.getElementById("source").value;
+			var idx = source.indexOf(keyword);
+			var len = keyword.length;
+			
+			var from = 0;
+			
+			
+			while (idx=source.indexOf(keyword, from)!= -1) {  // 못찾을때까지 
+				
+				document.getElementById("demo").innerHTML+= idx +"<br>";
+				
+				from = idx + len + 1;
+
+			}
+			
+		}
+		
+
+	}
+</script>
+</head>
+<body>
+	찾을 대상 (source)
+	<textarea id="source" rows="" cols=""></textarea>
+	찾을 문자열 (search)
+	<input type="text" id="search" value="name" onkeydown="word_search();">
+
+	<p id="demo"></p>
+
+
+	<script type="text/javascript">
+		// ' '   , " " 
+		var x = "hello 'World!' ";
+		var x = 'hello "World!" ';
+
+		// 문자열 길이
+		document.write(x.length);
+
+		// 제어문자 사용가능 \n \t
+		var x = "hello \"world\" ";
+		var x = 'hello\n World! ';
+
+		alert(x);
+
+		//
+		var name1 = "admin"; // string
+		var name2 = new String("admin"); //object
+
+		// 문자열 의 값 비교 : 같다
+		if (name1 == name2)
+			alert("같다");
+		else
+			alert("다르다");
+
+		// 문자열의 값 & 타입 비교 : 다르다
+		if (name1 === name2)
+			alert("같다");
+		else
+			alert("다르다");
+
+		// js 객체 비교 -- 항상 false
+		var name3 = new String("admin"); //object
+
+		alert(name2 == name3); //false
+		alert(name2 === name3); //false
+
+		//
+
+		var source = "var name3=new String(\"admin\"); //object"
+				+ "alert(name2==name3) " + "alert(name2===name3); //false";
+
+		var search = "new";
+
+		var idx = source.indexOf(search);
+
+		/* document.write(result); */
+
+		document.getElementById("source").innerText = source;
+		
+	</script>
+</body>
+</html>

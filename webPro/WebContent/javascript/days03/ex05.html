@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style type="text/css">
+
+</style>
+</head>
+<body>
+
+<button id="btn">한번만 클릭할 수 있는 버튼</button>
+<p id="demo"></p>
+<script type="text/javascript">
+
+window.addEventListener("resize", function () {
+	document.getElementById("demo").innerHTML=window.innerWidth+"/"+window.innerHeight;
+}
+
+)
+
+
+
+
+
+
+
+
+
+//
+var btn = document.getElementById("btn");
+
+// 호환성을 고려한 코딩 (8.0 이전, 이후 모두)
+if (btn.addEventListener) {
+	btn.addEventListener("click",test)	
+}else {
+	btn.attachEvent("onclick",test)
+}
+
+function test() {
+	alert("test");
+	btn.innerText="클릭안됨";
+	if (btn.addEventListener) {
+		btn.removeEventListener("click",test)	
+	}else {
+		btn.detachEvent("onclick",test)
+	}
+	
+}
+
+
+
+
+</script>
+
+<!-- 
+
+IE 8.0 이전에는 사용 X
+element.addEventListener
+			remove
+
+IE 8.0 이전에는 사용 O
+element.attachEvent()
+element.detachEvent() -->
+
+
+</body>
+</html>

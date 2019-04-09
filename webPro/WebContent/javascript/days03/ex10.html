@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style type="text/css">
+</style>
+</head>
+<body>
+
+	<script type="text/javascript">
+		var src = "hello world LLow ALlo!";
+
+		//대소문자 구분없이 llo 바꾸기..
+
+		var pattern = /llo/ig;
+		// 일치하는 첫번째 항목 + i( 대소문자 구분) + g(문자열 전체에서 검색)
+
+		var result = src.replace(pattern, "xxxxx");
+
+		result.toUpperCase();
+		result.toLowerCase();
+	</script>
+	<script type="text/javascript">
+		//concat()
+
+		console.log("hello".concat(" ").concat("world"));
+
+		alert("hello".concat(" ", "world"));
+
+		// trim() : IE 8.0 지원 X
+		var id = "           0g           ";
+		console.log(id.trim()); 
+	</script>
+<script type="text/javascript">
+	var data = "Hello World!";
+	
+	for (var i = 0; i < data.length; i++) {
+		
+		document.write( data[i]   +"/");	// ECMAscript 추가된 기능
+		document.write(data.charAt(i)+"/");	// 문자
+		document.write(data.charCodeAt(i)+"<br>");	 // 아스키코드값 
+	}
+
+</script>
+	
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style type="text/css">
+
+</style>
+</head>
+<body>
+
+
+
+<script type="text/javascript">
+//Number()
+
+// ** 기억.. 
+// 1554796034229 : 1970년 1월 1일부터 카운팅한 ms값 
+/* document.write( Number( new Date() ) ); */
+document.write(Number.MAX_VALUE+"<br>")
+document.write(Number.MIN_VALUE+"<br>")
+
+Number.POSITIVE_INFINITY;
+Number.NEGATIVE_INFINITY;
+
+
+//parseInt(), parseFloat()
+
+// eval()
+
+
+
+
+var n = 9.675;
+
+// toPrecision(n)
+// n 길이로 문자열 반환
+document.write(n.toPrecision(1)+"<br>") 
+document.write(n.toPrecision(2)+"<br>") 
+document.write(n.toPrecision(3)+"<br>") 
+document.write(n.toPrecision(7)+"<br>")  //9.675000
+
+
+
+
+//toFixed : return 타입 : string
+document.write(n.toFixed(0)+"<br>") 
+document.write(n.toFixed(1)+"<br>") 
+document.write(n.toFixed(2)+"<br>") 
+
+
+// toExponencial
+document.write(n.toExponential(2)+"<br>") //9.68e+0
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style type="text/css">
+[type=text]{
+	text-align: center;
+}
+</style>
+</head>
+<body>
+
+<input value="123456" type="text" id="rrn6" autofocus="autofocus" maxlength="6"  onkeydown="rrn6_keydown()"  onkeyup="rrn_next();"> <!-- keydown 누른상태 / keyup : 눌렀다 뗐을때 -->
+-
+<input type="text" id="rrn7" maxlength="7" onkeyup="rrn7_keyup()">
+
+<p id="demo"></p>
+
+<script type="text/javascript">
+var rrn6 = document.getElementById("rrn6");
+var rrn7 = document.getElementById("rrn7");
+
+function rrn6_keydown(){
+	  console.log( event.keyCode +" /  "+ String.fromCharCode(event.keyCode));
+	  var pattern = /^\d$/;	  
+	  console.log(pattern.test( String.fromCharCode(event.keyCode) ));	  
+	  if( !pattern.test( String.fromCharCode(event.keyCode) ) )
+   {
+		  // event.cancelable  = true;
+		  return false;
+   }
+}
+
+function rrn_next() {
+	
+	if (rrn6.value.length==6) {
+		rrn7.focus();
+	}
+	
+}
+
+function rrn7_keyup(){ 
+	
+	var demo = document.getElementById("demo");
+	var rrn6 = document.getElementById("rrn6").value;
+	
+	  if( event.srcElement.value.length == 7 ){
+		  //alert("test")
+		  //년도
+		  
+/* 		  demo.innerHTML+= "<li>"+ rrn6.substring(0, 2) +"</li>"; */		  
+		   demo.innerHTML+= "<li>"+ rrn6.substr(0, 2) +"</li>";
+		  
+		  //월
+		  
+/* 		   demo.innerHTML+= "<li>"+ rrn6.slice(2, 4) +"</li>"; */		  
+		    demo.innerHTML+= "<li>"+ rrn6.substr(2, 2) +"</li>";
+		   //일
+
+/* 		   demo.innerHTML+= "<li>"+ rrn6.substring(4, 6) +"</li>"; */
+		  
+		    demo.innerHTML+= "<li>"+ rrn6.substr(4, 2) +"</li>";
+		   //substring vs slice
+		   //                    slice(-?,-?)
+		   
+	  }
+}
+
+</script>
+
+</body>
+</html>

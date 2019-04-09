@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style type="text/css">
+</style>
+</head>
+<body>
+	10진수 입력 :
+	<input value="10" id="n">
+	<p id="demo"></p>
+
+
+
+	<script type="text/javascript">
+		document.getElementById("n").addEventListener("keydown", function() {
+			if (event.keyCode == 13) {
+				var demo = document.getElementById("demo");
+				var n = Number(event.srcElement.value); 
+
+				// number.toString( ) : 숫자 -> 문자
+				// number.toString(n ) : 10진수 숫자 -> n진수 숫자
+				
+				//16진수
+				demo.innerHTML = n.toString(16) + "<br>";
+				//8진수
+				demo.innerHTML += n.toString(8) + "<br>";
+				//2진수
+				demo.innerHTML += n.toString(2) + "<br>";
+
+			}
+
+		})
+	</script>
+
+
+
+	<script type="text/javascript">
+		var n = 100
+		/ "2"; / / 50
+
+		var n = 100
+		/ "apple"; / / NaN
+
+		console.log(isNaN(n));
+
+		var n = 100 + NaN; //NaN
+
+		var n = "100" + NaN; //100NaN
+
+		console.log(n);
+
+		console.log(typeof NaN); // number
+
+		var n = 2
+		/0; / / Infinity
+
+		console.log(typeof Infinity); //number
+
+		//0x : 16진수
+		var n = 0xFF; // 255
+
+		//0 : 8진수
+		var n = 010; // 8
+	</script>
+</body>
+</html>
