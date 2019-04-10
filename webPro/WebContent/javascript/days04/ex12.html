@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style type="text/css">
+select {
+	width: 100px;
+	text-align: center;
+}
+</style>
+</head>
+<body>
+	<select id="cmbyear"></select>
+	<select id="cmbmonth"></select>
+	<select id="cmbdate"></select>
+	
+
+
+	<script type="text/javascript">
+		var cmbyear = document.getElementById("cmbyear");
+
+		for (var i = 1970; i <= 2050; i++) {
+
+			if (i == 2019) {
+				// 1. 생성과 동시에 selected 부여 : new Option (text, value, default selcted, selected)
+				cmbyear.options[i - 1970] = new Option(i, i, true, true);
+
+			} else {
+
+				cmbyear.options[i - 1970] = new Option(i, i);
+
+			}
+
+		}
+
+		var cmbmonth = document.getElementById("cmbmonth");
+
+		for (var i = 0; i < 12; i++) {
+
+			var text = i + 1;
+			var value = i + 1;
+
+			cmbmonth.options[i] = new Option(text, value);
+
+		}
+
+		// 2. 생성 후에  selected 부여 : selectedIndex
+		cmbmonth.selectedIndex= 4-1;
+ 
+ 
+ 
+ 	// 현재 year, month에 combox default로 selected 되어지게 만들기..
+ 	
+ 	//options에서 현재 년도 2019와 일치하는 것 가져오기 
+
+ 	
+ 	// new Option([text[,value[,defaultSelected[,selected]]]])
+ 	//var m = cmbyear.options ;
+
+ 	// options[i]  === option 태그 (요소) 자체  	
+ 	
+ 	
+ 	
+ 	
+ 	//selected 속성 주기 
+ 	// .selectedIndex 속성은 selected된 속성을 가져올수도, 설정할수도 있음..
+ 	//cmbmonth.selectedIndex =
+	</script>
+</body>
+</html>

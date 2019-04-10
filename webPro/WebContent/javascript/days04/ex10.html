@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style type="text/css">
+
+</style>
+</head>
+<body>
+<script type="text/javascript">
+/* 
+ISO Date "2015-03-05"
+Short Date "03/05/2015"
+Long Date "March 05 2015"
+
+ */
+ // new Date (문자열 ) => ISO, SHORT 형식 사용..
+ 
+ var d  = new Date("2015-03-05"); // ISO Date 형식 사용
+ var d  = new Date("2015"); //2015-01-01
+ 
+ 
+  var d  = new Date();
+ document.write(Date.parse(d));
+ 
+var milli = Date.parse(d);
+var d = new Date(milli);
+
+document.write(d);
+
+</script>
+<p id="demo"></p>
+
+<script type="text/javascript">
+	var d = new Date();
+	
+	
+	
+	// 년 월 일 시 분 초 밀 요일
+	
+	var output = "-------------------------------------"+"<br>"; //d.getYear() + d.getMonth() + d.getDate() + d.getHours() + d.getDay();
+
+	output += d.getFullYear() +"<br>";
+	
+	var dayOfWeek = "일월화수목금토";
+	
+	document.getElementById("demo").innerHTML= output;
+	
+	
+	d.getDay() ; // 3 
+	document.write(dayOfWeek[d.getDay()]); // 수
+	
+	d.getTime(); // 1970 이후로의 milliseconds 반환
+	
+</script>
+
+
+</body>
+</html>

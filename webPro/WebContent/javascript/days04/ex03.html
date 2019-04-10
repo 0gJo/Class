@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style type="text/css">
+
+</style>
+</head>
+<body>
+<script type="text/javascript">
+	var names = [] ;  // 배열선언
+</script>
+
+이름 입력 : <input id="name"><br>
+<button id="add">배열추가</button>
+<button id="print" onclick="print_click()">배열출력</button>
+<p id="demo"></p>
+<script type="text/javascript">
+
+var txtname  = document.getElementById("name");
+var demo = document.getElementById("demo");
+
+document.getElementById("add").onclick= function () {
+	// alert("ddd");
+	
+	// 백스페이스 방지
+	var pattern = /^[가-힝a-zA-Z]+$/ig;
+	if (txtname.value.trim().length==0) {
+		alert("입력하세요.")
+		txtname.value="";
+		txtname.focus();
+		//txtname.select();
+		return;
+	}
+	// 유효성 검사
+	if (!pattern.test(txtname.value.trim())) {
+		alert("입력 잘못~ .")
+		txtname.value="";
+		txtname.focus();
+		return;
+	}
+	
+	var idx = names.length;
+	
+	//names[idx] = txtname.value.trim();
+	names.push( txtname.value.trim());
+	
+	txtname.focus();
+	txtname.select();
+	
+}
+
+function print_click() {
+	
+	names.sort();
+	
+	var output = "<ol><li>"+ names.join("</li><li>")+"</li></ol>";
+	
+	demo.innerHTML=output;
+	
+}
+
+
+</script>
+
+
+</body>
+</html>

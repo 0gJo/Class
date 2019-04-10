@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style type="text/css">
+
+</style>
+</head>
+<body>
+<script type="text/javascript">
+
+var points = [3,5,3,4,1] ;
+/* 
+// 배열인지 아닌지 확인
+// alert(Array.isArray(points));
+// typeof : object 
+
+// alert(points instanceof Array);
+ 
+ // alert(points.toString()); // 3,5,3,4,1
+ 
+ points.push(100);
+ alert(points.toString());
+ //alert(points.pop()); // 가장 마지막 것 가져올때 length-1 대신 쓸것.. 
+ 
+ 
+ // shift :0번째 요소 제거 위치 이동
+ points.shift();   == >  리턴 값 = 첫번째요소 
+ alert(points.toString());
+ 
+ points.shift();
+ alert(points.toString());
+
+ */ 
+ 
+ </script>
+
+<input id="data" value="xxx" onkeydown="data_keydown()">
+
+<script type="text/javascript">
+
+function data_keydown() {
+	
+	if (event.keyCode == 13) {
+	
+		var data = event.srcElement.value;
+		// 0번째 추가
+		points.unshift(data); // ==> 리턴값 : 배열크기 반환
+		alert(points.toString());
+	}
+	
+}
+
+</script>
+<script type="text/javascript">
+
+// 2번째 요소 값 삭제
+//delete points[1];
+
+alert(points.toString()); // 3,,3,4,1
+//                                 수정 
+// push, delete, pop, 배열명[]
+//unshift           shift 
+
+alert(points[1]); // undefined
+</script>
+
+<script type="text/javascript">
+
+
+//alert(points);
+
+//points.splice(pos, amount, newelt)
+points.splice(1, 2, 100,200);
+
+alert(points);
+
+points.splice(1, 0, 100,200);
+//					pos, 삭제갯수, 추가하려는 element
+points.splice(1, 1); // 1요소 제거 .. (추가는 안하고)
+</script>
+
+<script type="text/javascript">
+
+var arr1 = [1,2,3];
+var arr2 = [100, 200]; 
+var arr3 = [4,3];
+
+// 두배열을 병합 : concat()
+// 합친 배열을 반환, 원래배열 그대로 유지
+
+var conarr = arr1.concat(arr2);
+var conarr = arr1.concat(arr2,arr3);
+
+alert(conarr);
+
+</script>
+
+<script type="text/javascript">
+// 배열 자르기 (필요한 portion 가져오기..)
+
+var points = [1,2,3,4,5];
+
+//points.slice(2); // 3,4,5
+
+// slice(start, end ) : end - 1 위치값 까지 
+alert(points.slice(2,4)); // 3,4
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style type="text/css">
+
+</style>
+</head>
+<body>
+<script type="text/javascript">
+	var m = [];
+	// 1. m 100 개의 정수 랜덤하게 저장 (0~100 정수)
+	// 2. 30보다 큰 수를 배열 n에 담아서 출력
+	
+	Math.random()*101        // 0<= <1
+	
+	
+	//1. 
+	for (var i = 0; i < 100; i++) {
+		
+		m.push((Math.random()*101).toFixed(0));
+		
+	}
+	
+	console.log(m);
+	
+	//2. 
+	var n = [];
+	
+	for (var i = 0; i < m.length; i++) {
+		
+		if (m[i]>30 ) {
+			
+			n.push(m[i]);
+		}
+		
+		
+	}
+	
+	document.write(n);
+	
+	
+	
+
+</script>
+</body>
+</html>

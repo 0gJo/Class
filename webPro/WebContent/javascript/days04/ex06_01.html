@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2019. 4. 10. - 오후 12:30:17  k≡n¡k</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="">
+<style>
+</style>
+</head>
+<body>
+<script>
+   var m = [];
+   // 1. m  10 개의 정수 랜덤하게 저장.) ( 0~ 100  정수)
+   // 2. 30 정수보다 큰 수를 배열( n ) 담아서  출력.
+   for (var i = 0; i < 10; i++) {
+        m.push( Math.ceil(Math.random()*100) );
+  }
+  document.write( m +"<br>");
+  // 배열명.filter()
+  var n = m.filter(  function (value, index, array){
+	   return value > 30;
+  } );
+  // document.write( n +"<br>");
+  
+  console.log(typeof n);
+   
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+<!-- 
+Array.forEach()
+Array.map()
+Array.filter()
+Array.reduce()
+Array.reduceRight()
+Array.every()
+Array.some()
+Array.indexOf()
+Array.lastIndexOf()
+Array.find()
+Array.findIndex()
+ -->

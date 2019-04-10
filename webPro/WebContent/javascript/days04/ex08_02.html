@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style type="text/css">
+</style>
+</head>
+<body>
+
+
+
+
+
+	<script type="text/javascript">
+	// select 태그 동적 생성 
+	
+	var $forecolor = $( "<select id='bgcolor'></select>" );
+
+	$('body').append($forecolor);
+	
+	
+	
+	
+		var colors = [ "white", "red", "green", "blue" ];
+		
+		// option 태그  동적 생성
+		for (var i = 0; i < colors.length; i++) {
+			$("#bgcolor").append("<option>"+colors[i]+"</option>");
+		}
+		
+		$("#bgcolor").change(function () {
+			//alert("ddd");
+			//$(this).val(); // 선택한 option의 값
+			document.bgColor = $(this).val();
+			
+		});
+		
+		
+	</script>
+<script type="text/javascript">
+/* 
+
+	
+ */</script>
+</body>
+</html>

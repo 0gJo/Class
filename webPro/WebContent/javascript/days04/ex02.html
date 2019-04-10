@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style type="text/css">
+
+</style>
+</head>
+<body>
+숫자 입력  : <input id="numbers" value="3,5,2,4,1">
+<button id="btn_exec">실행</button>
+<p id="demo"></p>
+<hr>
+<script type="text/javascript">
+
+ document.getElementById("btn_exec").addEventListener("click", function () {
+	// 잘라내기 + 오름차순 정렬 -> p 태그에 출력..
+	
+	// 잘라내기 
+	var input = document.getElementById("numbers").value;
+	
+	var regex = /\s*,\s*/ ;
+	
+	var nums = input.split(regex);
+	
+	// 오름차순 정렬
+	
+	var sorting = nums.sort();
+	
+	//alert(sorting[0]);
+	
+	var demo = document.getElementById("demo");
+	
+	
+	//demo.innerHTML="<ol>" ==>  자동 닫기 태그 생성되므로 오류
+	
+	
+	// 방법1
+	var output="<ol>";
+	for (var i = 0; i < sorting.length; i++) {
+		
+		//alert(sorting[i]);
+		
+		output+= "<li>"+sorting[i]+ "</li>";
+
+	}
+	
+	output+="</ol>";
+	
+	demo.innerHTML = output;
+	
+	
+	
+	// 방법2
+	demo.innerHTML ="<li>" + sorting.join("</li><li>") +"</li>";
+	
+	
+})
+
+
+</script>
+
+
+
+
+<script type="text/javascript">
+
+
+
+//var m = [] ;
+// var m = [ 1, 2, 3 ] ;
+
+
+var m = new Array(1,2,3);
+
+m[0]=100;
+
+/* 배열 크기 */
+document.write(m.length);
+document.write(m[0]);
+
+// alert(typeof m); 
+
+m[3] = Date.now; 
+
+document.write(m[3]); //  배열크기 필요 x
+
+
+</script>
+<script type="text/javascript">
+
+document.write("-".repeat(10));
+
+</script>
+</body>
+</html>

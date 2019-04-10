@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style type="text/css">
+
+</style>
+</head>
+<body>
+<input type="text" id="rrn7" maxlength="7" autofocus="autofocus"
+ onkeydown="return rrn7_keydown()"   
+ onkeypress="return rrn7_keypress()" 
+ onkeyup="return rrn7_keyup()">
+
+<p id="demo"></p>
+
+<script type="text/javascript">
+	var rrn7 = document.getElementById("rrn7");
+	
+
+function rrn7_keydown() {
+		
+		//console.log("rrn7_keydown()"+rrn7.value.length);
+		/* return false; */  //  이벤트 취소 
+		
+		
+		
+		var pattern = /^[^0-9\b]$/;  // 숫자가 아님
+		
+		
+		
+		if (pattern.test(String.fromCharCode(event.keyCode)) ) {
+			alert('숫자만 입력하세요');
+			return false;
+		}
+		
+		
+ 	}
+	
+	var rrn7value = "";
+	
+	
+	function rrn7_keypress() {
+	//console.log("rrn7_keypress()"+rrn7.value.length)		;
+	
+	var rrn7length = rrn7.value.length;
+	
+	if (rrn7length>=1&&rrn7length<=6 ) {
+		
+		rrn7value +="*";
+		rrn7.value = rrn7value;
+		
+		return false;
+		
+		
+		
+	}
+	
+	rrn7value+=String.fromCharCode(event.keyCode);
+	
+	/* else if (rrn7length==0) {       
+		
+		rrn7value+=String.fromCharCode(event.keyCode);
+	} */
+	
+	
+	
+	}
+	
+	function rrn7_keyup() {
+		//console.log("rrn7_keyup()"+rrn7.value.length);
+		if (rrn7.value.length == 7) {
+			document.getElementById("demo").innerText = rrn7value;
+			
+		}
+		
+	}
+
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style type="text/css">
+
+</style>
+</head>
+<body>
+
+js - 브라우저의 시간대를 사용
+Date 날짜 객체 (내장)
+= new Date(); => 현재시스템 날짜 
+= new Date(year, month, hour, minutes, seconds) => 원하는 날짜 지정
+= new Date (milliseconds)
+= new Date (날짜 문자열 )
+
+
+<p id="demo"></p>
+<script type="text/javascript">
+
+	var d = new Date(); // Wed Apr 10 2019 15:25:09 GMT+0900 (한국 표준시)
+	var d = new Date(2018,12-1,21); // Fri Dec 21 2018 00:00:00 GMT+0900 (한국 표준시)
+	var d = new Date(2018,12-1 ); // default : 01일
+	var d = new Date(2018); //milliseconds
+	var d = new Date(99,12-1,21 ); 
+	var d = new Date("2019/04/10");
+	
+	document.getElementById("demo").innerHTML = d ;
+	document.getElementById("demo").innerHTML = d.toDateString(); // Wed Apr 10 2019
+	document.getElementById("demo").innerHTML = d.toTimeString(); //00:00:00 GMT+0900 (한국 표준시)
+	document.getElementById("demo").innerHTML = d.toLocaleDateString() + "/ "+d.toLocaleTimeString();  // 2019. 4. 10./ 오전 12:00:00
+	
+	
+	//$("#demo").html(d);
+	
+	//document.getElementById("demo").innerText = d ;
+	//$("#demo").text(d);
+	
+</script>
+
+
+</body>
+</html>

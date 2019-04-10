@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style type="text/css">
+
+
+</style>
+</head>
+<body>
+
+<script type="text/javascript">
+
+
+	/* function sum(n,m) {
+		return n+m;
+	} */
+	
+	function sum() {
+		//alert(arguments.length);
+		
+		var hap = 0 ;
+		for (var i = 0; i < arguments.length; i++) {
+			hap += arguments[i];
+		}
+		
+		return hap;
+	}
+	
+	
+	var result = sum(10,20);
+	
+	//document.write(result);
+
+</script>
+
+<select id="bgcolor" >
+<!-- <option></option> -->
+
+</select>
+
+<script type="text/javascript">
+	var bgcolor =	document.getElementById("bgcolor");
+	// 동적 코딩 으로  option (태그) 만들기
+	//optionObj=new Option([text[,value[,defaultSelected[,selected]]]])
+	// 					new Option('선택 4','value4',true,true);
+	
+	//var optionObj = new Option("빨강","red");
+	
+	//bgcolor.options[0] = optionObj;
+	
+	var colors = ["white", "red", "green","blue"];
+	
+	for (var i = 0; i < colors.length; i++) {
+		bgcolor.options[i] = new Option(colors[i]);
+	}
+	
+	// 선택된 option (색상) 으로 배경색 바꾸기
+	
+	//1. js 코딩
+/* 	
+  	bgcolor.onchange = function () {
+		var idx =bgcolor.selectedIndex;
+		//var text  = options[idx];
+		var text = bgcolor.options[idx].text;
+		//document.body.style.backgroundColor=text;
+		document.bgColor = text;
+	};
+	 */
+	
+	//2. addEventListener  ..
+	
+	bgcolor.addEventListener("onchange", function() {
+		
+	alert(event.srcElement);
+		
+	var idx = event.srcElement.selectedIndex;
+				  //selection태그
+	var text = event.srcElement.options[idx].text;			  
+				  
+	document.bgColor = text;
+			
+	} );
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	/* 	bgcolor.addEventListener("onchange", function () {
+		alert(bgcolor.selectedIndex);
+		
+		document.bgColor = "red";
+	}); */
+
+	
+	
+	
+	
+</script>
+
+
+
+
+</body>
+</html>
