@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style type="text/css">
+
+</style>
+</head>
+<body>
+<p id="demo"></p>
+<script type="text/javascript">
+
+	var demo = document.getElementById("demo");
+	var now_year = new Date().getFullYear(); 
+	//var now_year = new Date().getYear();  //119+1900
+	
+
+	//1월~12월 마지막 날짜 몇 일
+	// 2월 1일 날짜 객체 생성 - 1 => 일가져오기
+	
+	var lastDays = [] ;
+	
+	//var year = 2019;
+	
+		
+	
+	
+	
+	
+   	for (var i = 1; i < = 12; i++) {
+		
+  		// year, month+1 
+
+	  	var d = new Date(now_year, i);	
+  		var lastDay = d.setDate(0); //milliseconds//1556550000000
+  		
+  		// milli -> .. getDate
+  		
+  		
+  		
+  		//lastDays.push(31);
+ 
+	  		
+	}
+	demo.innerHTML="<ol><li>"+lastDays.join("</li><li>")+"</li></ol>";
+  	
+	demo.innerHTML=now_year; */\\
+
+</script>
+<script type="text/javascript">
+
+
+
+</script>
+
+
+</body>
+</html>

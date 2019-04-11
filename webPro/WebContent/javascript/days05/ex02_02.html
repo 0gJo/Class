@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style type="text/css">
+
+</style>
+</head>
+<body>
+<ul class="days"></ul>
+
+<script type="text/javascript">
+	function getLastDay( year, month ) {
+		
+		  var d = new Date( year, month);
+		  d.setDate( 0 );
+		 return  d.getDate();
+		
+	}
+
+
+</script>
+
+
+<script type="text/javascript">
+
+	var curr_year = 2019;
+	var curr_month = 4;
+	var lastDay =  getLastDay(curr_year, curr_month);
+
+	//alert(lastDay);
+
+	// 동적으로 li 태그 만들어서 ul태그에 추가
+
+	for (var i = 1; i < lastDay; i++) {
+		
+		$("ul.days").append("<li>"+i+"</li>");
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</script>
+
+</body>
+</html>

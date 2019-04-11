@@ -1,0 +1,20 @@
+d.setDate(0) : 이전 월의 lastDay 
+모든 옵션제거 
+
+노드 = 계층을 가지는 모든 객체
+태그안에 있는 텍스트도 노드로 잡힘.. 
+
+
+공백 == 빈 li 태그 만들기.. 
+getday 
+
+prev.onclick = "prev_click";
+next.onclick = next_click; 
+
+
+현재 일 == 
+
+
+
+04
+

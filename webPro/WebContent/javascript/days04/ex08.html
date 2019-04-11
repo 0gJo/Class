@@ -73,15 +73,27 @@
 	
 	//2. addEventListener  ..
 	
-	bgcolor.addEventListener("onchange", function() {
+	bgcolor.addEventListener("change", function() {
 		
-	alert(event.srcElement);
 		
-	var idx = event.srcElement.selectedIndex;
+		alert(event.srcElement);
+		
+		var idx = event.srcElement.selectedIndex;
+					  //selection태그
+		var text = event.srcElement.options[idx].text;			  
+					  
+		document.bgColor = text;
+		
+		
+		
+		
+	/* alert(this);
+		
+	var idx = this.selectedIndex;
 				  //selection태그
-	var text = event.srcElement.options[idx].text;			  
+	var text = this.options[idx].text;			  
 				  
-	document.bgColor = text;
+	document.bgColor = text; */
 			
 	} );
 	

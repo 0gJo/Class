@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style type="text/css">
+.container{
+	width: 500px;
+}
+
+.collapsible{
+	background-color: #777;
+	color: white;
+	cursor: pointer;
+	padding: 18px;
+	width: 100%;
+	border: none;
+	text-align: left;
+	outline: none;
+	font-size: 15px;
+}
+
+.collapsible::after {
+	content: '\002B';
+	color: white;
+	font-weight: bold;
+	float: right;
+	margin-left: 5px;
+}
+
+.collapsible:hover, .active{
+
+	background-color: #555;
+
+}
+
+
+.content{
+
+	padding: 0 18px;
+	max-height: 0px;
+	overflow: hidden;
+	transition : max-height 0.2s ease-out;
+	background-color: #f1f1f1;
+}
+
+
+.active::after {
+	content: '\2212';
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<button class="collapsible">Section 1</button>
+<div class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos alias natus dolorum suscipit minima dolore omnis voluptatum sunt optio. Autem dicta suscipit dignissimos explicabo eveniet numquam aperiam voluptatem cupiditate sunt!</div>
+
+<button class="collapsible">Section 2</button>
+<div class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos alias natus dolorum suscipit minima dolore omnis voluptatum sunt optio. Autem dicta suscipit dignissimos explicabo eveniet numquam aperiam voluptatem cupiditate sunt!</div>
+
+<button class="collapsible">Section 3</button>
+<div class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos alias natus dolorum suscipit minima dolore omnis voluptatum sunt optio. Autem dicta suscipit dignissimos explicabo eveniet numquam aperiam voluptatem cupiditate sunt!</div>
+
+</div>
+
+<script type="text/javascript">
+
+var coll = document.getElementsByClassName("collapsible"); // button
+
+for (var i = 0; i < coll.length; i++) {
+	
+	coll[i].addEventListener("click", function() {
+		
+		//alert("test");
+		// 이벤트 받은 객체 == event.srcEL~==this
+		
+		this.classList.toggle("active");
+		
+		//1번쨰 버튼 - 1번쨰 content 가져와서..
+		var content = this.nextElementSibling;
+		
+		//alert(content);
+		
+		//1. content 내용만큼 maxHeight == scrollHeight
+		//2. 여러번 반복해도 자곧ㅇ..
+		
+		if (content.style.maxHeight=="0px" || content.style.maxHeight== 0 ) {
+			content.style.maxHeight =   content.scrollHeight+"px";  //"105px";			
+		}else {
+			content.style.maxHeight ="0px";		
+		}
+
+		
+	});
+
+}
+
+
+
+</script>
+
+
+
+</body>
+</html>
