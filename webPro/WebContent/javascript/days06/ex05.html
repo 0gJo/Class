@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style type="text/css">
+
+</style>
+</head>
+<body>
+<script type="text/javascript">
+/* 1) num -> string
+1+""
+new String(false)
+false.toString()
+new String (new Date())
+Date.toString()
+
+2) string - > num
+parseInt
+Number()
+eval()
+
+3) 
+Number(false) : 0 / Number(true) : 1
+
+/////////////////////////////////////////
+
+* bit operator
+
+& } ^ ~
+(shift) <<   >> >>> 
+
+* js 정규표현식
+형식 : /pattern/modifiers
+      		             i, g ... 
+                    */
+var msg = "hello World~";
+var pattern = /world/i;
+
+var result = msg.search(pattern); // 6
+
+/* indexOf(char)
+search(regex)
+ */
+ 
+var result =  msg.replace(pattern, "xxx");
+ 
+//alert(result);
+</script>
+
+<script type="text/javascript">
+
+var msg = "abc\nis???\nIS XXX";  // 3줄에서 IS .. 
+// modifier m : multi line
+var pattern = /^is/m;  // 여러 줄에서 시작이 is..인 것 찾기. 
+// pattern.test() : boolean 반환  
+var result = msg.match(pattern) ; //is // 일치값 string 반환
+
+alert(result);
+
+</script>
+<input id="num">
+<button onclick="exec();">exec</button>
+<p id="demo"></p>
+
+<script type="text/javascript">
+// js 예외처리 
+/* 입력하지 않으면 throw new IOexception
+0보다 작으면
+100보다 크면 
+숫자가 아니면  		예외  */
+
+
+function exec() {
+	var num = 	document.getElementById("num").value;
+	
+	try {
+		
+		if (num == "")  throw "empty";
+		if (isNaN(num)) throw "not a number"; 
+		if(!(0<=num &&num<=100)) throw "out of range";
+		$("#demo").html(num);
+		
+	} catch (err) {
+		
+		$("#demo").html(err);
+		
+	}finally{
+		
+	}
+	
+	$("#demo").html(num);
+}
+
+
+</script>
+
+
+
+
+</body>
+</html>

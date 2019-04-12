@@ -17,4 +17,26 @@ next.onclick = next_click;
 
 
 04
+-------------------------------------
+<table>
+  <tr>
+    <th>Column 1 Heading</th>
+    <th>Column 2 Heading</th>
+  </tr>
+  <tr>
+    <td>Row 1: Col 1</td>
+    <td>Row 1: Col 2</td>
+  </tr>
+</table>
 
+
+insertRow
+insertCell.. 
+insertCell.. 
+insertCell.. 
+insertCell.. insertCell.. 
+
+---------------------
+
+indexOf(char)
+search(regex)

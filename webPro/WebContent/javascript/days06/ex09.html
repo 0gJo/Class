@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style type="text/css">
+
+</style>
+</head>
+<body>
+
+<script type="text/javascript">
+
+/* ECMScript2015 부터 추가된 : let(변수), const(상수) : 블럭범위 (Block Scope)에 사용
+- js 변수 선언 : var 변수  / let 변수  	의 			차이점 
+- ES2015 이전 전역범위, 지역범위 2가지만 존재 + 블럭범위 (Block Scope)
+
+{
+	var a ;
+	let b  ;
+	}
+ */
+</script>
+<script type="text/javascript">
+{
+var x =100; 
+}
+//document.write(x); // 100
+document.write("<br>");
+{
+	let  y =200; 
+	//var x = 400; 
+	let x = 400;
+	//document.write(x);
+	document.write("<br>");
+}
+
+//document.write(x);
+
+ // document.write(y); // y is not defined
+
+//////////////////////// let : {} 블럭안에서만 사용하고 싶을 때
+
+</script>
+<script type="text/javascript">
+
+var i = 5 ;
+for (var i = 0; i < 10; i++) {}
+//document.write(i); //10
+
+//////////////////////////////////중요 
+var i = 5 ;
+for (let i = 0; i < 10; i++) {}
+//document.write(i); // 5
+
+//////////////////
+/* var x; //1
+{
+var x; //2
+}
+
+//1 == 2
+
+var x;
+{
+let  x;	
+}
+// 1 != 2
+
+ */
+ </script>
+<script type="text/javascript">
+// 함수안에서 var, let 개념
+
+function test() {
+	var n ; // function (local) scope
+	n; // global 
+	let n ; // function (block ) scope 
+	
+	// 위의 var n 과 let n 은 동일한 의미 
+}
+
+var n ; //global
+let n ; // global 
+
+
+
+
+</script>
+<script type="text/javascript">
+
+//var msg = "hello"; // global  / window 객체의 멤버 
+let msg = "hello"; // global, / but, 					  x
+//document.write(window.msg); //undefined
+
+</script>
+<script type="text/javascript">
+	
+	// 재선언  // 오류안남 
+//	var x = 2;
+//	var x = 3;
+	
+	
+	// Identifier 'x' has already been declared
+//	var x = 2;
+//	let x = 3; 
+
+	// Identifier 'x' has already been declared
+	// 같은 구역내에 선언될 수 없다.
+	 //let x = 2;
+	 //let y = 3;
+	
+	 // 가능 
+	 let x = 2;
+	 {
+	    let x = 3;	  
+	 }
+	 
+// let 은 hosting 일어나지 x
+</script>
+<script type="text/javascript">
+// const 는 let과 개념은 같으나, const 는 상수선언, let 은 변수선언
+//										 따라서 변경될수 x
+
+
+// const 상수 선언할때 반ㄷ싀 초기화 해야한다. (선언+초기화) 헤야
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

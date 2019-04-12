@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style type="text/css">
+
+</style>
+</head>
+<body>
+
+<script type="text/javascript">
+
+
+//////////////출력값 false
+
+console.log(Boolean(""));
+
+var x ; // undefined
+console.log(Boolean(x));
+
+var y = null; // null 
+console.log(Boolean(y));
+
+var z = 10 / "x"; //NaN
+console.log(Boolean(z));
+
+var x1 = false; // type of : boolean 
+console.log(Boolean(x));
+var x2 = new Boolean(false); // type of : Boolean
+
+</script>
+
+<script type="text/javascript">
+// 비교연산자 === , !==  : 타입까지 비교 
+//alert(x1==x2);
+//alert(x1===x2);
+
+// 논리 연산자 : 자바와 동일
+// 삼항 연산자 : ? :
+	
+console.log(2<"12"); //true
+// "2"<"12" // true : 문자열 비교할때 앞 부터 비교..
+
+
+
+
+
+
+</script>
+</body>
+</html>

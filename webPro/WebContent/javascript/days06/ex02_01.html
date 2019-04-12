@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style type="text/css">
+
+</style>
+</head>
+<body>
+
+
+
+<script type="text/javascript">
+
+function getRndRange(min, max) {
+	return Math.floor(Math.random()*(max-min+1)) + min;
+	
+}
+
+function isDuplicationLotto( lottos, n ){
+	return   lottos.every(function (value, index, array){
+					  return value  !=  n;
+				  });
+  }
+  
+ </script>
+
+<script type="text/javascript"> // 자바스크립트
+
+/* 
+//select tag 만들어서 
+
+var sel = document.createElement("select");
+
+var body = document.getElementsByTagName("body")[0];
+
+//alert(body);
+
+body.appendChild(sel);
+
+//alert(sel);
+
+//  option tag 1-15 만들기
+
+for (var i = 1; i <=15 ; i++) {
+	
+		var opt = document.createElement("option");
+		var num_i  = document.createTextNode(i);
+		opt.appendChild(num_i);
+		sel.appendChild(opt);
+		
+}
+
+var p = document.createElement("p");
+
+body.appendChild(p);
+
+
+ */
+</script>
+
+<script type="text/javascript">
+var $select = $( "<select id='cmbCnt'></select>" ) ,
+	   $p =$( "<p id='demo'></p>" ); 
+
+/* 
+for (var i = 1; i <= 15; i++) {
+	$select.append("<option>"+ i +"</option>");
+}
+ */
+
+ for (var i = 1; i <=15; i++) {
+	$option = $("<option></option>");
+	$option.text(i);
+	//$option.value(i); //option의 value 속성
+ 	$select.append($option);
+ }
+ 
+//$p.html(style.. )
+
+$( "body" ).append( $select , $p );
+
+/////////////////////////////////////////////////
+
+
+var lottos = [];
+
+$select.change(function() {
+	
+	var numberOfGames = Number($(this).val());
+	
+	var lotto = [];
+	
+	
+for (var i = 0; i < numberOfGames; i++) {
+	
+	lotto = [];
+	
+	while (lotto.length < 6) {
+		n = getRndRange(1,45);
+		if (isDuplicationLotto(lottos, n)) {lotto.push(n);}
+	}
+
+	lottos.push(lotto); //  배열안에 배열 추가
+	
+}
+
+for (var i = 0; i < numberOfGames; i++) { 
+	console.log(  lottos[i] );
+}
+
+});
+
+$("demo").te
+
+
+
+
+
+
+
+</script>
+
+<script type="text/javascript">  // 선택된 갯수 만큼 로또 배열 출력하는 코딩
+/* 
+/// select태그에서 선택된 갯수 가져오기
+var sel_tag = document.getElementById("cmbCnt");
+
+sel_tag.onchange = getLottos();
+
+
+function getLottos() {
+	
+	var idx =	sel_tag.selectedIndex ;
+	
+	var num = sel_tag.options[idx];
+	
+	// 로또 만들기 
+	
+	var lotto = makeLotto();
+	
+	var p_tag = document.getElementById("demo");
+	
+	for (var i = 0; i < num; i++) {
+		
+		p_tag.innerHTML = lotto;
+		
+		console.log(lotto);
+		
+	}
+	
+	
+	
+	
+}
+
+function makeLotto() {
+	
+	var lotto = [];
+	
+	for (var i = 1; i <= 6; i++) {
+		lotto.push(getRndRange(1, 45));
+	}
+	
+	return lotto;
+	
+}
+
+
+ */
+</script>
+
+
+
+
+</body>
+</html>

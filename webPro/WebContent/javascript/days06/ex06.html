@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style type="text/css">
+
+</style>
+</head>
+<body>
+<script type="text/javascript">
+
+//js scope (범위)
+//1. 지역 (local) scope
+//2. 전역 (global) scope  X --> window.name 이 됨..
+								// 똑같은 name이 이미 정의되어있으면 overriding되므로..
+
+var name ="dddd" ; // global
+
+function test() {
+	var age ; // local 
+	alert(window.name)	;
+}
+
+//test();
+</script>
+<script type="text/javascript">
+// js에서는 변수를 사용한 후에 선언할 수도 있다.
+// [js hoisting]
+// : 모든 선언부분을 현재 scope의 맨 위로 이동시키는 작업을 하기 때문.. 
+// var x
+// x = 10; 으로 처리.. 
+
+
+x = 10;
+
+
+
+
+
+var x;
+
+alert(x); // 10
+
+
+</script>
+
+</body>
+</html>

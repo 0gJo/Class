@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style type="text/css">
+
+</style>
+</head>
+<body>
+
+<script type="text/javascript">
+
+var person = {
+/* 	
+ */		info :  function (){
+	         // 상황 1 this : 객체 / 상황 2 this : person_info : 인자로 전달받은 객체
+			return this.name + "/" + this.age; 
+		}
+}
+
+var person_info = {
+	name : "admin",
+	age : 20
+	
+}
+// 상황1
+//document.write(person.info()); // undefined/undefined
+// 상황 2
+//document.write(person.info.call(person_info)); //admin/20
+
+// call() 인자  줄때 사용.. 
+
+
+</script>
+</body>
+</html>

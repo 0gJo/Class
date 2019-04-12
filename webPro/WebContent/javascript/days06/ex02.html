@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style type="text/css">
+
+</style>
+</head>
+<body>
+<button>create Lotto</button>
+<p id="demo"></p>
+
+<script type="text/javascript">
+
+function getRndRange(min, max) {
+	return Math.floor(Math.random()*(max-min+1)) + min;
+	
+	
+}
+
+// 중복되면 false
+// 		 x   true
+function isDuplicationLotto( lottos, n ) {
+	
+ return 	lottos.every(function(value, index, array) { // 모두 달라야 트루 반환.. 
+		return  value != n;
+	})
+	
+	
+}
+
+</script>
+ <script type="text/javascript">
+ 
+ var lottos = [];
+ var n = - 1;
+ 
+ $("button").click(function() {
+ 	// lottos 배열 모든 요소 제거 
+ 	
+ 	lottos = [];
+ 	
+	 
+	 
+	while (lottos.length < 6) {
+		
+		n = getRndRange(1,45);
+		
+		console.log(n);
+		
+		if (isDuplicationLotto(lottos, n)) {
+			
+			lottos.push(n);
+		
+		}
+
+	}
+	 
+	 console.log(lottos);
+ 
+ });
+ </script>
+
+
+
+
+<script type="text/javascript">
+/* 
+var lottos = [];
+var i = 0; 
+
+$("button").click(function() {
+	
+	lottos.push(Math.floor(Math.random()*45+1)) //0.0<=   <1.0 인 실수 
+	
+	//console.log(lottos[0]);
+	
+	console.log(lottos[i++]);
+	
+	lottos.filter(function(elt, i, array) {
+		return elt == lottos[i];
+	})
+	
+	
+}); */
+
+
+
+
+</script>
+
+
+
+</body>
+</html>

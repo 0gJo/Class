@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style type="text/css">
+
+</style>
+</head>
+<body>
+
+<input id="num" name="num" autofocus="autofocus">
+<br>
+<button id="if">if문</button>
+<button id="switch">switch문</button>
+<button id="for">for문</button>
+<button id="while">while문</button>
+<button id="foreach">foreach문</button>
+
+<p id="demo"></p>
+
+
+<script type="text/javascript">
+
+$("#if").click(function() {
+	//alert(typeof $("#num").val());	// string
+	var n = Number($("#num").val());
+	
+	// 유효성검사
+	if (isNaN(n)) { //문자 입력할떄..
+		alert("정수입력하세요");
+		$("#num")
+		.focus()
+		.select();
+		return;
+	}
+	//
+	var result = "odd";
+	if (n % 2 == 0) {	result  ="even";}
+	else {		result = "odd";}	
+	
+	$("#demo").html(result);
+	
+});
+
+// 국어점수 입력받아서 수~ 출력 + 유효성검사 (정규표현식)
+$("#switch").click(function(kor) {
+	var kor = kor;
+	
+	var regex = /^(100|[1-9]?[0-9])$/ ;
+	
+	if (!regex.test(kor)) {
+		alert("다시입력.. ");
+		return;
+	}
+	
+	var grade ="가";
+	
+	switch (parseInt( Number(kor) / 10 )) {
+	case 10:
+		grade ="수";
+		break;
+
+	case 9:
+		grade ="우";
+		break;
+
+	case 8:
+		grade ="미";
+		break;
+
+	case 7:
+		grade ="양";
+	break;
+
+	
+	default:
+		
+		break;
+	}
+	
+	
+	$("#demo").html(grade);
+	
+	
+	
+	
+});
+// 1+2+ +10 = 55;
+$("#for").click(function() {
+	var n = Number($("#num").val());	
+	var sum = 0;
+	
+	var result = "";
+	
+	for (var i = 1; i <= n ; i++) {
+		sum += i ;
+		result +=  i==n ?  i +  "=" : i + "+"; 
+	}
+	
+		result += sum;
+	
+	$("#demo").html(result);
+	
+});
+
+// 가로 , 세로 2~9단 출력 (table, td, tr)
+$("#while").click(function() {
+/* js 코딩 */
+ // 3번째.. - insertRow, insertCell.
+ 
+var table = document.createElement("table");
+
+
+for (var j = 1; j <= 9; j++) {
+	
+	var row = table.insertRow(j-1);
+	
+	for (var i = 2; i <= 9 ; i++) {
+		
+		var cell = row.insertCell(i-2);	
+		cell.innerHTML = i + "*" + j + "=" + i*j;
+		
+	}
+}
+
+$("#demo").html(table);
+
+
+
+ 
+ 
+ 
+ 
+
+
+
+
+// 2번째... 
+/*/var table =document.createElement("table");
+	table.setAttribute("border", "1");
+	table.setAttribute("style", "width:100%");
+	
+	
+	var tr = document.createElement("tr");
+	for (var i = 2; i <= 9; i++) {
+		var  th = document.createElement("th");
+		
+		tr.appendChild(th);
+		
+	}
+	
+	table.appendChild(tr);
+	
+	var demo = document.getElementById("demo");
+	$("#demo").html(table);
+	
+	
+ */	
+	
+/* // 방법1	
+	var output = [];
+	output.push("<table>");
+	output.push("<tr>");
+	for (var i = 2; i < 9; i++) {
+		output.push("<th>"+i+"</th>");
+	}
+	output.push("</tr>");
+	
+	for (var i = 1; i < 9; i++) { 
+		output.push("<tr>");
+		for (var j = 2; j <= 9; j++) {
+			output.push("<td align='center''>"+j+"*"+i+"="+(i*j)+"</td>");
+		}
+	}
+	output.push("</tr>");
+	
+ 	
+	output.push("</table>");
+
+	var demo = document.getElementById("demo");
+	demo.innerHTML = output.join("");
+	
+ */	
+ 
+ 
+	
+/* 	
+	var $("table") = "<table></table>";
+	
+	// tr 만들고 (9개)  dan  
+	
+	var $("tr") = ""
+	
+	
+	// td 8개 ( 2단~9단)  num 
+	// 2*1   3*1  4*1 ...  9*1
+	// dan * num
+
+	 */
+});
+$("#foreach").click(function() {});
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style type="text/css">
+
+</style>
+</head>
+<body>
+
+
+<script type="text/javascript">
+"use strict"; 
+// js 의 this 설명
+//1 메소드 안에서 this
+// : 메서드를 소유한 클래스 객체
+
+var person ={ // object
+		name : "admin",
+		age : 20,
+		info : function () {
+			return this.name + "/" + this.age ;
+		}
+}; 
+alert(person.name);
+alert(person["age"]);
+
+var msg = person.info();
+alert(msg);
+
+//2. 전역객체 this : window 객체
+var x = 20;
+alert(this.x);
+alert(window.x);
+alert(x);
+
+//3. 함수안에서 this  : Window 객체
+// cf. 메소드 : 클래스안에 선언된것 
+
+function this_test() {
+	return this;
+}
+
+alert(this_test()); //[object Window]
+
+//4. 엄격한 모드 + 함수안에서 this  : undefined
+
+alert(this_test()); //undefined
+
+//5.  이벤트에서의 this : 이벤트 받은 객체요소 (element)
+
+</script>
+
+<button onclick=" this.style.color = 'red' ">click me</button>
+
+</body>
+</html>
