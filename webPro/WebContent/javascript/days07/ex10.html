@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style type="text/css">
+.myProgress {
+	width: 100%;
+	background-color: #ddd;
+}
+
+.myBar {
+	width: 1%;
+	height: 30px;
+	background-color: #4caf50;
+	text-align: right;
+	color: red;
+}
+</style>
+</head>
+<body>
+
+
+	<h3>Progress Bar</h3>
+	<div id="myProgress1" class="myProgress">
+		<div id="myBar1" class="myBar"></div>
+		<button id="btn1">진행</button>
+	</div>
+
+	<div id="myProgress2" class="myProgress">
+		<div id="myBar2" class="myBar"></div>
+		<button id="btn2">진행</button>
+	</div>
+
+	<div id="myProgress3" class="myProgress">
+		<div id="myBar3" class="myBar"></div>
+		<button id="btn3">진행</button>
+	</div>
+
+
+
+	<script type="text/javascript">
+		// 진행버튼 클릭하면 css 변하도록 코딩..
+
+		//js 코딩..
+
+		// 1. progressbar 구현
+/* 
+		document.getElementById("btn1").onclick = progressbar;
+
+		var width = 1;
+		var bar = document.getElementById("myBar1"); //event.srcElement.previousSibling;
+
+		function progressbar() {
+			// myBar 객체 가져오기..
+			//console.log(bar);
+			if (width == 100) {
+				clearTimeout(timer);
+			} else {
+				width++;
+				//console.log(width);
+				bar.style.width = width + "%";
+				bar.innerHTML = width + "%";
+				var timer = setTimeout(progressbar, 30);
+			}
+		}
+		
+ */		
+		//2. 여러개의 btn에 progressbar 부여
+		
+		var btns = document.getElementsByTagName("button");
+		
+		for (var i = 0; i < btns.length; i++) {
+			btns[i].onclick = progressbar;
+		}
+		
+		function progressbar() {
+			var btn =	event.srcElement;
+			var bar = btn.previousSibling;
+			var width = 1;
+			
+			width++;
+			
+			bar.style.width = width + "%";
+			bar.innerHTML = width + "%";
+			
+			setTimeout(progressbar, 30);
+			
+			
+		}
+		
+		
+		
+		
+	</script>
+
+
+</body>
+</html>

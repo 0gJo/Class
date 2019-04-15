@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style type="text/css">
+span {
+	color: red;
+}
+
+</style>
+</head>
+<body>
+<!-- jquery forms 유효성 검사  -->
+
+<form id="form1" name="form1" action="ex01_ok.jsp" method="post">
+Name : <input type="text" id="fname" name="fname" autofocus="autofocus">
+<span></span>
+<br>
+
+<input type="submit">
+</form>
+<script type="text/javascript">
+
+$("#form1").submit(function(event) {
+	if ($("#fname").val() == "") {
+	//alert("name은 필수 입력 항목입니다.");
+	//$( "span" ).			text( "필수 입력 항목입니다." ).show().fadeOut( 1000 );
+	$("#fname").next().text( "필수 입력 항목입니다." ).show().fadeOut( 1000 );
+	event.preventDefault(); // 		
+	}
+});
+
+</script>
+
+</body>
+</html>

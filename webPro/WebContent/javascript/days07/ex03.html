@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style type="text/css">
+
+</style>
+</head>
+<body>
+<script type="text/javascript">
+
+//	function fname(pars..) {
+		// code
+		// return 문
+//	}
+
+// js 함수는 표현식을 사용하여 정의 할 수 있다.
+var hap = function (a,b) {return a+b;};
+console.log(hap(2,4)); //6
+
+// fuction hoisting ( 호출 후 선언 가능 / 선언문을 가장 위로 올림)
+
+console.log(myFunc(5)); // 25
+
+function myFunc(y) {
+	return y*y;
+}
+
+
+// 자체 호출 함수 
+function disp() {
+	return "disp";
+}
+
+var result = disp();
+
+console.log(result);
+
+// 위의 과정을 자체적으로 하는 것
+
+( function () { return "test"})(); // test를 반환하는 함수를 호출  // 봐두기.. 
+
+console.log(( function () { return "test"})());  // test
+
+
+
+
+
+</script>
+<script type="text/javascript">
+var x4 = function () {};
+console.log(typeof x4);
+</script>
+</body>
+</html>

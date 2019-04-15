@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style type="text/css">
+
+</style>
+</head>
+<body>
+<script type="text/javascript">
+// arguments
+function test() {
+	//alert(arguments.length);
+	for (var i = 0; i < arguments.length; i++) {
+		console.log(arguments[i]);
+	}
+}
+
+//test("홍길동",10,20,30,"A");
+
+// js 함수는 object
+var test_def = test.toString();
+alert(test_def); // 함수의 정의 부분 출력..
+</script>
+<script type="text/javascript">
+	// ECMA5
+	var x = function (a,b) {return a+b;};
+	// ECMA6 람다식
+	var x = (a,b)=> a+b;
+</script>
+
+
+</body>
+</html>

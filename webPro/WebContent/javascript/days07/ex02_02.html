@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style type="text/css">
+
+</style>
+</head>
+<body>
+<script type="text/javascript">
+/* JS data type : string, number, boolean, object, function
+						null  : literal
+						undefined  : literal 
+JS 객체 만들기 
+ */
+ //1
+var person = {
+						 firstName : "John",
+						 lastName : "Doe",
+						 age : 25,
+						 // js method
+/* 						 fullName : function () {
+							return this.firstName + this.lastName;
+						} */
+						//ECMAScript getter, setter
+						language : "en",
+						get lang(){
+							return this.language;
+						} ,
+						set lang(lang){
+							this.language = lang;
+						}
+						} ;
+
+// 객체 새 메서드 추가
+person.fullName = function () {
+	return this.firstName + this.lastName;
+}
+
+
+// method 호출
+//console.log(person.fullName());
+
+var name = person.fullName();
+console.log(name); //JohnDoe
+
+var name = person.fullName;
+console.log(name); // function () {
+								//return this.firstName + this.lastName;
+								// }
+
+
+//2
+//var person = new Object();
+//console.log(person["firstName"]);
+//person["lastName"];
+//person.age = 25;
+
+
+/// 확인
+// foreach
+for ( var x in person ) {
+	//console.log(person[x]);
+}
+
+var m = [3,4,5,2,1];
+
+//foreach
+for ( var n in m) {
+	//console.log(n); // index 출력 
+	//console.log(m[n]);
+}
+
+/// 새 속성 추가
+person.grade = "a";
+delete person.age;
+
+
+for ( var x in person ) {
+	//console.log(person[x]);
+}
+
+
+
+
+
+
+
+
+</script>
+<script type="text/javascript">
+// 생성자
+// js function 
+// 생성자 함수
+
+function Person(name, age, color) {
+	this.name = name;
+	this.age = age;
+	this.color = color;
+	
+	/* this.print =  function () {
+		 return this.firstName + this.lastName;
+	} */
+}
+
+
+ var father = new Person("kenik",30,"blue");
+ 
+// 객체에 속성추가 
+// Person.grade = "a"; ==> 불가능
+ father.grade = "a";
+ // 객체에 메서드 추가
+ father.print = function () {
+	 return this.firstName + this.lastName;
+}
+ 
+ 
+</script>
+
+</body>
+</html>

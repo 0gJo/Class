@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>js 클로저</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style type="text/css">
+</style>
+</head>
+<body>
+<p id="demo"></p>
+<script type="text/javascript">
+/* 
+var i;
+for (i = 0; i < 10; i++) {
+  setTimeout(function() { // 클로저 상황
+    console.log(i);
+    //$("#demo").html(i);
+  }, 1000);
+}
+*/
+
+
+//// 
+var i;
+for (i = 0; i < 10; i++) {
+	// 자체함수호출
+  (function(j) { // i를 받음
+    setTimeout(function() {
+      console.log(j);
+    }, 100);
+  })(i);
+}
+
+
+</script>
+<script type="text/javascript">
+function hello(name) {
+	  var _name = name;
+	  // 함수를 돌리는 것. 함수를 호출하는 것 아님.
+	  // 
+	  return function() {
+	    console.log('Hello, ' + _name);
+	  };
+	}
+
+	var hello1 = hello('승민');
+	var hello2 = hello('현섭');
+	var hello3 = hello('유근');
+
+	//hello1(); // 'Hello, 승민'
+	//hello2(); // 'Hello, 현섭'
+	//hello3(); // 'Hello, 유근'
+
+</script>
+	<script type="text/javascript">
+		// 생성자 메서드
+		function Hello(name) {
+			this._name = name;
+		}
+
+		// say 메서드 추가할때 -> prototype
+		Hello.prototype.say = function() {
+			console.log('Hello, ' + this._name);
+		}
+		var hello1 = new Hello('승민');
+		var hello2 = new Hello('현섭');
+		var hello3 = new Hello('유근');
+
+		//hello1.say(); // 'Hello, 승민'
+		//hello2.say(); // 'Hello, 현섭'
+		//hello3.say(); // 'Hello, 유근'
+		
+		
+		hello1._name = 'anonymous';
+		hello1["_name"]='anonymous';
+		hello1.say(); // 'Hello, anonymous'
+		
+		//클로저를 사용하여 외부에서 변수에 직접 접근하는 것을 제한할 수 있다.
+	</script>
+
+	<script type="text/javascript">
+		var base = 'Hello, ';
+		function sayHelloTo(name) {
+			var text = base + name;
+			//console.log(text) 사용대신 왜.. 
+			return function() {
+				console.log(text);
+			};
+		}
+		var hello1 = sayHelloTo('승민');
+		var hello2 = sayHelloTo('현섭');
+		var hello3 = sayHelloTo('유근');
+
+		//hello1(); // 'Hello, 승민'
+		//hello2(); // 'Hello, 현섭'
+		//hello3(); // 'Hello, 유근'
+	</script>
+	<script type="text/javascript">
+		//js 클로저
+		//1. 클로저는 독립적인 (자유) 변수를 가리키는 함수이다. 
+		//2. 또는, 클로저 안에 정의된 함수는 만들어진 환경을 ‘기억한다’.
+		//3. 함수내에서 함수를 정의하고 사용하는 것을 클로저라한다.
+		function getClosure() {
+			var text = 'variable 1';
+			return function() {
+				return text;
+			};
+		}
+
+		var closure = getClosure();
+
+		//console.log(closure());
+		//console.log(getClosure()());
+	</script>
+</body>
+</html>

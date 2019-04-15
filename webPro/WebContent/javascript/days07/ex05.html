@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style type="text/css">
+
+</style>
+</head>
+<body>
+<script type="text/javascript">
+var person1 = {
+		name:"admin1",
+		age : 20
+		}
+
+var person2 = {
+		name:"admin2",
+		age : 25
+		}
+
+var person = {
+		print : function () { return this.name + "/" + this.age} // this : 전달받은 객체
+		}
+
+console.log(person.print.call(person1)); // call : 객체넘겨주기
+
+
+
+
+</script>
+<script type="text/javascript">
+function test(x,y) {
+	if (y == undefined) { y = 0;}
+	return x+y;
+}
+//console.log(test(1,2));
+//console.log(test(12)); // 12 + undefined = NaN
+//console.log(test(x=1,y=2));
+
+
+</script>
+
+
+</body>
+</html>
