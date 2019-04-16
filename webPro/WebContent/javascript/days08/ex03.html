@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style type="text/css">
+.myDiv {
+	background: #f1f1f1;
+	text-align: center;
+	border: solid 1px #d3d3d3;
+	position: absolute;
+	z-index: 9;
+}
+
+.myDivHeader {
+	padding: 10px;
+	cursor: move;
+	z-index: 10;
+	background-color: #2396f3;
+	color: #fff;
+}
+</style>
+</head>
+<body>
+<a href="ex04.html">ex04.html</a>
+
+	<div id="myDiv1" class="myDiv">
+		<div id="myDiv1Header" class="myDivHeader">Click Here</div>
+		<p>DragDrop</p>
+		<p>DragOver</p>
+		<p>Div</p>
+	</div>
+	<script type="text/javascript">
+		function draggable(elem) {
+
+			var pos1 = 0, pos2 = 0; // x, y 처음좌표값
+			var pos3 = 0, pos4 = 0; // 옮긴후 좌표값
+
+			 document.getElementById( elem.id+"Header" ).onmousedown
+			   = dragMouseDown;
+			
+			function dragMouseDown() {
+				// body 0,0 기준좌표점..
+				pos3 = event.clientX;
+				pos4 = event.clientY;
+				
+				document.onmousedown  =elementDrag;
+				document.onmouseup = closeDragElement;
+				
+				
+			}
+			function elementDrag() {
+				
+				pos1 = pos3 - event.clientX; // 옮긴정도 
+				pos2 = pos4 - event.clientY;
+
+				console.log(pos1+","+pos2);
+				
+				 elem.style.left = ( elem.offsetLeft - pos1) +"px";
+				 elem.style.top = ( elem.offsetTop - pos2) +"px";		   
+				 
+				  pos3 = event.clientX;
+				  pos4 = event.clientY;
+
+			}
+			function closeDragElement(e) {
+				   
+				document.onmousemove = null;
+				   document.onmouseup = null;
+
+			}
+
+		}
+	</script>
+	<script type="text/javascript">
+		draggable(document.getElementById("myDiv1"));
+	</script>
+</body>
+</html>

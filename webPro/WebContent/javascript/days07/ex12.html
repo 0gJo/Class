@@ -71,11 +71,16 @@ function draggable(elem) { // 위치값 변경하는것.. left top
 		document.onmouseup = closeDragElement;
 		
 		function elementDrag() {
-			
+			 pos1 = pos3 - event.clientX;
+			  pos2 = pos4 - event.clientY;
+
 		}
 		
 		function closeDragElement() {
 			
+			 document.onmousemove = null;
+			   document.onmouseup = null;
+
 		}
 		
 	}

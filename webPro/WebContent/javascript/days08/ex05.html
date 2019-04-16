@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style type="text/css">
+
+</style>
+</head>
+<body>
+
+<form id="form1" name="form1" action="">
+Name : <input type="text" name="name" value="admin">
+<br>
+Age : <input name="age" value="25">
+<br>
+Email : <input type="email" name="email" value="te1902@gmail.com">
+
+<button type="button" value="ok">확인</button>
+</form>
+<p id="demo"></p>
+
+<script type="text/javascript">
+
+$("button").click(function() {
+	// form 태그안의 모든 입력값을 확인..  => elements 컬렉션 사용.. 
+	var form = document.forms["form1"];
+	alert(form);
+	var output = "";
+	for (var i = 0; i < form.elements.length; i++) {
+		output += form.elements[i].value +"<br>";
+	}
+	
+	$("#demo").html(output);
+	
+});
+
+</script>
+</body>
+</html>
+

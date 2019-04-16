@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style type="text/css">
+.myDiv {
+	background: #f1f1f1;
+	text-align: center;
+	border: solid 1px #d3d3d3;
+	position: absolute;
+	z-index: 9;
+}
+
+.myDivHeader {
+	padding: 10px;
+	cursor: move;
+	z-index: 10;
+	background-color: #2396f3;
+	color: #fff;
+}
+</style>
+</head>
+<body>
+	<div id="myDiv1" class="myDiv">
+		<div id="myDiv1Header" class="myDivHeader">Click Here</div>
+		<p>DragDrop</p>
+		<p>DragOver</p>
+		<p>Div</p>
+	</div>
+<script type="text/javascript">
+
+function draggable(elem) {
+	var pos1 = 0, pos2 = 0;
+	var pos3 = 0, pos4 =0;
+	
+	// myDiv1Header 에 onmouseDown 할때의 x,y 좌표값 기억... 50, 50
+	
+	//alert(document.getElementById(elem.id + "Header"));
+	
+	document.getElementById(elem.id + "Header").onmousedown
+	= function () {
+		pos1 = event.clientX;
+		pos2 = event.clientY;
+		
+		 document.onmouseup = closeDragElement;
+
+		document.onmousemove = function () {
+			if(event.button == 0 ){
+			//alert(document.documentElement);
+			
+			pos3 = event.clientX;
+			pos4 = event.clientY;
+			
+			elem.style.left = pos3+"px";
+			elem.style.top = pos4+"px";
+			
+			}
+			
+			
+			
+		}
+		
+	}
+	
+	
+	   function closeDragElement(){
+		   if( event.button == 0 ){
+		    document.onmousemove = null;
+		     document.onmouseup = null;
+		   }
+	   }
+
+	
+	// document 에 onmouseDown 할때의 x, y 좌표값 기억.. 100, 100
+	
+	// myDiv1 left, top 변경.. 
+	
+	
+	
+}
+
+
+
+</script>
+<script type="text/javascript">
+
+draggable(document.getElementById("myDiv1"));
+
+</script>
+</body>
+</html>

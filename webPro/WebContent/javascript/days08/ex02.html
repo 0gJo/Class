@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style type="text/css">
+table {
+	width: 50%;
+	margin: 0 auto;
+}
+
+table, td, th {
+	border: solid 1px gray;
+}
+
+table>thead>tr:first-child {
+	background-color: gray;
+	color: white;
+}
+</style>
+</head>
+<body>
+	<table>
+		<thead>
+			<tr>
+				<!-- th*3>lorem1 -->
+				<th> <input type="checkbox" id="ckbAll" >  Lorem.</th>
+				<th>Nihil.</th>
+				<th>Rerum!</th>
+			</tr>
+		</thead>
+		<tbody>
+			<!-- tr*3>td*3>lorem1 -->
+			<tr>
+				<td> <input type="checkbox" id="7369" class="sub"> Lorem.</td>
+				<td>Quod?</td>
+				<td>Quia.</td>
+			</tr>
+			<tr>
+				<td> <input type="checkbox"  id="7779" class="sub"> Lorem.</td>
+				<td>Officiis!</td>
+				<td>Tempora.</td>
+			</tr>
+			<tr>
+				<td> <input type="checkbox"  id="7999" class="sub"> Lorem.</td>
+				<td>Et?</td>
+				<td>Commodi.</td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<td colspan="3">
+				<input type="button" id="empAdd" value="사원추가">
+					<input type="button" id="empDelete" value="사원삭제"> 
+					<input type="button" id="empEdit" value="사원수정">
+					</td>
+			</tr>
+		</tfoot>
+	</table>
+	
+	<p id="demo"></p>
+<script type="text/javascript"> // 체크 전체 해제 1
+//var first = document.querySelector("table>thead>tr>th:first-child>input");
+//first.onclick = alert("체크되었습니다.");
+
+
+/* //1.
+document.getElementById("ckbAll").onclick = function() {
+	var ckblist = document.getElementsByClassName("sub");
+	//alert(ckblist.length);
+	for (var i = 0; i < ckblist.length; i++) {
+		ckblist[i].checked = this.checked;
+	}
+}
+ */
+
+
+</script>	
+<script type="text/javascript">
+// node ? DOM의 Element  /  html -> DOM / 
+document.querySelector("thead input").onclick = function() {
+	var ckblist = document.querySelectorAll("tbody [type='checkbox']");
+	for (var i = 0; i < ckblist.length; i++) {
+		ckblist[i].checked =  this.checked;
+	}
+}
+// 하나라도 체크 풀면 다풀리도록, 다 체크되면 다 체크되도록
+// tbody의 tr의 첫번째 td.. select. 
+//document.querySelectorAll(selectors)
+
+document.getElementById("empDelete").onclick =  function() {
+	//삭제하고자 하는 id값(체크되어있는)을 p태그에 뿌리기.. 
+	
+	/// 체크되어있는 element 가져오기
+	//var checkdList =  document.querySelectorAll("tbody [checked='checked']");
+	//alert(checkdList.length);
+	
+	// checked 속성이 안변하는 이유??
+	var ckblist = document.querySelectorAll("tbody [type='checkbox']");
+	var demo = document.getElementById("demo");
+	for (var i = 0; i < ckblist.length; i++) {
+		if (ckblist[i].checked   == true ) {
+			var id  = ckblist[i].getAttribute("id");
+			demo.innerHTML+= id + " ";
+		}else {
+			alert("none");
+		}
+	}
+	
+}
+
+</script>
+</body>
+</html>

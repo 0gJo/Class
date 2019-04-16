@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2019. 4. 16. - 오전 10:02:30  k≡n¡k</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="">
+<style>
+   table{
+      width:50%;
+      margin: 0 auto;
+   }
+   table, td, th {
+      border:solid 1px gray;
+   }
+   
+   table > thead > tr:first-child{
+     background-color: gray;
+     color:white;
+   }
+   
+   tr > td:first-child{
+      text-align: center;
+   }
+</style>
+</head>
+<body>
+<!-- table>tr*3>td*3 -->
+<table>
+   <thead>
+	<tr>
+		<!-- th*3>lorem1 -->
+		<th><input type="checkbox" id="ckbAll" /> Lorem.</th>
+		<th>Nihil.</th>
+		<th>Rerum!</th>
+	</tr>
+	</thead>
+	 <tbody>
+	   <!-- tr*3>td*3>lorem1 -->
+	   <tr>
+	   	<td><input type="checkbox" id="7369" class="sub" />Lorem.</td>
+	   	<td>Quod?</td>
+	   	<td>Quia.</td>
+	   </tr>
+	   <tr>
+	   	<td><input type="checkbox"  id="7789"  class="sub" />Lorem.</td>
+	   	<td>Officiis!</td>
+	   	<td>Tempora.</td>
+	   </tr>
+	   <tr>
+	   	<td><input type="checkbox"  id="9833"  class="sub" />Lorem.</td>
+	   	<td>Et?</td>
+	   	<td>Commodi.</td>
+	   </tr>
+	 </tbody>
+	 <tfoot>
+	   <tr>
+	      <td colspan="3">
+	         <input type="button" name=""  id="empAdd" value="사원추가" />
+	         <input type="button" name=""  id="empDelete" value="사원삭제" />
+	         <input type="button"  name="" id="empEdit" value="사원수정" />
+	      </td>
+	   </tr>
+	 </tfoot>
+</table>
+
+<p id="demo"></p>
+
+<script>
+// <input type="checkbox">
+$("thead :checkbox").click(function() {
+	$("tbody :checkbox").prop("checked", $(this).prop("checked"));
+})
+
+ $("#empDelete").click(function() {
+	// 체크된 체크박스의 id 속성값을 p 태그에 출력
+	 var id = [];
+	$("tbody :checked").each(function() {
+		id.push($(this).attr("id"));
+	})
+		$("#demo").html("<ul><li>"+ id.join("</li><li>") + "</li></ul>");
+ })
+ 
+$("#empAdd").click(function() {
+	
+	var table =   document.getElementsByTagName("table")[0];// $("table");
+	
+	
+	
+	var row = table.insertRow(table.rows.length-1);
+	
+	for (var i = 0; i < 3 ; i++) {
+	
+	var cell = row.insertCell(i) ;
+	if (i == 0) { cell.innerHTML = "<input type='checkbox'>"}
+	//cell.innerHTML += "<input type='text'>";
+	var input_tag = document.createElement("input");
+	cell.appendChild(input_tag);	
+	}
+	
+	//alert(row);
+	
+})
+ 
+ 
+ 
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
