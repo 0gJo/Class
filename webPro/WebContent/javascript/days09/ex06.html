@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style type="text/css">
+
+</style>
+</head>
+<body onload="win_load()">
+
+<button onclick="nw_open();">새 창 열기</button>
+<button onclick="nw_close();">새 창 닫기</button>
+<button></button>
+<button></button>
+
+<script type="text/javascript">
+/* 다른 윈도우(창) 메소드 : open(), close(), moveTo(), moveBy(), resizeTo(), resizeBy() */
+// open()
+//[winObj=][window].open(['URL'][,'winTarget'][,'winFeature'])
+
+function win_load() {
+	nw_open();
+	// 자동 창 닫기 
+	setTimeout(nw_close, 3000);
+	
+}
+
+
+function nw_close() {
+	newwindow.close();
+}
+
+
+
+var newwindow;
+function nw_open() {
+	var url = "ex07_02.html";
+	var width = 600;
+	var height = 500;
+	var left = 200;
+	var top = 100;
+	newwindow=window.open(url,"","width="+width+",height="+height+",top="+top+",left="+left);
+}
+
+
+
+</script>
+<script type="text/javascript">
+var w = window.innerWidth || document.documentElement.clientWidth;
+var h =  window.innerHeight || document.documentElement.clientHeight;
+
+	
+</script>
+</body>
+</html>

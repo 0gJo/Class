@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>이벤트등록</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style type="text/css">
+
+</style>
+</head>
+<body>
+<h1 onclick="this.innerHTML='클릭미'">Click Me</h1>
+<h1 id="htag" onclick="changeText(this)" >Click Me</h1>
+<script type="text/javascript">
+function changeText(elem) {
+	elem.innerHTML = "클릭미";
+}
+// DOM(필드 + 메서드)
+document.getElementById("htag").onmouseover=
+	function () {
+		this.style.color = "red";
+		
+	}
+document.getElementById("htag").onmouseout=
+	function () {
+	this.style.color = "black";
+	}
+</script>
+
+<input type="text" id="message">
+
+<script type="text/javascript">
+// input text의 onchange 이벤트 = 입력값의 유효성 검사를 할때 사용.. 
+// 엔터치거나 포커스가 다른곳으로 이동할때 인식.. 
+document.querySelector("input[type=text]").onchange=
+function () {
+	alert("abc");
+	this.value = this.value.toUpperCase();
+}
+// 이벤트 삭제
+document.querySelector("input[type=text]").onchange = null;
+//document.querySelectorAll(selectors)
+</script>
+<br>
+<button type="button" id="btn">버튼</button>
+<script type="text/javascript">
+//NodeList와 HTMLCollection 차이점
+var nodeList = document.getElementsByTagName("button");
+// addEventListener : 같은 이벤트에 여러 이벤트 등록.. 가능.. 이점.. 
+nodeList[0].addEventListener("click", function(e) {
+	//alert(this.innerHTML);
+	alert(this.id);
+}, false);
+//nodeList[0].removeEventListener("click", 이벤트핸들러명(익명일경우 사용불가), capture)
+</script>
+<br>
+<!-- <p name="demo"></p> Undefined attribute name  -->
+<input id="demo" name="demo" type="text" alt="데모"> <!-- name 속성..  -->
+<script type="text/javascript">
+// HTMLCollection : document.getElementsByName("demo")
+var hcoll = document.getElementsByName("demo");
+// 이벤트 등록 : attactEvent
+//attachEvent is not a function
+//hcoll[0].attachEvent("change", function () { console.log(this.value)});
+// attachEvent, detachEvent
+
+</script>
+</body>
+</html>

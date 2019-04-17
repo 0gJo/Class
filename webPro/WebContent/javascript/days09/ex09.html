@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style type="text/css">
+
+</style>
+</head>
+<body>
+<p id="demo"></p>
+
+
+<script type="text/javascript">
+//BOM의 screen 객체 
+// 사용자 화면에 대한 정보를 포함하고 있는 객체 
+
+var demo = document.getElementById("demo");
+var output = "";
+output += screen.width + "/ " + screen.height + '<br>';
+// 작업표시줄 x
+output += screen.availWidth + "/ " + screen.availHeight + '<br>';
+// 화면의 색상수를 비트단위로 표시한 값
+output += screen.colorDepth + '<br>';
+
+output += screen.colorDepth + '<br>';
+demo.innerHTML = output;
+
+</script>
+</body>
+</html>

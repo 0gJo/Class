@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style type="text/css">
+
+</style>
+</head>
+<body>
+<button onclick="btn_move()">페이지이동</button>
+
+
+<script type="text/javascript">
+// BOM - location 객체 
+// : 현재 페이지의 URL(주소)에 대한 정보를 갖고 있는 객체 
+//alert(location.hostname);// localhost
+//console.log(location.pathname);///webPro/javascript/days09/ex10.html
+//console.log(location.protocol);//http:
+//console.log(location.port); // 기본포트 80 일 경우 안 나옴.. 
+</script>
+<script type="text/javascript">
+function btn_move() {
+	//  전체 URL 얻어오기
+	// alert(location.href); //http://localhost/webPro/javascript/days09/ex10.html
+	// URL 설정하기
+	location.href = "ex11.html";
+	//location.assign("http://www.naver.com");
+}
+
+
+</script>
+
+
+</body>
+</html>

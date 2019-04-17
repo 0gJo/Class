@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style type="text/css">
+
+</style>
+</head>
+<body>
+<table border="1" style="width: 500px; margin: 0 auto">
+<tr>
+	<td>우편번호</td>
+	<td> <input id="zip1" size="3" type="text" />-<input size="3" id="zip2" type="text" />
+	<input type="button" value="우편번호 검색" onclick="search_zipcode()">
+	</td>
+</tr>
+<tr>
+	<td>주소</td>
+	<td><input id="addr1" style="width: 90%"></td>
+</tr>
+<tr>
+	<td>상세주소</td>
+	<td><input id="addr2" style="width: 90%"></td>
+</tr>
+</table>
+<script type="text/javascript">
+var zip ;
+function search_zipcode() {
+	// 창 한번만 띄우기 (있으면 활성화)
+	if (!zip) {
+		zip = window.open("ex08_02.html","","width=600,height=500,left=200,top=100");
+		zip.default_dong = "당산"; // zip이라는 window객체의 전역변수
+	}else {
+		zip.focus();
+	}
+}
+
+</script>
+
+</body>
+</html>

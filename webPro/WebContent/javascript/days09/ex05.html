@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style type="text/css">
+
+</style>
+</head>
+<body>
+
+
+<script type="text/javascript">
+// BOM(Browser Object Model) + js
+// : 브라우저가 제공해주는 객체
+/* window 
+: 모든 브라우저에서 제공, 브라우저 창 자체
+- js 코딩의 모든 전역변수, 전역함수, 전역객체들 자동으로 윈도우 멤버가 된다
+ex) var name ;
+window.name;
+- DOM 문서 객체 : document 노드 또한 window의 멤버가 된다.
+window.document.... 
+window.alert();
+- window.innerHeight, window.innerWidth = 보여지는 부분 + 스크롤바 포함 
+- window.outerHeight, window.outerWidth = 
+- window.document.documentElement.clientHeight, clientWidth = 스크롤바 제외, 도구모음 제외, 보더, 등등 순수하게 내용이 보여지는 영역
+screen
+history
+location
+navigator */
+</script>
+<script type="text/javascript">
+console.log(window.innerHeight+"/"+window.innerWidth); // 645/1266
+console.log(window.outerHeight+"/"+window.outerWidth); // 733/1282
+console.log(window.document.documentElement.clientHeight+"/"+window.document.documentElement.clientWidth); // 733/1282
+console.log(document.body.clientHeight+"/"+document.body.clientWidth); // 733/1282
+
+</script>
+
+</body>
+</html>

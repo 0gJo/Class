@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2019. 4. 17. - 오전 11:53:09  k≡n¡k</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="">
+<style>
+   *{
+      box-sizing: border-box;
+   }
+   .alert{
+      padding: 20px;
+      background-color: #f44336;
+      color:white;
+      opacity: 1; 
+      transition:opacity 0.6s, height 0.6s;
+      margin-bottom: 15px;
+   }
+   .alert.success{     background-color: #4caf50;   }
+   .alert.info{      background-color: #2196f3;   }
+   .alert.warning{     background-color: #ff9800;   }
+   .closebtn{
+     margin-left: 15px;
+     color:white;
+     font-weight: bold;
+     float:right;
+     font-size: 22px;
+     line-height: 20px;
+     cursor:pointer;
+     transition:0.3s;
+   }
+   .closebtn:hover{
+      color:black;
+   }
+</style>
+</head>
+<body>
+
+<select name="" id="type">
+<option value="">없음</option>
+<option value="">success</option>
+<option value="">warning</option>
+<option value="">info</option>
+</select>
+<br>
+<input>
+<button>공지사항추가</button>
+
+<h2>알림(공지사항)</h2>
+<!-- 
+<div class="alert">
+  <span class="closebtn">&times;</span>
+  <strong>Danger!</strong>
+  Lorem ipsum dolor sit amet, consectetur adipisicing.
+</div>
+<div class="alert success">
+  <span class="closebtn">&times;</span>
+  <strong>Success!</strong>
+  Lorem ipsum dolor sit amet, consectetur adipisicing.
+</div>
+<div class="alert success">
+  <span class="closebtn">&times;</span>
+  <strong>Success!</strong>
+  Lorem ipsum dolor sit amet, consectetur adipisicing.
+</div>
+<div class="alert warning">
+  <span class="closebtn">&times;</span>
+  <strong>Warning!</strong>
+  Lorem ipsum dolor sit amet, consectetur adipisicing.
+</div>
+<div class="alert info">
+  <span class="closebtn">&times;</span>
+  <strong>Info!</strong>
+  Lorem ipsum dolor sit amet, consectetur adipisicing.
+</div>
+<div class="alert success">
+  <span class="closebtn">&times;</span>
+  <strong>Success!</strong>
+  Lorem ipsum dolor sit amet, consectetur adipisicing.
+</div>
+ -->
+
+
+
+<script>
+   var type = ["success", "warning", "info"];
+   var messages = [
+	   "Lorem ipsum dolor sit amet, consectetur adipisicing."
+	   ,"Lorem ipsum dolor sit amet, consectetur adipisicing."
+	   ,"Lorem ipsum dolor sit amet, consectetur adipisicing."
+   ];
+for (var i = 0; i < 3; i++) {
+	/* 공지사항(알림) 페이지를 요청하면 DB 연동 select */
+	   var alertdiv =   document.createElement("div");
+	   //alertdiv.className = "alert success"; // classList.add
+	   alertdiv.classList.add("alert");
+	   alertdiv.classList.add( type[i] );
+	   // span
+	   var spanbtn =  document.createElement("span");
+	   spanbtn.classList.add("closebtn");
+	   spanbtn.innerHTML = "&times;";
+	   alertdiv.appendChild(spanbtn);
+	   // 
+	   var strongbtn =  document.createElement("strong"); 
+	   strongbtn.innerHTML = "Success!";
+	   alertdiv.appendChild(strongbtn);
+	   // 
+	   var content = messages[i];
+	   var message =   document.createTextNode(content);
+	   alertdiv.appendChild(message);
+	   document.body.appendChild(alertdiv);
+}   
+   
+</script> 
+<script>
+   // nodeList
+   var close = document.getElementsByClassName("closebtn");
+   for (var i = 0; i < close.length; i++) {
+      close[i].onclick = function (){
+    	  var alertdiv =  this.parentElement;
+    	  alertdiv.style.opacity = "0";
+    	  //alertdiv.style.height = "0";
+    	  setTimeout(function() {
+    		  alertdiv.style.display = "none";
+    	  }, 600);
+      }	
+  }
+   
+</script>
+
+<script type="text/javascript">
+
+document.getElementsByTagName("button")[0].onclick
+= function () {
+	// select 태그에서 선택된 값 가져오기 
+	var sel_tag = document.getElementsByTagName("select")[0];
+	var index = sel_tag.selectedIndex;
+	var opt = sel_tag.options[index].text;
+	alert(opt);
+	// input 태그에서 선택된 값 가져오기 
+	var input_tag = document.getElementsByTagName("input")[0];
+	alert(input_tag.value);
+	
+	
+	   var alertdiv =   document.createElement("div");
+	   //alertdiv.className = "alert success"; // classList.add
+	   alertdiv.classList.add("alert");
+	   alertdiv.classList.add( type[i] );
+	   // span
+	   var spanbtn =  document.createElement("span");
+	   spanbtn.classList.add("closebtn");
+	   spanbtn.innerHTML = "&times;";
+	   alertdiv.appendChild(spanbtn);
+	   // 
+	   var strongbtn =  document.createElement("strong"); 
+	   strongbtn.innerHTML = opt;
+	   alertdiv.appendChild(strongbtn);
+	   // 
+	   var content = input_tag.value;
+	   var message =   document.createTextNode(content);
+	   alertdiv.appendChild(message);
+	   document.body.appendChild(alertdiv);
+	
+	
+}
+
+
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
