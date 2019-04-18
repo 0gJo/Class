@@ -1,0 +1,49 @@
+호환.. 
+    if(div.addEventListener) {
+        div.addEventListener("click", function(a, b) { test(a, b); }, false);
+    } else {
+        div.attachEvent("onclick", function(a, b) { test(a, b); });
+    }
+
+
+이벤트 등록... 삭제 .. 
+DOM 노드(node) 개념 /  DOM 요소 추가, 수정, 삭제
+
+ex04 - 공지사항 등록 삭제.. 
+
+
+ BOM(Browser Object Model) + js
+: 브라우저가 제공해주는 객체
+window : 브라우저 창 / screen : 컴퓨터화면  / history / location : url / navigator 
+윈도우(창) 메소드 : open(), close(), moveTo(), moveBy(), resizeTo(), resizeBy() 
+
+ex06 + ex07_02 - 새 창 열기 / 창 흔들기 / 창 닫기
+[ex08 + ex08_02] - 우편번호 검색 새창 / a 태그 클릭 우편번호 자동입력
+
+[ex14_02] - 검색어 자동완성
+    
+ ex09.html 
+ 새창을 화면 가운데에 띄우기
+ 새창을 우측 하단에 띄우기 
+ -- window.open 에서 left, top 값 조정.. 
+ 
+ ex14_02. autocomplete (검색어 입력하면 자동완성)
+ // 
+ // div 태그 동적으로 생성
+ // div 안에 조건에 맞는 값들 .. 
+ // div 보여지게.. 
+ 
+ [			]
+ ex14_02 => 함수만들기
+ + 누르면 해당 사이트로 이동 
+ + 방향키
+ 
+ ex06 + ex07_02
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
