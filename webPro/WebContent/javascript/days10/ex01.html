@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>쿠키( Cookie )</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style type="text/css">
+
+</style>
+</head>
+<body>
+
+쿠키이름 : <input id="cname" type="text" autofocus="autofocus"><br>
+쿠키값   : <input id="cvalue" type="text"><br>
+
+<button onclick="selectCookies()">모든 쿠키 확인</button>
+<button onclick="createCookies()">쿠키 생성</button>
+<button onclick="getCookie()">쿠키 확인</button> <!-- 원하는 쿠키만 확인..  -->
+<button onclick="deleteCookie()">쿠키 삭제</button> <!-- 원하는 쿠키만 확인..  -->
+
+<p id="demo"></p>
+
+<script type="text/javascript">
+
+function deleteCookie() {
+	// 쿠키를 삭제할때는 만료시점을 과거설정해서 .. 쿠키생성
+	var cname = $("#cname").val(); // 삭제하고자 하는 쿠키 이름 
+	var now = new Date();
+	now.setDate(now.getDate() - 1);
+	
+	document.cookie  = cname+"="+"; expires=" + now.toGMTString() ;
+	
+	$("#cname").val("");
+	$("#cvalue").val("");
+	
+}
+
+
+function getCookie() {
+	
+	var cname = $("#cname").val(); // 확인하고자 하는 쿠키 이름 
+	var cookies = document.cookie;
+	///ID=admin; auto=%uD64D%uAE38%uB3D9
+	var entry = cookies.split(";");
+	console.log(cookies.split(";")[0]);
+	for (var i = 0; i < entry.length; i++) {
+		console.log(entry[i].split("=")[0]);
+		if(entry[i].split("=")[0].trim() == cname){
+			var value = entry[i].split("=")[1];
+			$("#demo").html(unescape(value));
+			return;
+		}
+	}
+	
+	$("#demo").html("x");
+	
+}
+
+function createCookies() {
+	var cname = $("#cname").val(); //id
+	var cvalue = $("#cvalue").val(); // value
+	// 만료시점 : 고정 10일 동안..
+	var now = new Date();
+	now.setDate(now.getDate() + 10);
+	
+	document.cookie  = cname+"="+escape(cvalue)+"; expires=" + now.toGMTString() ;
+	
+	$("#cname").val("");
+	$("#cvalue").val("");
+	
+}
+
+
+
+function selectCookies() {
+	alert("cookies");
+	var cookies = 	document.cookie;
+	$("#demo").html(cookies); //ID=admin; auto=%uD64D%uAE38%uB3D9
+}
+
+</script>
+</body>
+</html>

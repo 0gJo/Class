@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="cookie.js"></script>
+<style type="text/css">
+
+</style>
+</head>
+<body>
+<table border="1" style="background-color: white ; width: 400px; margin: 0 auto;">
+<tr>
+<td><img alt="" src="/webPro/javascript/images/item02.gif"></td>
+<td><img alt="" src="/webPro/javascript/images/item03.gif"></td>
+<td><img alt="" src="/webPro/javascript/images/item04.gif"></td>
+</tr>
+
+<tr>
+<!-- name : 그룹화  -->
+<td><input checked="checked" name="bgImages" type="radio" id="item02" value="item02">item02</td>
+<td><input name="bgImages" type="radio" id="item03" value="item03">item03</td>
+<td><input name="bgImages" type="radio" id="item04" value="item04">item04</td>
+</tr>
+
+</table>
+
+<script type="text/javascript">
+var cname = "bgimg";
+var cvalue ;
+var exdays = 10;
+//var cookie = "data";
+//alert(!cookie);
+$("document").ready (function () {
+	// 쿠키 배경이미지 저장되어있다면 -> 그 쿠키값에 해당하는 배경이미지로 변경(적용) + radio 체크
+	// (저장된 쿠키가 없을경우 item02 라디오 버튼 체크된 상태 -> 배경이미지 설정)
+	
+	// 쿠키이름 : bgimg
+	// 쿠키값 : item02 item03 item 04
+	// 쿠키 만료시점 : 10일
+	
+	cvalue = getCookie(cname);
+	if (cvalue) {  // js에서는 null 이아니면 무조건 true (string, number 이던간에)
+ 		// 배경이미지 변경
+ 		
+ 		$("body").css("backgroundImage","url(/webPro/javascript/images/"+cvalue+".gif)");
+			
+	/* 		document.body.style.backgroundImage = 
+ 			"url(/webPro/javascript/images/"+cvalue+".gif)"; */
+		
+		// 라디오버튼 바꾸기
+	/* 	var input_tag = document.getElementById(cvalue);
+		input_tag.checked = "checked"; */
+		
+		$("#"+cvalue).prop("checked", true);
+		
+		
+	} else {
+		document.body.style.backgroundImage = 
+ 			"url(/webPro/javascript/images/item02.gif)";
+	}
+	
+	// 체크한 값에 해당하는 이미지 설정
+	// radio input 클릭하면 --> 쿠키저장되도록
+	// HTML Collections
+	
+/* 	$(":radio").click(function() { */
+	$("[name=bgImages]").click(function() {
+		cvalue = this.value ; // this : event 발생객체
+		alert(cvalue);
+		// 쿠키 저장하고 
+		setCookie(cname, cvalue, exdays);
+		// 배경바꾸기
+		document.body.style.backgroundImage = 
+ 			"url(/webPro/javascript/images/"+cvalue+".gif)";
+		
+	})
+	
+	
+	
+	
+	
+	
+	
+/* 	[js 코딩]
+	var radioButtons =	document.getElementsByName("bgImages");
+	for (var i = 0; i < radioButtons.length; i++) {
+		radioButtons[i].onclick = function () {
+			cvalue = this.value // this : event 발생객체
+			alert(cvalue);
+			// 쿠키 저장하고 
+			setCookie(cname, cvalue, exdays);
+			// 배경바꾸기
+			document.body.style.backgroundImage = 
+	 			"url(/webPro/javascript/images/"+cvalue+".gif)";
+		
+			
+		}
+	} */
+	
+}
+)
+
+</script>
+</body>
+</html>

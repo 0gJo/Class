@@ -1,0 +1,89 @@
+페이지 전체가 업데이트 되는 것이 아니라, 필요한 부분(검색창, 실시간 검색어 등.. )만 비동기적으로 처리해서 서버에 요청해서 
+가져오는 것 (js) + xml 형식으로 데이터를 주고 받음 
+						json 
+						
+----
+<쿠키>
+[ cookie.js ] - setCookie, getCookie, delCookie.. 
+					(escape->한글깨짐방지)
+로드 될때 쿠키값 불러와서 적용.. 
+  ex04 
+[ ex05 ] - 로그인 (id 저장)
+// 로그인시 경고창 ( 없습니다 / 비밀번호~ ) or 로그인완료창
+// id 저장 여부.. -> id input에 값 + 체크 해놓기.. 
+
+
+
+--
+쿠키
+웹에서 서버에 요청한 이후에 이전의 웹의 정보(설정한 정보.. 등 ) 는 유지가 되지 않음.
+ex) 광고창.. 3일동안 보지 않음.. 
+=> 쿠키가 해결.. 
+
+상태관리방법
+1. db
+2. 세션 ( 서버에 있는 클라이언트 기억공간)
+3. 쿠키 
+- 사용자 정보를 웹페이지에 저장 할 수 있다.
+- 로컬 pc에 텍스트파일로 저장된 데이터
+- 클라이언트에서 사용하는 상태관리 방법 중 하나이다.
+- document.cookie 속성으로 쿠키 관리 (데이터저장, 수정, 삭제)
+- 형식 : 
+name="nameValue"; expires="expireDate"; path="pathHolders"; domain="domainName"; secure
+쿠키이름 = 쿠키값  (쌍  pair / 필수 )
+									만료시점 설정하지 않으면, 브라우저 닫으면 쿠키 자동 삭제
+																		특정 페이지에서만 쿠키 설정.. 
+클라이언트에서 상태를 관리할수 있도록 저장한 데이터 (텍스트)
+key - value
+서버에서 쿠키관련 코딩 후 클라이언트에 응답.. 클라이언트에서 랜더링.. 
+쿠키 정보 : id, 값, 만료일, 경로(서버의 특정 경로에서 볼수 있게 하)
+
+
+jquery 코딩변경..
+// onload -> $("document").ready
+// $("#"+cvalue).prop("checked", true);
+// $("[name=bgImages]") , $(this).val();
+
+js
+---------------------------
+jquery
+== 자바스크립트 더 쉽게 사용하기 쉽도록 하는 라이브러리.. 
+1. 빠르고 작으며 기능이 풍부한 [Javascript 라이브러리]
+2.
+ㄱ 문서 탐색 및 조작 
+조작 childAppend
+문서탐색 : firstNode.. 찾기.. 
+ㄴ. 이벤트 처리
+ㄷ. 애니메이션 및 Ajax 를 훨씬 간단하게.. 
+3. jquery 프레임웍 (framework)
+ex)
+쿠키클래스{
+// 필드
+// 메서드 : set, get, delCookie
+}
+jquery객체.메서드.. 
+
+ㄹ. 사용 
+- CDN 이용 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+- 실제 파일 다운로드 
+
+
+
+
+[		]
+jquery API Documentation.. 살펴보기..
+--
+ex04
+// 쿠키 배경이미지 저장되어있다면 -> 그 쿠키값에 해당하는 배경이미지로 변경(적용) + radio 체크
+ (저장된 쿠키가 없을경우 item02 라디오 버튼 체크된 상태 -> 배경이미지 설정)
+// radio input 클릭하면 --> 쿠키저장 + 배경이미지 변경
+
+ex05.html
+idArr.indexOf  : -1 여부로 아이디존재여부 체크 + return 함수 빠져나가기 
+else{
+	deleteCookie
+}
+
+
+

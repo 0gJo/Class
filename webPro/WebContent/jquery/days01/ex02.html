@@ -1,0 +1,69 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<!-- <script src="WebContent/jquery/jquery-3.4.0.min.js"></script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style type="text/css">
+
+</style>
+<script>
+
+$(document).ready( function () {
+	$("a").click(function(event) {
+		// a 태그를 클릭했을때 a 태그의 기본기능인 페이지 이동을 막~
+		event.preventDefault();
+		$(this).hide();
+	})
+	
+	
+	// jquery selector 태그면
+	$("p").click(function(event) {//이벤트 발생시 함수 바인딩.. 
+		//alert(this.innerHTML);
+		//alert($(this).html()); // this.html() ==? X
+		
+		$(this).hide(4000, function() {
+					// duration complete 인자 (callback 함수 라 부름) 
+			alert("숨김성공");
+		}); 
+		
+	})
+	//jQuery.fn - jquery객체.메소드
+	// fn - 전역메소드
+	
+});
+
+</script>
+</head>
+<body>
+<a href="http://www.naver.com">Click to hide me too</a>
+<p>Lorem ipsum.</p>
+<p>Voluptate ipsa.</p>
+<p>Quae culpa.</p>
+<p>Natus enim!</p>
+<p>Porro laudantium.</p>
+<script type="text/javascript">
+/* 1. jquery 사용하려면 다운로드
+ㄱ. 개발버젼 (압축 x)
+ㄴ. 생산버젼 (압축 o)
+2. CDN(Content Delivery Network) 호스팅
+ㄱ. 구글 CDN, MS CDN ... 
+3. jquery 사용하는 문법(형식)
+	- html 요소 선택 + 작업
+	- 기본구조
+	$(selector).action();
+		요소선택 		작업
+4. 항상 <script> body 닫기 위에 코딩한 이유?
+		html 요소 로딩 전부 된 후 ... 처리
+		=> 해결방법.. 
+		ㄱ. window.onload = function(){}
+		ㄴ. $("document").ready( function(){})
+			$(function(){});  */
+			
+</script>	
+</body>
+</html>

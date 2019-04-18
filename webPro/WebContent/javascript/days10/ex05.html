@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="cookie.js"></script>
+<style type="text/css">
+.tblLogin, .tblLogout{
+	width: 400px;
+	height: 100px;
+}
+</style>
+</head>
+<body>
+	<table id="tblLogin" class="tblLogin" border="1">
+
+
+		<tr>
+			<td>아이디</td>
+			<td><input id="txtid"></td>
+			<td rowspan="2"><input type="checkbox" id="ckbLogin"> <label
+				for="ckbLogin">ID 저장</label> <br> <input type="button"
+				id="btnLogin" value="로그인"></td>
+		</tr>
+		<tr>
+			<td>비밀번호</td>
+			<td><input type="password" id="txtpwd"></td>
+		</tr>
+	</table>
+	<table id="tblLogout" class="tblLogout" border="1">
+		<tr>
+			<td><span id="s_id">admin</span>님 환영합니다. <br> <input id="btnLogout" type="button" value="로그아웃">
+			</td>
+		</tr>
+	</table>
+<script type="text/javascript">
+var tblLogin = document.getElementById("tblLogin");
+var tblLogout = document.getElementById("tblLogout");
+
+var txtid = document.getElementById("txtid");
+var txtpwd = document.getElementById("txtpwd");
+var ckbLogin = document.getElementById("ckbLogin");
+var btnLogin = document.getElementById("btnLogin");
+var btnLogout = document.getElementById("btnLogout");
+
+// 쿠키이름 : idsave
+var cname = "idsave";
+// 쿠키값 : admin
+var cvalue;
+// 만기시점 : 10
+var exdays = 10;
+window.onload = function () {
+	tblLogout.style.display = "none";
+	// idsave 쿠키
+	cvalue =	getCookie(cname);
+	
+	if (cvalue) {
+		ckbLogin.checked = "checked";
+		txtid.value = cvalue;
+		txtpwd.focus();
+		
+	}else {
+		txtid.focus();
+	}
+		
+}// window.onload
+
+var idArr = ["admin", "hong","kenik"];
+var pwdArr = ["1234","1111","4321"]
+
+btnLogout.onclick = function () {
+	txtid.value = "";
+	txtpwd.value = "";
+	tblLogin.style.display = "block";
+	tblLogout.style.display = "none";
+}
+
+btnLogin.onclick = function () {
+	//alert("aaa");
+	/// 아이디랑 비밀번호 존재 여부 확인
+	// 아이디 존재 여부 확인
+	for (var i = 0; i < idArr.length; i++) {
+		if (idArr[i]==txtid.value) {// 아이디 존재 
+			// 대응하는 비밀번호 일치하는지 여부 확인
+			if (pwdArr[i]== txtpwd.value) { // 아이디+비밀번호 모두 일치 
+				alert("로그인 성공");
+				if (ckbLogin.checked) { // 체크박스에 표시되어있으면
+					// 쿠키 저장 
+					setCookie(cname, txtid.value, exdays);
+				}else {
+					delCookie(cname);
+				}
+				//div 숨김여부 변경
+				tblLogin.style.display = "none";
+				tblLogout.style.display = "block";
+				
+				return;
+				
+				
+			}else { // 아이디 일치 but, 비밀번호 틀림 
+				alert("비밀번호를 잘못 입력하셨습니다.");
+				return;
+			}
+			
+		}
+	}
+	
+	alert("없는 아이디 입니다.");
+	return;
+	
+}
+// 로그인시 경고창 ( 없습니다 / 비밀번호~ ) or 로그인완료창
+// id 저장 여부.. -> id input에 값 + 체크 해놓기.. 
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style type="text/css">
+  .tblLogin, .tblLogout{
+     width: 400px;
+     height:100px;
+  }
+
+</style>
+<script type="text/javascript">
+
+$(document).ready( function () {
+	
+});
+
+</script>
+</head>
+<body>
+<table id="tblLogin" class="tblLogin" border="1">
+  <tr>
+    <td>아이디</td>
+    <td><input type="text" id="txtid" /></td>
+    <td rowspan="2">
+      <input type="checkbox" id="ckbLogin" />
+      <label for="ckbLogin">ID 저장</label>
+      <br>
+      <input type="button" id="btnLogin" value="로그인" />
+    </td>    
+  </tr>
+  <tr>
+    <td>비밀번호</td>
+    <td><input type="password" id="txtpwd" /></td>
+  </tr>
+</table>
+<table id="tblLogout" class="tblLogout" border="1">
+  <tr>
+    <td>
+       <span id="s_id"></span> 님 환영합니다.
+       <br><input type="button" id="btnLogout" value="로그아웃" />
+    </td>
+  </tr>
+</table>
+<script type="text/javascript">
+var tblLogin = document.getElementById("tblLogin");
+var tblLogout = document.getElementById("tblLogout");
+
+var txtid = document.getElementById("txtid");
+var txtpwd = document.getElementById("txtpwd");
+var ckbLogin = document.getElementById("ckbLogin");
+var btnLogin = document.getElementById("btnLogin");
+var btnLogout = document.getElementById("btnLogout");
+
+var idArr     = ["admin", "hong" , "kenik"];	  
+var pwdArr = ["1234", "1111", "4321"];
+
+
+btnLogin.onclick = function() {
+
+	var id = txtid.value;
+	var pwd = txtpwd.value;
+	
+	// 아이디 있는지 체크..
+	var idx = idArr.indexOf(id);
+	
+	if (idx == -1) {
+		alert("아이디가 없습니다.")
+		return ;
+	}
+	
+	if (pwd != pwdArr[idx]) {
+		alert("잘못된 비밀번호 입니다.");
+		return;
+	}
+	
+	alert("로그인 성공");
+	
+	$("#tblLogin").css("display", "none");
+	$("#tblLogout").show();
+	
+	$("#s_id").text(id);
+	
+
+}
+
+
+
+
+</script>
+</body>
+</html>
