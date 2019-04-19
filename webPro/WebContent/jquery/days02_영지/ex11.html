@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style type="text/css">
+ div {
+    width: 60px;
+    height: 60px;
+    margin: 5px;
+    float: left;
+  }
+ #box1 {
+    width: 50px;
+    color: yellow;
+    background-color: blue;
+  }
+  #box2 {
+    width: 80px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(15, 99, 30);
+  }
+  #box3 {
+    width: 40px;
+    color: #fcc;
+    background-color: #123456;
+  }
+  #box4 {
+    width: 70px;
+    background-color: #f11;
+  }
+</style>
+<script type="text/javascript">
+
+$(document).ready( function () {
+	
+});
+
+</script>
+</head>
+<body>
+<span id="result">&nbsp;</span>
+<div id="box1"></div>
+<div id="box2"></div>
+<div id="box3"></div>
+<div id="box4"></div>
+ 
+ <script type="text/javascript">
+ 
+$("div").click(function() {
+/* 	// 설정된 속성값 가져오기 css
+	$("#result").html($(this).css("background-color")); */
+	
+	// [여러개의 ] 설정된 속성값 가져오기 css
+	var styleprops =	$(this).css(["color","width","height","background-color"]);
+	
+	//console.log(styleprops);
+	//{color: "rgb(0, 0, 0)", width: "70px", height: "60px", background-color: "rgb(255, 17, 17)"}
+	//alert(typeof styleprops); //object
+	
+	$.each(styleprops, function(prop, value) {
+		
+	})
+	
+})
+ 
+ </script>
+</body>
+</html>

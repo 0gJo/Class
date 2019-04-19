@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style type="text/css">
+body, html{
+	height: 100%;
+	margin: 0;
+}
+.bgimg{
+	background-image: url("/webPro/javascript/images/forestbridge.jpg");
+	height: 100%;
+	background-position: center;
+	background-size: cover;
+	position: relative;
+	color: white;
+	font-family: "verdana";
+	font-size: 25px;
+}
+
+.topleft{
+	position: absolute;
+	top: 0;
+	left: 16px;
+}
+
+.bottomleft{
+	position : absolute;
+	bottom: 0;
+	left: 16px;
+}
+
+.middle{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	text-align: center;
+}
+
+hr{
+	margin: auto;
+	width: 40%;
+}
+
+</style>
+<script type="text/javascript">
+
+$(document).ready( function () {
+	// 지금~수료 일 / 시 / 분 / 초 
+	var countDownDate = new Date("2019.07.22 18:00:00").getTime();
+ 	console.log(countDownDate); // 1563786000000 
+ 	console.log( new Date("2019.07.22 18:00:00")); // Mon Jul 22 2019 18:00:00 GMT+0900 (한국 표준시)
+ 	
+ 	var countDownFunction = setInterval(function() {
+ 		var now = new Date().getTime(); // 1970 .1.1 ~ 지금까지의 밀리세컨드값
+ 		var distance = countDownDate - now ; // ms 값
+ 		
+ 		// 일
+ 		var days = Math.floor(distance / (1000 *60 *60 * 24) );
+ 		// 시
+ 		var hours =  Math.floor(distance / (1000 *60 *60)) ;
+ 		// 분
+ 		var minutes =  Math.floor(distance / (1000 *60) ) ;
+ 		
+ 		// 1분 = 60 초 = 60 * 1000 ms 
+ 		
+ 		// 초
+ 		var seconds = Math.floor(distance / 1000);
+ 		
+ 		// 밀초
+ 		var miliseconds = distance ;// % 1000;
+ 		
+ 		//console.log(distance);//음수
+ 		
+ 		
+ 		console.log(days);
+ 		console.log(minutes);
+ 		
+ 		
+ 		
+// 		$("#demo").html(days+"d" + hours +"h" + minutes +"m" + seconds + "s" + miliseconds +"ms" );
+ 		
+ 		
+ 	}, 1000);
+	
+	
+});
+
+</script>
+</head>
+<body>
+<div class="bgimg">
+	<div class="topleft">
+		<p>logo</p>
+	</div>
+<div class="middle">
+	<h1>Coming Soon</h1>
+</div>
+<hr />
+<p id="demo" style="font-size: 30px"></p>	
+</div>
+
+<div class="bottomleft">
+	<p>some text</p>
+</div>
+
+
+
+</body>
+</html>

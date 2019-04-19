@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style type="text/css">
+
+</style>
+<script type="text/javascript">
+
+$(document).ready( function () {
+	
+	var fn = function calleeTest() {
+		document.write("a");
+		return arguments.callee;
+				// function calleeTest() { document.write("a"); }
+	}
+	
+	//calleeTest() ;
+	
+	//document.write(fn); // 선언부
+	// function calleeTest() { document.write("a"); }
+	document.write(fn());
+	
+	
+	
+});
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

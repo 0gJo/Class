@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style type="text/css">
+ span {
+    background: #def3ca;
+    padding: 3px;
+    float: left;
+  }
+</style>
+<script type="text/javascript">
+
+$(document).ready( function () {
+	
+	$( "#hider" ).click(function() {
+		 $( "span:last-child" ).hide( "fast", function() { // 마지막 span hide 하고 수행하는 함수.. 
+			   $( this ).prev().hide( "fast", arguments.callee );
+		 		 //console.log(arguments.callee);
+				 // $( this ).prev().hide( "fast");
+			  // .prev() ; previousSibling
+			  });
+		});
+
+
+		$( "#shower" ).click(function() {
+		  //$( "span" ).show( 2000 );
+			  $( "span:first-child" ).show( "fast", function() { // 마지막 span hide 하고 수행하는 함수.. 
+				   $( this ).next().show( "fast", arguments.callee );
+					 // $( this ).prev().hide( "fast");
+				  // .prev() ; previousSibling
+				  });
+		  
+		  
+		});
+});
+
+</script>
+</head>
+<body>
+	<button id="hider">Hide</button>
+	<button id="shower">Show</button>
+	<div>
+		<span>Once</span> <span>upon</span> <span>a</span> <span>time</span> <span>there</span>
+		<span>were</span> <span>three</span> <span>programmers...</span>
+	</div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style type="text/css">
+
+</style>
+<script type="text/javascript">
+
+$(document).ready( function () {
+	
+});
+
+</script>
+</head>
+<body>
+
+<input type="password" ><br>
+<p id="demo">경고! CapsLock is On</p>
+
+<script type="text/javascript">
+$(":password").keyup(function() {
+	if(event.getModifierState("CapsLock"))  $("p#demo").show();
+	else	 $("p#demo").hide();
+})
+
+
+
+</script>
+
+
+
+<script type="text/javascript">
+/* var flag = false;
+
+$("input").on("keydown", function() {
+
+	if (event.keyCode == 20 ) { flag= true; }
+	
+	 if (!flag ) {
+		 $("p#demo").show();
+	}else {
+		 $("p#demo").hide();
+	}
+	 
+	
+}) */
+
+$("p#demo")
+				.css("color", "red")
+				.hide();
+
+</script>
+
+
+</body>
+</html>

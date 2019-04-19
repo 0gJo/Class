@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style type="text/css">
+div {
+    color: blue;
+  }
+div#five {
+    color: red;
+  }
+</style>
+<script type="text/javascript">
+
+$(document).ready( function () {
+	
+});
+
+</script>
+</head>
+<body>
+<div id="one"></div>
+<div id="two"></div>
+<div id="three"></div>
+<div id="four"></div>
+<div id="five"></div>
+
+<script type="text/javascript">
+var arr = [ "one", "two", "three", "four", "five" ];
+
+jQuery.each( arr, function( i, val ) {
+	  $( "#" + val ).text( "Mine is " + val + "." );
+	 
+	  // Will stop running after "three"
+	 return ( val !== "three" );   // true, true, false
+	});
+	
+var obj = { one: 1, two: 2, three: 3, four: 4, five: 5 };
+jQuery.each( obj, function( i, val ) {
+	  $( "#" + i ).append( document.createTextNode( " - " + val ) );
+	});
+	
+</script>
+
+</body>
+</html>
