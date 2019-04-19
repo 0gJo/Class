@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2019. 4. 19. - 오전 11:46:11  k≡n¡k</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="">
+<style>
+</style>
+<script>
+   $(document).ready(function (){
+	   // hide()
+	   // show()
+	   // toggle()
+   });
+</script>
+</head>
+<body>
+<button>hide</button>
+<p></p>
+<script>
+    //$("p").css("속성","속성값");
+    /* 
+    $("p").css({
+    	속성:속성값,
+    	속성:속성값,
+    	..
+    });
+     */
+
+     $("p").css({
+     	width:"200px",
+     	height:"100px",
+     	"border":"solid 1px gray",
+     	/* backgroundColor:"yellow" */
+     	"background-color":"yellow"
+     });
+     
+     // on()  **********  jquery  ajax 이벤트 등록 
+     // $("button").click(function (){});
+     var n = 0;
+     $("button").on("click",function (){ 
+     
+    	 var txt  = $(this).text();
+    	 $("p").toggle(function (){
+    		 $("button").html( txt == 'hide'? 'show':'hide');
+    	 });
+     
+    	 /* 
+    	 if(   $(this).html() == "hide"  ){
+    		 $("p").hide().prev().html("show");
+    	 }else{
+    		 $("p").show().prev().html("hide");
+    	 }
+    	 */ 
+     });
+     
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

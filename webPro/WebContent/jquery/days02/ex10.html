@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2019. 4. 19. - 오후 12:20:12  k≡n¡k</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="">
+<style>
+</style>
+<script>
+   $(document).ready(function (){
+	   
+   });
+</script>
+</head>
+<body>
+
+비밀번호 : <input type="password" /><br>
+<p id="demo">경고! Caps lock is ON~</p>
+
+<script>
+   //$("[type=password]")
+   $(":password").keyup(function() {
+	  //  event
+   	  if(event.getModifierState("CapsLock"))  $("#demo").show();
+   	  else $("#demo").hide();
+   });
+   
+   $("p#demo")
+         .css("color","red")
+         .hide();
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
