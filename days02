@@ -1,0 +1,92 @@
+다음주.. jsp..
+
+
+-------------
+jquery 코딩 위치.. 
+$(document).ready()   // document 안의 객체가 모두 올라가고 (load) 난 뒤.. 
+$(funtion(){})
+window.onload
+or
+body 닫기 위 script
+
+arguments.callee;
+- Function 개체 속에서 Function 개체 자체 문자열을 반환한다.
+- ex)
+function () { 
+	 $( this ).prev().hide( "fast", arguments.callee ); 
+ 	}
+ 	
+ 새로운 태그생성 "<div>"
+ 있는 태그 불러올때 "div"
+ 
+category :  DOM Insertion, Inside
+ append / appendTo
+ prepend / prependTo
+ html() 
+ ex. 	$("p").html("<span style='color : red';>span tag</span>"); 
+ 
+ 
+ Category: DOM Removal
+ remove() : Remove elements ( 자신 )
+ 
+ empty() : Remove all child [nodes] of element ( inner 관련 )
+ unwrap() : Remove the parents, leaving the elements in their place. ( outer 관련 )
+ <-> 부모태그 만들기 ( 태그 wrap 포장 )
+ detach
+ 
+ 조건에 해당하는 태그만 삭제하기
+$(p.hello).remove();
+== $( "p" ).remove( ":contains('Hello')" );
+
+
+
+jQuery ()
+
+jQuery (selector) : jQuery("#demo)
+jQuery (element) : jQuery ("<div></div>")
+jQuery (elementArray) : jQuery("div")
+
+-- ex08. jquery $ 의미.. 
+jQuery.fn == jQuery.prototype = {  }
+               동의어.                        객체 
+jQuery.fn.(		)
+객체의 (	 	) 멤버(변수 or 함수) 사용..
+
+-- ex09 effect 
+여러 속성값주기 ..
+
+
+hide()
+show()
+toggle() : element 의 display 속성 에 따라 show , hide
+ .toggle(boolean)
+cf. function(  jquery Event   ){ event. ....  : event는 브라우저제공객체 (BOM)}
+
+
+ex16. 
+modal - 뒤창 선택 x
+modalless -     o 
+
++ 다른곳 클릭해도 닫히도록.. 
+
+ex16_02 - UI - Dialogue (modal.. )
+
+
+---------------------------------------------------------------------------
+CSS
+
+$.each (array/object)   vs   ( ).each(function(){})
+array or obejct를 도는것 				( ) : jquery 객체
+
+(element) 를 도는 것.. 
+
+
+[			]
+days07 .ex06...등등.. 프로토타입.. 등등..
+Cateory.. 
+ex11
+[ ex16_02 - UI - Dialogue (modal.. ) ]********
+script  - js
+script - js ui
+
+dialog : ui 함수
