@@ -55,6 +55,8 @@ jQuery.fn.(		)
 -- ex09 effect 
 여러 속성값주기 ..-> 인자를 { } object로 주기
 $(selector).css({ , , })
+[ 여러개의 ] 설정된 속성값 가져오기
+$(this).css(["color","width","height","background-color"]); -> return type : object
 
 hide()
 show()
@@ -78,8 +80,12 @@ CSS
 $.each (array/object)   vs   ( ).each(function(){})
 array or obejct를 도는것 				( ) : jquery 객체
 
-(element) 를 도는 것.. 
+(elements) 를 도는 것.. 
 
+- 반복문 stop
+return (false를 반환하는 조건식)
+
+ex. return ( val !== "three" ); // three 이후 반복문 수행 x
 
 [			]
 days07 .ex06...등등.. 프로토타입.. 등등..
