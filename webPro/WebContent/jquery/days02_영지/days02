@@ -53,8 +53,8 @@ jQuery.fn.(		)
 객체의 (	 	) 멤버(변수 or 함수) 사용..
 
 -- ex09 effect 
-여러 속성값주기 ..
-
+여러 속성값주기 ..-> 인자를 { } object로 주기
+$(selector).css({ , , })
 
 hide()
 show()
